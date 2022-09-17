@@ -1,0 +1,19 @@
+{
+  "Version": 1,
+  "Hash": "rkHAVYpnRLpbccrWwwEFCkfv78yatRctDPu+ipKCdHg=",
+  "Source": "Courses Center",
+  "BasePath": "_content/Courses Center",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "Courses Center\\wwwroot",
+      "Source": "Courses Center",
+      "ContentRoot": "C:\\Users\\HAMZAWY\\Desktop\\Freelance Project 2\\MVC\\Courses Center\\wwwroot\\",
+      "BasePath": "_content/Courses Center",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": []
+}
