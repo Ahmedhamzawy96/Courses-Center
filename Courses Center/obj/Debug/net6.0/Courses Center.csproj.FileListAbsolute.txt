@@ -57,3 +57,5 @@ C:\Users\HAMZAWY\Desktop\Freelance Project 2\MVC\Courses Center\obj\Debug\net6.0
 C:\Users\HAMZAWY\Desktop\Freelance Project 2\MVC\Courses Center\obj\Debug\net6.0\Courses Center.pdb
 C:\Users\HAMZAWY\Desktop\Freelance Project 2\MVC\Courses Center\obj\Debug\net6.0\Courses Center.genruntimeconfig.cache
 C:\Users\HAMZAWY\Desktop\Freelance Project 2\MVC\Courses Center\obj\Debug\net6.0\ref\Courses Center.dll
+C:\Users\HAMZAWY\Desktop\Freelance Project 2\MVC\Courses Center\obj\Debug\net6.0\Courses Center.RazorAssemblyInfo.cache
+C:\Users\HAMZAWY\Desktop\Freelance Project 2\MVC\Courses Center\obj\Debug\net6.0\Courses Center.RazorAssemblyInfo.cs

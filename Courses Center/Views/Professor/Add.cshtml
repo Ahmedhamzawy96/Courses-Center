@@ -1,0 +1,93 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+          <section class="section " style="margin:50px ;">
+                    <div class=" p-3 rounded-3" style="background: #fff; border: 1px solid transparent; box-shadow: 0 2px 5px 1px rgb(64 60 67 / 16%);">
+                        <h1 class="d-flex justify-content-center">اضافة محاضر </h1>
+                        <form method="post" enctype="multipart/form-data">
+                            <div class="row mb-3" bis_skin_checked="1">
+                                <label class="col-sm-1 col-form-label">الجامعه</label>
+                                <div class="col-3" bis_skin_checked="1">
+                                    <select name="Univesity" class="form-select">
+                      <option selected>اختر الجامعه</option>
+                      <option value="">جامعه المنيا</option>
+                      <option value="">جامعه بني سويف</option>
+                      <option value="">جامعه اسيوط</option>
+                      <option value="">جامعه القاهره</option>
+                    
+                   </select>
+                                </div>
+
+                                <label class="col-sm-1 col-form-label">الكليه</label>
+                                <div class="col-3" bis_skin_checked="1">
+                                    <select name="College" class="form-select">
+                      <option selected>اختر الكلية</option>
+                      <option value="">كليه حاسبات</option>
+                      <option value="">كليه هندسه</option>
+                      <option value="">كليه طب </option>
+                    
+                    
+                   </select>
+                                </div>
+                                <br>
+                                <br>
+                                <br>
+                                <label class="col-sm-1 col-form-label">القسم</label>
+                                <div class="col-3" bis_skin_checked="1">
+                                    <select name="Department" class="form-select">
+                      <option selected="">اختر القسم</option>
+                      <option value="">علوم حاسب </option>
+                      <option value="">نظم و ملعومات</option>
+                   
+                    
+                    
+                   </select>
+
+                                </div>
+                                <label class="col-sm-1 col-form-label">المادة</label>
+                                <div class="col-3" bis_skin_checked="1">
+                                    <select name="Material" class="form-select">
+                      <option selected="">اختر المادة</option>
+                      <option value="">نظم التشغيل  </option>
+                      <option value="">امن المعلومات</option>
+                      <option value="">كليه طب </option>
+                    
+                    
+                   </select>
+
+                                </div>
+
+                                <br>
+                                <br>
+                                <br>
+                                <label class="col-sm-1 col-form-label">المحاضر</label>
+                                <div class="col-3" bis_skin_checked="1">
+                                    <input name="Instructor" class="form-control" type="text" />
+                                    <span class="text-danger"></span>
+
+                                </div>
+                                <label class="col-sm-1 col-form-label">التليفون</label>
+                                <div class="col-3" bis_skin_checked="1">
+                                    <input name="Phone" class="form-control" type="text" />
+                                    <span class="text-danger"></span>
+
+                                </div>
+
+                                <label class="col-sm-1 col-form-label">العنوان</label>
+                                <div class="col-3" bis_skin_checked="1">
+                                    <input name="Address" class="form-control" type="text" />
+                                    <span class="text-danger"></span>
+
+                                </div>
+
+                                <br>
+                                <br>
+                                <br>
+                                <div class="col-12 d-flex justify-content-center" bis_skin_checked="1">
+                                    <button class="btn btn-primary" type="submit">  اضافة  </button>
+                                </div>
+                        </form>
+                        </div>
+                </section>
+}
