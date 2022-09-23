@@ -12,5 +12,9 @@ namespace Courses_Center.Controllers
         {
             return View();
         }
+        public IActionResult Details()
+        {
+            return View();
+        }
     }
 }
