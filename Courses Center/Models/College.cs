@@ -1,9 +1,10 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using Courses_Center.Models.Entity;
 
 namespace Courses_Center.Models
 {
-    public class College
+    public class College:Entityobj
     {
         public string Name { get; set; }
         public bool ISDeleted { get; set; }

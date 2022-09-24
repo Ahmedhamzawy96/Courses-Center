@@ -5,7 +5,7 @@
 
     }
 
-    public abstract class Entity
+    public abstract class Entityobj
     {
         public virtual int Id { get; set; }
 
