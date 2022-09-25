@@ -15,14 +15,6 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = G:\Freelancing\Courses-Center\Courses Center
 build_property._RazorSourceGeneratorDebug = 
 
-[G:/Freelancing/Courses-Center/Courses Center/Views/Authintication/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aGludGljYXRpb25cSW5kZXguY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[G:/Freelancing/Courses-Center/Courses Center/Views/Carts/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FydHNcSW5kZXguY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
 [G:/Freelancing/Courses-Center/Courses Center/Views/Collage/Add.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29sbGFnZVxBZGQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
@@ -61,10 +53,6 @@ build_metadata.AdditionalFiles.CssScope =
 
 [G:/Freelancing/Courses-Center/Courses Center/Views/Source/Add.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU291cmNlXEFkZC5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[G:/Freelancing/Courses-Center/Courses Center/Views/Source/Details.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU291cmNlXERldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [G:/Freelancing/Courses-Center/Courses Center/Views/Source/Index.cshtml]

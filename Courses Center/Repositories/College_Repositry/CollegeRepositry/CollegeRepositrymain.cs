@@ -8,6 +8,5 @@ namespace Courses_Center.Repositories.College_Repositry.CollegeRepositry
     {
         public CollegeRepositrymain(CenterContext context) :base(context)
         { }
-
     }
 }

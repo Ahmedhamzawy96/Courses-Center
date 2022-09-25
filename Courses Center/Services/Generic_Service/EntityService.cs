@@ -21,6 +21,7 @@ namespace Courses_Center.Services.Generic_Service
         public virtual IEnumerable<T> GetAll()
         {
             return _repository.GetAll();
+
         }
         public virtual void Add(T entity)
         {

@@ -1,18 +1,26 @@
 ﻿using Courses_Center.Models;
 using Courses_Center.Models.Entity;
+using Courses_Center.Repositories.General;
 using Courses_Center.Repositories.Generic_repositry.IGenericRepositry;
 using Microsoft.EntityFrameworkCore;
 
 namespace Courses_Center.Repositories.Generic_repositry.GenericRepositry
 {
     public abstract class GenericRepositry<T> : IGenericRepositry<T>
-               where T : Entityobj
+               where T : class
 
     {
         protected CenterContext _entities;
         protected readonly DbSet<T> _dbset;
 
-        public GenericRepositry(CenterContext context) {
+        public GenericRepositry(IUnitOfWork unitOfWork)
+        {
+            _entities = unitOfWork.dbContext;
+            _dbset = unitOfWork.dbContext.Set<T>();
+
+        }
+        public GenericRepositry(CenterContext context)
+        {
             _entities = context;
             _dbset = context.Set<T>();
 
