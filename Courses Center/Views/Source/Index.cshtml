@@ -1,0 +1,367 @@
+﻿
+@model SourceDisplayDTO
+
+@{
+<div id="CreateLesson">    
+    <section class="section" id="CreateLesson" style="margin:50px ;">
+        <div class=" p-3 rounded-3" style="background: #fff; border: 1px solid transparent; box-shadow: 0 2px 5px 1px rgb(64 60 67 / 16%);">
+
+                <form data-ajax-url="/admin/Source/Details" data-ajax="true" data-ajax-method="Post"
+                  data-ajax-mode="replace" data-ajax-update="#SourceData">
+                    <div class="row mb-3" bis_skin_checked="1">
+                    <label class="col-sm-1 col-form-label" asp-for="UniID"> </label>
+                    <div class="col-3" bis_skin_checked="1">                                                                                  
+                    <select asp-for="UniID" id="unversity"  asp-items="ViewBag.universities as SelectList" class="form-select" onchange="unversitychange(this.value)">
+                    <option value="" selected>اختر جامعه</option>
+                    </select>
+                        <span class="text-danger" asp-validation-for="UniID"></span>
+                    </div>
+                    <label class="col-sm-1 col-form-label" asp-for="ColID"> </label>
+                    <div class="col-3" bis_skin_checked="1">
+                        <select asp-for="ColID" id="colleges"  class="form-select" onchange="collegechange(this.value)"  disabled></select>
+
+                                                                                               
+                        <span class="text-danger" asp-validation-for="ColID"></span>
+
+                    </div>
+                    <label class="col-sm-1 col-form-label" asp-for="DeptID"></label>
+                    <div class="col-3" bis_skin_checked="1">
+                            <select asp-for="DeptID" id="department"  class="form-select" onchange="departmentchange(this.value)"  disabled></select>
+
+                        <span class="text-danger" asp-validation-for="DeptID"></span>
+
+                    </div>
+                </div>
+                <div class="row mb-3" bis_skin_checked="1">
+                    <label class="col-sm-1 col-form-label" asp-for="CrsID"></label>
+                    <div class="col-3" bis_skin_checked="1">
+                            <select asp-for="CrsID" id="courses"  class="form-select" onchange="coursechange(this.value)"  disabled></select>
+
+                        <span class="text-danger" asp-validation-for="CrsID"></span>
+
+                    </div>
+                    <label class="col-sm-1 col-form-label" asp-for="ProfID"></label>
+                    <div class="col-3" bis_skin_checked="1">
+                            <select asp-for="ProfID" id="instructor"  class="form-select"  disabled></select>
+
+                        <span class="text-danger" asp-validation-for="ProfID"></span>
+
+                    </div>
+                    <label class="col-sm-1 col-form-label" asp-for="SourceType"></label>
+                    <div class="col-3" bis_skin_checked="1">
+                        <select asp-for="SourceType" id="Source_Type" class="form-select">
+                            <option value="" selected>  اختر نوع المصدر</option>
+                            <option value="ملخص">ملخص </option>
+                            <option value="حل تاسك">حل تاسك</option>
+                        </select>
+                        <span class="text-danger" asp-validation-for="SourceType"></span>
+
+                    </div>
+                </div>
+                <br>
+
+                <div class="col-12 d-flex justify-content-center" bis_skin_checked="1">
+                    <button class="btn btn-primary" type="submit">  عرض </button>
+                </div>
+            </form>
+        </div>
+
+    </section>
+        <div class="section " style="margin:50px ;" id="SourceData">
+            @{
+                Html.RenderPartial("SourceDisplay");
+            }
+        </div>
+
+    @*<section class="section " style="margin:50px ;">
+                                                
+                                                                    <div class="row " id="data">
+                                                                @*       @if( Model!=null)
+                        {
+                            @foreach (var item in Model)
+                {
+                                    <div class=" col-4   ">
+                                    <div class="    p-3 rounded-3" style="background: #fff; border: 1px solid transparent; box-shadow: 0 2px 5px 1px rgb(64 60 67 / 16%);">
+                                        <div>
+                                            <a asp-action="Delete" asp-controller="Source" asp-route-Id="@item.Id">   <i class='bx bx-x' style="cursor: pointer;"></i></a> 
+                                            <a>  <i class='bx bx-edit-alt' style="cursor: pointer;"></i></a> 
+
+                                        </div>
+                                        <br>
+                                        <div class=" mb-3" bis_skin_checked="1" width="100%" height="90%">
+                                            <embed   id="previewImg" src="~/resources/@item.Url"   width="100%" height="90%" />
+                                              
+                                            </div>
+                                        <div>
+                                            <h6>
+                                                @item.Title
+                                            </h6>
+                                        </div>
+                                        <div>
+                                            <h6>
+                                                السعر:@item.Price $
+                                            </h6>
+                                        </div>
+                                    </div>
+
+                                </div>
+                }
+                           
+                        }
+
+                                                                    </div>
+                                                              
+
+
+    </section>*@
+</div>
+}
+ @section scripts {
+<script>
+    function previewFile(input) {
+            var file = $("input[type=file]").get(0).files[0];
+
+            if (file) {
+                var reader = new FileReader();
+
+                reader.onload = function() {
+
+                    $("#previewImg").attr("src", reader.result);
+                    document.getElementById('fileIcon').style.display = "none";
+                    document.getElementById('previewImg').style.display = "block";
+                    console.log(reader.result);
+                }
+
+                reader.readAsDataURL(file);
+            }
+        }
+   function  unversitychange(value){
+
+     $.ajax({
+                url: "/admin/Source/unversity/",
+    dataType: "json",
+    cache: false,
+    type: 'POST',
+    data: {Id: value },             
+    success: function (result) {
+        console.log(result);
+      
+            
+        $("#colleges").empty();
+                                  $("#colleges").append('<option value="' + 0 + '">' + "اختر" + '</option>');
+
+                      $.each(result, function (i, state) {
+                          $("#colleges").append('<option value="' + state['item1'] + '">' + state['item2'] + '</option>');
+                          // here we are adding option for States
+                      });
+       
+    },
+    error: function(ex) { 
+         console.log(ex)
+    }
+
+});
+       document.getElementById('colleges').disabled = false;
+        $("#department").empty();
+         $("#courses").empty();
+          $("#instructor").empty();
+       document.getElementById('department').disabled = true;
+        document.getElementById('courses').disabled = true;
+         document.getElementById('instructor').disabled = true;
+    }
+   function collegechange(value){
+     $.ajax({
+    url: "/admin/Source/departments",
+    dataType: "json",
+    cache: false,
+    type: 'POST',
+    data: {Id: value },             
+    success: function (result) {
+        console.log(result);
+      
+            
+        $("#department").empty();
+                                          $("#department").append('<option value="' + 0 + '">' + "اختر" + '</option>');
+
+                      $.each(result, function (i, state) {
+                          $("#department").append('<option value="' + state['item1'] + '">' + state['item2'] + '</option>');
+                          // here we are adding option for States
+                      });
+       
+    },
+    error: function(ex) { 
+         console.log(ex)
+    }
+
+});
+       document.getElementById('department').disabled = false;
+       
+         $("#courses").empty();
+          $("#instructor").empty();
+        document.getElementById('courses').disabled = true;
+         document.getElementById('instructor').disabled = true;
+    }
+     function departmentchange(value){
+     $.ajax({
+                url: "/admin/Source/courses",
+    dataType: "json",
+    cache: false,
+    type: 'POST',
+    data: {Id: value},             
+    success: function (result) {
+        console.log(result);
+      
+            
+        $("#courses").empty();
+                  $("#courses").append('<option value="' + 0 + '">' + "اختر" + '</option>');
+
+                      $.each(result, function (i, state) {
+                          $("#courses").append('<option value="' + state['item1'] + '">' + state['item2'] + '</option>');
+                          // here we are adding option for States
+                      });
+       
+    },
+    error: function(ex) { 
+         console.log(ex)
+    }
+
+});
+       document.getElementById('courses').disabled = false;
+       
+          $("#instructor").empty();
+      
+         document.getElementById('instructor').disabled = true;
+    }
+     function coursechange(value){
+     $.ajax({
+    url: "/admin/Source/Profs",
+    dataType: "json",
+    cache: false,
+    type: 'POST',
+    data: {Id: value},             
+    success: function (result) {
+        console.log(result[0]['item1']);
+      
+            
+        $("#instructor").empty();
+                  $("#instructor").append('<option value="' + 0 + '">' + "اختر" + '</option>');
+                  
+                      $.each(result , function (i, state) {
+                          console.log(state);
+                          $("#instructor").append('<option value="' + state['item1']+ '">' + state['item2']+ '</option>');
+                          // here we are adding option for States
+                      });
+       
+    },
+    error: function(ex) { 
+         console.log(ex)
+    }
+
+});
+       document.getElementById('instructor').disabled = false;
+    }
+
+//      function Display(){
+//          var valdata = $("#friendform").serialize();  
+          
+//          $.ajax({
+//                url: "/admin/Source/Details",
+//              dataType: "json",
+//              cache: false,
+//              type: 'POST',
+//              data: valdata,// {courses:$("#courses").val(), instructor:$("#instructor").val(), department:$("#department").val(), colleges:$("#colleges").val(), unversity:$("#unversity").val(), Source_Type:$("#Source_Type").val()},             
+//              success: function(result) {
+                 
+//                  console.log(result)
+//                    $("#data").empty();
+//                  $.each(result, function(i, state) {
+                    
+//                      $("#data").append(
+//                          '    <div class=" col-lg-4 col-md-6 col-sm-12 mb-5   ">' +
+//                          '<div class="    p-3 rounded-3" style="background: #fff; border: 1px solid transparent; box-shadow: 0 2px 5px 1px rgb(64 60 67 / 16%);">' +
+//                          ' <div> <a asp-action="Delete" asp-controller="Source" asp-route-Id="item.Id" onclick="D('+state['id']+')">   <i class="bx bx-x" style="cursor: pointer;"></i></a> ' +
+//                          '   <a onclick="Update('+state['id']+')" >  <i class="bx bx-edit-alt" style="cursor: pointer;"></i></a>' +
+
+//            '   </div>'+
+//                          ' <br>' +
+//                          ' <div class=" mb-3" bis_skin_checked="1" width="100%" height="90%">' +
+//                          ' <embed   id="previewImg" src="/resources/'+state['url']+'"   width="100%" height="90%" />' +
+
+//                          '   </div> <div><h6>' +
+//                          state['title'] +
+//                          ' </h6> </div> <div><h6>' +
+//                          ' السعر:' + state['price'] +
+//                          ' $</h6> </div> </div> </div>');
+
+//                  });
+
+//              },
+//              error: function(ex) {
+
+//              }
+          
+//});
+       
+//    }
+//function D(value){
+     
+//    $.ajax({
+//        url: "/admin/Source/Delete",
+//        dataType: "json",
+//        cache: false,
+//        type: 'GET',
+//        data: { Id:value ,courses:$("#courses").val(), instructor:$("#instructor").val(), department:$("#department").val(), colleges:$("#colleges").val(), unversity:$("#unversity").val(), Source_Type:$("#Source_Type").val()},// {courses:$("#courses").val(), instructor:$("#instructor").val(), department:$("#department").val(), colleges:$("#colleges").val(), unversity:$("#unversity").val(), Source_Type:$("#Source_Type").val()},             
+//              success: function(result) {
+                 
+//                  console.log(result)
+//                  $("#data").empty();
+//                  $.each(result, function(i, state) {
+                    
+//                      $("#data").append(
+//                          '    <div class=" col-4   ">' +
+//                          '<div class="    p-3 rounded-3" style="background: #fff; border: 1px solid transparent; box-shadow: 0 2px 5px 1px rgb(64 60 67 / 16%);">' +
+//                          ' <div> <a asp-action="Delete" asp-controller="Source" asp-route-Id="item.Id" onclick="D('+state['id']+')">   <i class="bx bx-x" style="cursor: pointer;"></i></a> ' +
+//                          '   <a onclick="Update('+state['id']+')">  <i class="bx bx-edit-alt" style="cursor: pointer;"></i></a>' +
+
+//            '   </div>'+
+//                          ' <br>' +
+//                          ' <div class=" mb-3" bis_skin_checked="1" width="100%" height="90%">' +
+//                          ' <embed   id="previewImg" src="/resources/'+state['url']+'"   width="100%" height="90%" />' +
+
+//                          '   </div> <div><h6>' +
+//                          state['title'] +
+//                          ' </h6> </div> <div><h6>' +
+//                          ' السعر:' + state['price'] +
+//                          ' $</h6> </div> </div> </div>');
+
+//                  });
+
+//              },
+//              error: function(ex) {
+
+//              }
+          
+//});
+       
+    
+//}
+//function Update(value){
+//   // window.location.href = 'Url.Action("Update", "Source", new {  Id=value  })';
+   
+//  // window.location.href = "Url.Action("Update", "Source")" +"/"+ Id=value ;
+//    $.ajax({
+//                url: "/admin/Source/Update",
+       
+//        type: 'GET',
+//        data: { Id:value ,department:$("#department").val(),  colleges:$("#colleges").val(), unversity:$("#unversity").val()},// {courses:$("#courses").val(), instructor:$("#instructor").val(), department:$("#department").val(), colleges:$("#colleges").val(), unversity:$("#unversity").val(), Source_Type:$("#Source_Type").val()},             
+//             success:function(result){
+//                 console.log(result);
+//                $("#CreateLesson").html(result);
+//             }
+          
+//});
+       
+    
+//}
+</script>
+ }

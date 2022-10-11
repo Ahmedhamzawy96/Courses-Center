@@ -1,0 +1,116 @@
+﻿<style>
+
+    /**********************************/
+    /********* My Account CSS *********/
+    /**********************************/
+    .my-account {
+        position: relative;
+        padding: 30px 0;
+    }
+
+    .my-account .nav.nav-pills .nav-link {
+        padding: 10px 15px;
+        color: #353535;
+        background: #ffffff;
+        border-radius: 0;
+        border-bottom: 1px solid #dddddd;
+        transition: all .3s;
+    }
+
+    .my-account .nav.nav-pills .nav-link:last-child {
+        border-bottom: none;
+    }
+
+    .my-account .nav.nav-pills .nav-link:hover,
+    .my-account .nav.nav-pills .nav-link.active {
+        color: #ffffff;
+        background: #FF6F61;
+    }
+
+    .my-account .nav.nav-pills .nav-link i {
+        margin-right: 5px;
+    }
+
+    .my-account .tab-content {
+        padding: 30px;
+        background: #ffffff;
+    }
+
+    .my-account .tab-content .table {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 0;
+    }
+
+    .my-account .tab-content .table .thead-dark th {
+        text-align: center;
+        color: #353535;
+        background: #ffffff;
+        border-color: #dddddd;
+        border-bottom: none;
+        vertical-align: middle;
+    }
+
+    .my-account .tab-content .table td {
+        vertical-align: middle;
+    }
+
+</style>
+<div class="my-account" dir="rtl">
+    <div class="container-fluid">
+        <div class="row justify-content-around">
+            <div style="background-color:#f5f5f5" class="card h-100  col-md-3 m-1 text-right shadow-lg p-2 mb-5 bg-white rounded">
+                <div class="card-body text-center">
+                    <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava3.webp" alt="avatar"
+                         class="rounded-circle img-fluid" style="width: 150px;">
+                    <h5 class="my-3">John Smith</h5>
+                    <p class="text-muted mb-1">Full Stack Developer</p>
+                </div>
+
+                <div class="card-body nav flex-column nav-pills" role="tablist" aria-orientation="vertical">
+                    <a class="nav-link h4 active" id="dashboard-nav" data-toggle="pill" href="#dashboard-tab" role="tab" aria-selected="true" onclick="ShowProfileInfo();"><i class="fa fa-tachometer-alt p-1 m-1 h4"></i>الرئيسية</a>
+                    <a class="nav-link h4" id="orders-nav" data-toggle="pill" href="#orders-tab" role="tab" onclick="MySources();"><i class="fa fa-shopping-bag p-1 m-1 h4"></i>الكتب</a>
+@*                    <a class="nav-link h4" id="payment-nav" data-toggle="pill" href="#payment-tab" role="tab"><i class="fa fa-credit-card p-1 m-1 h4"></i>Payment Method</a>
+                    <a class="nav-link h4" id="address-nav" data-toggle="pill" href="#address-tab" role="tab"><i class="fa fa-map-marker-alt p-1 m-1 h4"></i>address</a>*@
+                    <a class="nav-link h4" id="account-nav" data-toggle="pill" href="#account-tab" role="tab" aria-selected="false" onclick="UpdateProfileInfo()"><i class="fa fa-user p-1 m-1 h4"></i>تعديل الحساب</a>
+                    <a class="nav-link h4" href="index.html"><i class="fa fa-sign-out-alt p-1 m-1 h4"></i>تسجيل الخروج</a>
+                </div>
+            </div>
+            <div class="card  col-md-8 m-1 text-right shadow-sm p-2 mb-5 bg-white rounded">
+                <div class="tab-content card-body" id="ScreenProfileInfo">
+                    <div class="tab-pane fade active show" id="dashboard-tab" role="tabpanel" aria-labelledby="dashboard-nav">
+                      @Html.Partial("ProfileInfo");
+                    </div>
+                  
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
+@section Scripts{
+
+
+
+    <script>
+
+
+        function ShowProfileInfo() {
+            let urlProfileInfo = '@Url.Action("ProfileInfo", "Home")';
+            console.log(urlProfileInfo);
+            $('#ScreenProfileInfo').load(urlProfileInfo);
+        };
+        function UpdateProfileInfo() {
+            let urlUpdateProfile = '@Url.Action("UpdateProfile", "Home")';
+            console.log(urlUpdateProfile);
+            $('#ScreenProfileInfo').load(urlUpdateProfile);
+        };
+        function MySources() {
+            let urlSources = '@Url.Action("Sources", "Home")';
+            console.log(urlSources);
+            $('#ScreenProfileInfo').load(urlSources);
+        };
+      
+    </script>
+
+}

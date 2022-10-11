@@ -1,0 +1,284 @@
+﻿@model Courses_Center.ViewModels.SourceDto
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    Layout = null;
+}
+@{
+    <section class="section " style="margin:50px ;">
+        <div class=" p-3 rounded-3" style="background: #fff; border: 1px solid transparent; box-shadow: 0 2px 5px 1px rgb(64 60 67 / 16%);">
+            <h1 class="d-flex justify-content-center">اضافه مصدر</h1>
+            <form method="post" enctype="multipart/form-data" asp-controller="Source" asp-action="Update">
+               <input asp-for="Id" class="form-control" type="hidden" />
+            <div class="row mb-3" bis_skin_checked="1">
+                    <label class="col-lg-1 col-md-1 col-sm-3 col-form-label"> الجامعه</label>
+                    <div class="col-lg-3 col-md-3 col-sm-9" bis_skin_checked="1">
+                       
+                         <select name="Univesity" id="Univesity"  asp-items="ViewBag.universities as SelectList" class="form-select" onchange="unversitychange(this.value)">
+                          <option value="" selected>اختر جامعه</option>
+                         </select>
+
+                        <span class="text-danger"></span>
+
+                    </div>
+                   <label class="col-lg-1 col-md-1 col-sm-3 col-form-label"> الكليه</label>
+                    <div class="col-lg-3 col-md-3 col-sm-9" bis_skin_checked="1">
+                  
+                      <select name="colleges" id="colleges" asp-items="ViewBag.Colleges as SelectList"  class="form-select" onchange="collegechange(this.value)"  ></select>
+
+                        <span class="text-danger"></span>
+
+                    </div>
+                      <label class="col-lg-1 col-md-1 col-sm-3 col-form-label">القسم</label>
+                    <div class="col-lg-3 col-md-3 col-sm-9" bis_skin_checked="1">
+                    
+                     <select name="DeptName" id="DeptName" asp-items="ViewBag.Departments as SelectList"  class="form-select" onchange="departmentchange(this.value)"  ></select>
+
+                        <span class="text-danger"></span>
+
+                    </div>
+                </div>
+                <div class="row mb-3" bis_skin_checked="1">
+                    <label class="col-lg-1 col-md-1 col-sm-3 col-form-label"> اسم الماده</label>
+                    <div class="col-lg-3 col-md-3 col-sm-9" bis_skin_checked="1">
+                     
+                        <select name="CrsID" id="CrsName" asp-items="ViewBag.Cources as SelectList" class="form-select" onchange="coursechange(this.value)"  ></select>
+
+                        <span class="text-danger"></span>
+
+                    </div>
+                    <label class="col-lg-1 col-md-1 col-sm-3 col-form-label"> االمحاضر</label>
+                    <div class="col-lg-3 col-md-3 col-sm-9" bis_skin_checked="1">
+                     
+                         <select asp-for="ProfID" asp-items="ViewBag.Profs as SelectList" class="form-select"  ></select>
+
+                        <span class="text-danger"></span>
+
+                    </div>
+                    <label class="col-lg-1 col-md-1 col-sm-3 col-form-label">نوع المصدر</label>
+                    <div class="col-lg-3 col-md-3 col-sm-9" bis_skin_checked="1">
+                       
+                         <select asp-for="Type" asp-items="ViewBag.Types as SelectList" class="form-select"  ></select>
+
+                        <span class="text-danger"></span>
+
+                    </div>
+                </div>
+               
+                <div class="row mb-3" bis_skin_checked="1">
+                    <label class="col-lg-1 col-md-1 col-sm-3 col-form-label"> عنوان الملخص  </label>
+                    <div class="col-lg-5 col-md-5 col-sm-9" bis_skin_checked="1">
+                        <input asp-for="Title" class="form-control" type="text" />
+                        <span class="text-danger"></span>
+
+                    </div>
+                    <label class="col-lg-1 col-md-1 col-sm-3 col-form-label">الوصف   </label>
+                    <div class="col-lg-5 col-md-5 col-sm-9" bis_skin_checked="1">
+                        <input asp-for="Description" class="form-control" type="text" />
+                        <span class="text-danger"></span>
+
+                    </div>
+
+                </div>
+                <div class="row mb-3" bis_skin_checked="1">
+                    <label class="col-lg-1 col-md-1 col-sm-3 col-form-label">  السعر  </label>
+                    <div class="col-lg-5 col-md-5 col-sm-9" bis_skin_checked="1">
+                        <input asp-for="Price" class="form-control" type="text" />
+                        <span class="text-danger"></span>
+
+                    </div>
+                    <label class="col-lg-1 col-md-1 col-sm-3 col-form-label">الملاحظات   </label>
+                    <div class="col-lg-5 col-md-5 col-sm-9" bis_skin_checked="1">
+                        <input asp-for="Notes" class="form-control" type="text" />
+                        <span class="text-danger"></span>
+
+                    </div>
+
+                </div>
+
+                <div class=" mb-3" bis_skin_checked="1" width="300px" height="200px">
+  @*                 <label for="file" >
+                       
+  //                      <!-- <img  src="../assets/img/avatars/1.png" style="width: 100px; height: 100px;" />  -->
+  //                      <div class="border border-dark text-center  rounded-3" style="width: 300px; height: 200px; vertical-align:middle; display:table-cell;">
+                           
+  //                          <img name="fileS" id="previewImg" src="~/resources/@Model.Url" width="300px" height="200px"  />
+  //                      </div>
+  //                  <input id="file" asp-for="Url"  value="~/resources/@Model.Url" type="text" onchange="previewFile(this);" style="display: block;
+  //width: 157px;
+  //height: 57px;
+  //background-color: blue;" />
+
+  //                  </label>*@
+                           <label for="file" >
+                                        <!-- <img  src="../assets/img/avatars/1.png" style="width: 100px; height: 100px;" />  -->
+                                        <div class="border border-dark text-center  rounded-3" style="position:relative;  width: 300px; height: 200px; vertical-align:middle; display:table-cell;">
+                                            <embed id="previewImg" src="~/resources/@Model.Url"  width="300px" height="200px" style=" position:absolute; top:0; right:0" />
+                           <input id="file" name="sources"  type="file" onchange="previewFile(this);" style="display: block; opacity: 0; width: 300px; height: 200px;" />
+
+                                            </div>
+
+                                    </label>
+                </div>
+
+
+
+                <br>
+              
+                <div class="col-12 d-flex justify-content-center" bis_skin_checked="1">
+                    <button class="btn btn-primary" type="submit">  تعديل </button>
+                </div>
+            </form>
+        </div>
+    </section>
+}
+ @section scripts {
+<script>
+
+   function  unversitychange(value){
+
+     $.ajax({
+    url: "/Source/unversity/",
+    dataType: "json",
+    cache: false,
+    type: 'POST',
+    data: {Id: value },             
+    success: function (result) {
+        console.log(result);
+      
+            
+        $("#College").empty();
+                                  $("#College").append('<option value="' + 0 + '">' + "اختر" + '</option>');
+
+                      $.each(result, function (i, state) {
+                          $("#College").append('<option value="' + state['item1'] + '">' + state['item2'] + '</option>');
+                          // here we are adding option for States
+                      });
+       
+    },
+    error: function(ex) { 
+         console.log(ex)
+    }
+
+});
+       //document.getElementById('College').disabled = false;
+       // $("#DeptName").empty();
+       //  $("#CrsName").empty();
+       //   $("#ProfID").empty();
+       //document.getElementById('DeptName').disabled = true;
+       // document.getElementById('CrsName').disabled = true;
+       //  document.getElementById('ProfID').disabled = true;
+    }
+   function collegechange(value){
+     $.ajax({
+    url: "/Source/departments",
+    dataType: "json",
+    cache: false,
+    type: 'POST',
+    data: {Id: value  },             
+    success: function (result) {
+        console.log(result);
+      
+            
+        $("#DeptName").empty();
+                 $("#DeptName").append('<option value="' + 0 + '">' + "اختر" + '</option>');
+
+                      $.each(result, function (i, state) {
+                          $("#DeptName").append('<option value="' + state['item1'] + '">' + state['item2'] + '</option>');
+                          // here we are adding option for States
+                      });
+       
+    },
+    error: function(ex) { 
+         console.log(ex)
+    }
+
+});
+       //document.getElementById('DeptName').disabled = false;
+       
+       //  $("#CrsName").empty();
+       //   $("#ProfID").empty();
+      
+       // document.getElementById('CrsName').disabled = true;
+       //  document.getElementById('ProfID').disabled = true;
+    }
+     function departmentchange(value){
+     $.ajax({
+    url: "/Source/courses",
+    dataType: "json",
+    cache: false,
+    type: 'POST',
+    data: {Id: value},             
+    success: function (result) {
+        console.log(result);
+      
+            
+        $("#CrsName").empty();
+                  $("#CrsName").append('<option value="' + 0 + '">' + "اختر" + '</option>');
+
+                      $.each(result, function (i, state) {
+                          $("#CrsName").append('<option value="' + state['item1'] + '">' + state['item2'] + '</option>');
+                          // here we are adding option for States
+                      });
+       
+    },
+    error: function(ex) { 
+         console.log(ex)
+    }
+
+});
+       document.getElementById('CrsName').disabled = false;
+        
+          $("#ProfID").empty();
+      
+         document.getElementById('ProfID').disabled = true;
+
+    }
+     function coursechange(value){
+     $.ajax({
+    url: "/Source/profs",
+    dataType: "json",
+    cache: false,
+    type: 'POST',
+    data: {Id: value},             
+    success: function (result) {
+        console.log(result[0]['item1']);
+      
+            
+        $("#ProfID").empty();
+                  $("#ProfID").append('<option value="' + 0 + '">' + "اختر" + '</option>');
+                  
+                      $.each(result , function (i, state) {
+                          console.log(state);
+                          $("#ProfID").append('<option value="' + state['item1']+ '">' + state['item2']+ '</option>');
+                          // here we are adding option for States
+                      });
+       
+    },
+    error: function(ex) { 
+         console.log(ex)
+    }
+
+});
+       document.getElementById('ProfID').disabled = false;
+    }
+ function previewFile(input) {
+            var file = $("input[type=file]").get(0).files[0];
+
+            if (file) {
+                var reader = new FileReader();
+
+                reader.onload = function() {
+
+                    $("#previewImg").attr("src", reader.result);
+                    document.getElementById('fileIcon').style.display = "none";
+                    document.getElementById('previewImg').style.display = "block";
+                    console.log(reader.result);
+                }
+
+                reader.readAsDataURL(file);
+            }
+        }
+</script>
+ }

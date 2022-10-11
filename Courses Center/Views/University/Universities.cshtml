@@ -1,0 +1,123 @@
+﻿@model IEnumerable<Courses_Center.Models.University>
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    <!-- Universitets-Section -->
+    <div class="slider-area">
+      <!-- Mobile Menu -->
+      <div
+        class="single-slider slider-height2 d-flex align-items-center"
+        data-background="https://mediaaws.almasryalyoum.com/news/large/2022/05/06/1797747_0.jpg"
+      >
+        <div class="container">
+          <div class="row">
+            <div class="col-xl-12">
+              <div class="hero-cap text-center">
+                <h2> الجامعات</h2>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid py-5" dir="rtl">
+      <div class="row">
+        
+        <div class="col-12 ">
+          <!-- <section class="UniPref" >
+            <div class="card" style="background-color:#f5f5f5 ;">
+              <div class="card-body">
+                <div class="img-sec">
+                  <div class="col-12 py-2">
+                    <div class="card align-items-center py-3">
+                      <div class="card-body text-center py-4">
+                        <img
+                          class="w-75"
+                          src="./assets/img/Cairo_University_Crest.png"
+                          alt="University Logo"
+                        />
+                      </div>
+                      <div class="info px-3">
+                        <p>
+                          جامعة القاهرة ، المعروفة أيضًا باسم الجامعة المصرية من
+                          1908 إلى 1940 ، وجامعة الملك فؤاد الأول وجامعة فؤاد
+                          الأول من 1940 إلى 1952 ، هي الجامعة الحكومية الأولى في
+                          مصر. يقع حرمها الرئيسي في الجيزة ، مباشرة عبر النيل من
+                          القاهرة.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section> -->
+          <section class="py-3">
+            <div class="card" style="background-color:#f5f5f5 ;">
+              <div class="card-body">
+                <h3 class="text-center">الجامعات</h3>
+                <div class="container py-0 py-md-3">
+                <form asp-action="Universities" asp-controller="University" method="post">
+                    <div class="row  ">
+                      <div class="Search-Bar py-3 col-12  col-lg-6">
+                        <input
+                          type="search"
+                          class="form-control rounded"
+                          placeholder="البحث"
+                          aria-label="Search"
+                          aria-describedby="search-addon"
+                          name="search"
+                        />
+                      </div>
+                      <div class=" col-12  col-lg-6 py-3">
+                        <button href="#" class="genric-btn danger-border radius"
+                        >بحث</button
+                      >                      
+                    </div>
+                    </div>
+                    </form>
+                    <div class="row py-5">
+                    @foreach (var item in Model)
+                    {
+                         <div class="col-md-4 mb-3">
+                        <div class="card text-center">
+                          <img
+                            class="img-fluid"
+                            alt="100%x280"
+                            src="./assets/img/University.jpg"
+                          />
+                          <div class="card-body">
+                            <h4 class="card-title text-center">
+                             @item.Name
+                            </h4>
+                            <p class="card-text text-center">
+                              هي الجامعة الحكومية الأولى في مصر. يقع حرمها
+                              الرئيسي في الجيزة ، مباشرة عبر النيل من القاهرة.
+                            </p>
+                            <a
+                             asp-controller="University" asp-action="Details" asp-route-Id="@item.Id"
+                              class="genric-btn danger-border radius"
+                              >عرض</a
+                            >
+                          </div>
+                        </div>
+                      </div>
+                    }
+                     
+                   
+                     
+                     
+                    </div>
+              </div>
+            </div>
+          </section>
+
+        </div>
+
+      </div>
+    </div>
+
+      <!-- Universitets-Section -->
+
+   }

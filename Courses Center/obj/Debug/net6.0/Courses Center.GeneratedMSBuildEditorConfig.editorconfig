@@ -1,0 +1,204 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = Courses_Center
+build_property.RootNamespace = Courses_Center
+build_property.ProjectDir = C:\Users\HAMZAWY\Downloads\New folder (3)\project2\Courses Center\Courses Center\
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\HAMZAWY\Downloads\New folder (3)\project2\Courses Center\Courses Center
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/HAMZAWY/Downloads/New folder (3)/project2/Courses Center/Courses Center/Views/BuyingCart/Display.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQnV5aW5nQ2FydFxEaXNwbGF5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/HAMZAWY/Downloads/New folder (3)/project2/Courses Center/Courses Center/Views/Collage/Add.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29sbGFnZVxBZGQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/HAMZAWY/Downloads/New folder (3)/project2/Courses Center/Courses Center/Views/Collage/CollegeDepts.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29sbGFnZVxDb2xsZWdlRGVwdHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/HAMZAWY/Downloads/New folder (3)/project2/Courses Center/Courses Center/Views/Collage/DisplayCollage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29sbGFnZVxEaXNwbGF5Q29sbGFnZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/HAMZAWY/Downloads/New folder (3)/project2/Courses Center/Courses Center/Views/Collage/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29sbGFnZVxFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/HAMZAWY/Downloads/New folder (3)/project2/Courses Center/Courses Center/Views/Collage/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29sbGFnZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/HAMZAWY/Downloads/New folder (3)/project2/Courses Center/Courses Center/Views/Collage/product.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29sbGFnZVxwcm9kdWN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/HAMZAWY/Downloads/New folder (3)/project2/Courses Center/Courses Center/Views/Course/Add.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ291cnNlXEFkZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/HAMZAWY/Downloads/New folder (3)/project2/Courses Center/Courses Center/Views/Course/CourseDisplay.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ291cnNlXENvdXJzZURpc3BsYXkuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/HAMZAWY/Downloads/New folder (3)/project2/Courses Center/Courses Center/Views/Course/Edite.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ291cnNlXEVkaXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/HAMZAWY/Downloads/New folder (3)/project2/Courses Center/Courses Center/Views/Course/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ291cnNlXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/HAMZAWY/Downloads/New folder (3)/project2/Courses Center/Courses Center/Views/Department/Add.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVwYXJ0bWVudFxBZGQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/HAMZAWY/Downloads/New folder (3)/project2/Courses Center/Courses Center/Views/Department/DisplayDepartment.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVwYXJ0bWVudFxEaXNwbGF5RGVwYXJ0bWVudC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/HAMZAWY/Downloads/New folder (3)/project2/Courses Center/Courses Center/Views/Department/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVwYXJ0bWVudFxFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/HAMZAWY/Downloads/New folder (3)/project2/Courses Center/Courses Center/Views/Department/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVwYXJ0bWVudFxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/HAMZAWY/Downloads/New folder (3)/project2/Courses Center/Courses Center/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/HAMZAWY/Downloads/New folder (3)/project2/Courses Center/Courses Center/Views/Home/Profile.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcm9maWxlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/HAMZAWY/Downloads/New folder (3)/project2/Courses Center/Courses Center/Views/Home/Profile3.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcm9maWxlMy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/HAMZAWY/Downloads/New folder (3)/project2/Courses Center/Courses Center/Views/Home/ProfileInfo.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcm9maWxlSW5mby5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/HAMZAWY/Downloads/New folder (3)/project2/Courses Center/Courses Center/Views/Home/Sources.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxTb3VyY2VzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/HAMZAWY/Downloads/New folder (3)/project2/Courses Center/Courses Center/Views/Home/UpdateProfile.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxVcGRhdGVQcm9maWxlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/HAMZAWY/Downloads/New folder (3)/project2/Courses Center/Courses Center/Views/Login/UserAccessDenied.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cVXNlckFjY2Vzc0RlbmllZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/HAMZAWY/Downloads/New folder (3)/project2/Courses Center/Courses Center/Views/Login/UserLogin.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cVXNlckxvZ2luLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/HAMZAWY/Downloads/New folder (3)/project2/Courses Center/Courses Center/Views/Professor/Add.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZmVzc29yXEFkZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/HAMZAWY/Downloads/New folder (3)/project2/Courses Center/Courses Center/Views/Professor/DisplayProfessors.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZmVzc29yXERpc3BsYXlQcm9mZXNzb3JzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/HAMZAWY/Downloads/New folder (3)/project2/Courses Center/Courses Center/Views/Professor/Edite.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZmVzc29yXEVkaXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/HAMZAWY/Downloads/New folder (3)/project2/Courses Center/Courses Center/Views/Professor/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZmVzc29yXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/HAMZAWY/Downloads/New folder (3)/project2/Courses Center/Courses Center/Views/Registeration/NewUser.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVnaXN0ZXJhdGlvblxOZXdVc2VyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/HAMZAWY/Downloads/New folder (3)/project2/Courses Center/Courses Center/Views/Shared/_AdminLayout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9BZG1pbkxheW91dC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/HAMZAWY/Downloads/New folder (3)/project2/Courses Center/Courses Center/Views/Shared/_UserLayout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Vc2VyTGF5b3V0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/HAMZAWY/Downloads/New folder (3)/project2/Courses Center/Courses Center/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/HAMZAWY/Downloads/New folder (3)/project2/Courses Center/Courses Center/Views/Source/Add.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU291cmNlXEFkZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/HAMZAWY/Downloads/New folder (3)/project2/Courses Center/Courses Center/Views/Source/DisplayOne.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU291cmNlXERpc3BsYXlPbmUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/HAMZAWY/Downloads/New folder (3)/project2/Courses Center/Courses Center/Views/Source/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU291cmNlXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/HAMZAWY/Downloads/New folder (3)/project2/Courses Center/Courses Center/Views/Source/SourceDisplay.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU291cmNlXFNvdXJjZURpc3BsYXkuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/HAMZAWY/Downloads/New folder (3)/project2/Courses Center/Courses Center/Views/Source/Update.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU291cmNlXFVwZGF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/HAMZAWY/Downloads/New folder (3)/project2/Courses Center/Courses Center/Views/University/Add.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVW5pdmVyc2l0eVxBZGQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/HAMZAWY/Downloads/New folder (3)/project2/Courses Center/Courses Center/Views/University/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVW5pdmVyc2l0eVxEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/HAMZAWY/Downloads/New folder (3)/project2/Courses Center/Courses Center/Views/University/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVW5pdmVyc2l0eVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/HAMZAWY/Downloads/New folder (3)/project2/Courses Center/Courses Center/Views/University/Universities.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVW5pdmVyc2l0eVxVbml2ZXJzaXRpZXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/HAMZAWY/Downloads/New folder (3)/project2/Courses Center/Courses Center/Views/University/update.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVW5pdmVyc2l0eVx1cGRhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/HAMZAWY/Downloads/New folder (3)/project2/Courses Center/Courses Center/Views/University/_editANDcreate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVW5pdmVyc2l0eVxfZWRpdEFORGNyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/HAMZAWY/Downloads/New folder (3)/project2/Courses Center/Courses Center/Views/User/Add.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxBZGQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/HAMZAWY/Downloads/New folder (3)/project2/Courses Center/Courses Center/Views/User/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/HAMZAWY/Downloads/New folder (3)/project2/Courses Center/Courses Center/Views/User/Update.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxVcGRhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/HAMZAWY/Downloads/New folder (3)/project2/Courses Center/Courses Center/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/HAMZAWY/Downloads/New folder (3)/project2/Courses Center/Courses Center/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 

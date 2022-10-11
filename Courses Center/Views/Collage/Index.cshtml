@@ -1,0 +1,87 @@
+﻿@model FilterDepartViewModel
+<section class="section " style="margin:50px ;">
+
+    <div class=" p-3 rounded-3" style="background: #fff; border: 1px solid transparent; box-shadow: 0 2px 5px 1px rgb(64 60 67 / 16%);">
+        <form data-ajax-url="/admin/Collage/DisplayCollage" data-ajax="true" data-ajax-method="post"
+              data-ajax-mode="replace" data-ajax-update="#DataCollage"
+              data-ajax-begin="OnBegin" data-ajax-failure="OnFailure"
+              data-ajax-success="OnSuccess" data-ajax-complete="OnComplete">
+
+            <div class="row mb-3" bis_skin_checked="1">
+                <label class="col-sm-1 col-form-label">الجامعه</label>
+                <div class="col-3" bis_skin_checked="1">
+                    @if (ViewBag.Universities != null)
+                    {
+                        <select asp-for="UniverstyID" class="form-select" 
+                            asp-items="@(new SelectList(ViewBag?.Universities,"Id","Name"))"
+                            aria-label="Default select example"
+                            value="UniverstyID">
+                            <option value="">اختر الكلية</option>
+
+                        </select>
+                    }
+                    else
+                    {
+                        <select asp-for="UniverstyID" class="form-select" 
+                            aria-label="Default select example"
+                            value="UniverstyID">
+                            <option value="">لا توجد بيانات</option>
+                        </select>
+                    }
+                    <span asp-validation-for="UniverstyID"  class="text-danger"></span>
+
+                </div>
+                <br />
+                <br />
+
+                <div class="col-12 d-flex justify-content-center" bis_skin_checked="1">
+                    <button class="btn btn-primary" type="submit">عرض الكليات </button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+
+
+</section>
+
+<section class="section " style="margin:50px ;" id="DataCollage">
+    @{
+        Html.RenderPartial("DisplayCollage");
+    }
+</section>
+
+@section Scripts{
+    <script>
+
+        function OnBegin() {
+            console.log("i start");
+
+        }
+        function OnSuccess() {
+            $('#Modal_PMT').modal('hide')
+            console.log("i OnSuccess");
+
+        }
+        $('#Modal_PMT').on('hidden.bs.modal', function (e) {
+            e.target.hidden;
+        })
+        function OnComplete() {
+            console.log("i OnComplete");
+            $('#Modal_PMT').modal('hide')
+            $('#Modal_PMT').removeClass('show')
+
+            $('div').remove('.modal-backdrop')
+
+        }
+
+        function OnFailure() {
+            console.log("i OnFailure");
+            $('#Modal_PMT').modal('hide')
+
+        }
+    </script>
+    @{
+        Html.RenderPartial("_ValidationScriptsPartial");
+    }
+}
