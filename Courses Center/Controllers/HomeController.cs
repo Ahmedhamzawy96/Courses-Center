@@ -1,5 +1,6 @@
 ﻿using Courses_Center.Models;
 using Courses_Center.Services.BuyerService;
+using Courses_Center.Services.SourcesService;
 using Courses_Center.Services.University_Service;
 using Courses_Center.ViewModels;
 using Microsoft.AspNetCore.Authorization;
@@ -11,12 +12,16 @@ namespace Courses_Center.Controllers
     {
         private readonly IUniversityService _universityService;
         private readonly IBuyerService _buyerServices;
+        private readonly ISource _source;
 
-        public HomeController(IUniversityService universityService , IBuyerService buyerService )
+        public HomeController(
+            IUniversityService universityService
+            , IBuyerService buyerService 
+            , ISource source)
         {
             _universityService = universityService;
             _buyerServices = buyerService;
-
+            _source = source;
         }
 
         // GET: UniversitiesController
@@ -100,7 +105,10 @@ namespace Courses_Center.Controllers
         }
         public IActionResult Sources()
         {
-            return PartialView();
+            var claims = User.Claims.ToList();
+            var username = claims[0].Value;
+            var Sources = _source.getallSourceForBuyer(username).ToList();
+            return View(Sources);
         }
         
     }

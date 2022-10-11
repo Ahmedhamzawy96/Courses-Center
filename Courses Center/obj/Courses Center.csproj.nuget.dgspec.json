@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\HAMZAWY\\Downloads\\project2\\Courses Center\\Courses Center\\Courses Center.csproj": {}
+    "C:\\Users\\La Vie\\Documents\\Courses Center\\Courses Center.csproj": {}
   },
   "projects": {
-    "C:\\Users\\HAMZAWY\\Downloads\\project2\\Courses Center\\Courses Center\\Courses Center.csproj": {
+    "C:\\Users\\La Vie\\Documents\\Courses Center\\Courses Center.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\HAMZAWY\\Downloads\\project2\\Courses Center\\Courses Center\\Courses Center.csproj",
+        "projectUniqueName": "C:\\Users\\La Vie\\Documents\\Courses Center\\Courses Center.csproj",
         "projectName": "Courses Center",
-        "projectPath": "C:\\Users\\HAMZAWY\\Downloads\\project2\\Courses Center\\Courses Center\\Courses Center.csproj",
-        "packagesPath": "C:\\Users\\HAMZAWY\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\HAMZAWY\\Downloads\\project2\\Courses Center\\Courses Center\\obj\\",
+        "projectPath": "C:\\Users\\La Vie\\Documents\\Courses Center\\Courses Center.csproj",
+        "packagesPath": "C:\\Users\\La Vie\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\La Vie\\Documents\\Courses Center\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\HAMZAWY\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\La Vie\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -116,7 +112,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     }
