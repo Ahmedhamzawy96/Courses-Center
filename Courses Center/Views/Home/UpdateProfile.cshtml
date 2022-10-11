@@ -1,48 +1,51 @@
-﻿@model Buyer
-<h1 id="ScreenProfileTitle">تعديل بيانات المستخدم</h1>
-<div class="dropdown-divider"></div>
+﻿@model UProfileViewModel
+<div class="container " dir="rtl">
+    <div class="row justify-content-center">
+        <div class="col-12">
+            <h1 class="text-center text-danger my-5">تعديل بيانات المستخدم</h1>
+        </div>
+        <div class=" col-8  col-md-6 text-right ">
+            <form asp-action="UpdateProfile"
+                  asp-controller="Home"
+                  method="post"
+                  novalidate="novalidate">
+                <div class="form-group my-4">
+                    <label asp-for="FnameProfile" class="my-2">الاسم الاول </label>
+                    <input type="text" style="line-height:2"
+                           class="form-control text-right w-100"
+                           asp-for="FnameProfile"
+                           placeholder="الاسم الاول" />
+                    <span asp-validation-for="FnameProfile" class="text-danger"></span>
+                </div>
+                <div class="form-group my-4">
+                    <label asp-for="LnameProfile" class="my-2">الاسم الثانى </label>
+                      <input type="text" style="line-height:2"
+                                   class="form-control text-right w-100"
+                                   asp-for="LnameProfile"
+                                   placeholder="الاسم الثانى" />
+                            <span asp-validation-for="LnameProfile" class="text-danger"></span>
+                </div>
+                <div class="form-group my-4">
+                    <label asp-for="EmailProfile" class="my-2">البريد الالكترونى</label>
+                    <input type="email"
+                           class="form-control text-right"
+                           asp-for="EmailProfile"
+                           placeholder="البريد الالكترونى" />
+                    <span asp-validation-for="EmailProfile" class="text-danger"></span>
+                </div>
+                <button type="submit" value="submit" class="btn_3 w-100">
+                    تعديل البيانات
+                </button>
+            </form>
 
-<div class="tab-pane active show fade" id="account-tab" role="tabpanel" aria-labelledby="account-nav">
-    <div class="row">
-        <div class="mb-3 col-md-6">
-            <label for="FnameProfile" class="form-label">الاسم الاول</label>
-            <input class="form-control" id="FnameProfile" type="text" placeholder="الاسم الاول">
-        </div>
-        <div class="mb-3 col-md-6">
-            <label for="LnameProfile" class="form-label">الاسم الثانى</label>
-            <input class="form-control" id="LnameProfile" type="text" placeholder="الاسم الثانى">
-        </div>
-        <div class="mb-3 col-md-6">
-            <label for="EmailProfile" class="form-label">البريد الالكترونى</label>
-            <input class="form-control" id="EmailProfile" type="email" placeholder="البريد الالكترونى">
-        </div>
-        <div class="mb-3 col-md-6">
-            <label for="usernameProfile" class="form-label">اسم المستخدم</label>
-            <input class="form-control" id="usernameProfile" type="text" placeholder="اسم المستخدم">
-        </div>
-        <div class="col-md-12">
-            <button type="submit" class="btn btn-primary">تعديل البيانات</button>
-            <br><br>
-        </div>
-    </div>
-    <div class="dropdown-divider"></div>
-    <h4>Password change</h4>
-    <div class="row">
-        <div class="mb-3 col-md-12">
-            <label for="LnameProfile" class="form-label">كلمة السرالقديمة</label>
-            <input class="form-control" type="password" placeholder="كلمة السر القديمة">
-        </div>
-        <div class="mb-3 col-md-6">
-            <label for="LnameProfile" class="form-label">كلمة سر جديد</label>
-            <input class="form-control" type="text" placeholder="كلمة السرالجديدة">
-        </div>
-        <div class="mb-3 col-md-6">
-            <label for="LnameProfile" class="form-label">تاكيد كلمة السر الجديدة</label>
-            <input class="form-control" type="text" placeholder="تأكيد كلمة السر">
-        </div>
-        <div class="col-md-12">
-            <button type="submit" class="btn btn-primary">حفظ كلمة السر الجديدة</button>
-            <br><br>
         </div>
     </div>
 </div>
+@section Scripts
+    {
+    @{
+        Html.RenderPartial("_ValidationScriptsPartial");
+    }
+
+
+    }

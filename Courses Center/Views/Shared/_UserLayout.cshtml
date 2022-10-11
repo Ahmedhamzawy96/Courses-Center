@@ -41,7 +41,7 @@
                             <div class="col-xl-1 col-lg-1 col-md-1 col-sm-3">
                                 <div class="logo">
                                     <a href="index.html">
-                                        <img src="assets/img/logo/logo.png" alt="" />
+                                        <img src="~/assets/img/logo/logo.png" alt="" />
                                     </a>
                                 </div>
                             </div>
@@ -52,15 +52,13 @@
                                     <nav>
                                         <ul id="navigation">
                                             <li>
-                                                <a
-                                                    asp-action="Login" asp-controller="UserLogin"
+                                                <a asp-action="UserLogin" asp-controller="Login"
                                                    class=""
                                                    style="font-size: 20px; color: red">تسجيل الدخول</a>
                                             </li>
-                                            <li><a href="Catagori.html">الاقسام</a></li>
-                                            <li><a href="#">الكليات</a></li>
-                                            <li><a href="All-University.html">الجامعات</a></li>
-                                            <li><a href="index.html">الصفحة الرئيسية</a></li>
+                                            <li><a asp-controller="University" asp-action="Universities">الجامعات</a></li>
+                                            <li><a asp-action="Index" asp-controller="Home">الصفحة الرئيسية</a></li>
+
                                         </ul>
                                     </nav>
                                 </div>
@@ -68,23 +66,36 @@
 
                             <div class="col-xl-5 col-lg-3 col-md-3 col-sm-3 fix-card">
                                 <ul class="header-right f-right d-none d-lg-block d-flex justify-content-between align-self-start">
-                                    <li
-                                         @{
-            var count=HttpContextAccessor.HttpContext.Session.GetString("ProCount");
-            var user=HttpContextAccessor.HttpContext.Session.GetString("username");
-                                            }
-                                             @if(user!=null){
+                                    <li>
+                                        @{
+                                            //var user = HttpContextAccessor?.HttpContext?.User?.Claims?.FirstOrDefault()?.Value;
+
+                                            var count = HttpContextAccessor.HttpContext.Session.GetString("ProCount");
+                                            var user = HttpContextAccessor.HttpContext.Session.GetString("username");
+                                        }
+                                        @if (user != null)
+                                        {
+                                            <div class="shopping-card">
+
+                                                <a href="/BuyingCart/Display">
+                                                    <i class="fas fa-shopping-cart"></i>
+                                                </a>
+
+
+                                                <span class="shoping-cart-span">@count</span>
+
+                                            </div>
+                                        }
+
+                                       
+                                    </li>
+                                    <li>
                                         <div class="shopping-card">
 
-                                            <a href="/BuyingCart/Display">
-                                                <i class="fas fa-shopping-cart"></i>
+                                            <a asp-action="Profile" asp-controller="Home">
+                                                <i class="fas fa-user"></i>
                                             </a>
-                                           
-                                           
-                                            <span class="shoping-cart-span">@count</span>
-                                            
                                         </div>
-                                        }
                                     </li>
                                 </ul>
                             </div>
@@ -227,6 +238,7 @@
     <script src="~/assets2/js/contact.js"></script>
     <script src="~/assets2/js/jquery.form.js"></script>
     <script src="~/assets2/js/jquery.validate.min.js"></script>
+    <script src="~/assets2/js/jquery.validate.unobtrusive.min.js"></script>
     <script src="~/assets2/js/mail-script.js"></script>
     <script src="~/assets2/js/jquery.ajaxchimp.min.js"></script>
 

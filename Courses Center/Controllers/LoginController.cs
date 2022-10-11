@@ -2,6 +2,7 @@
 using Courses_Center.Services.BuyerService;
 using Courses_Center.Services.BuyingCartServices;
 using Courses_Center.Services.UserService;
+using Courses_Center.ViewModels;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Mvc;
@@ -27,12 +28,14 @@ namespace Courses_Center.Controllers
             return View();
         }
         [HttpPost]
-        public ActionResult UserLogin([Bind] string username, [Bind] string password)
+        public ActionResult UserLogin(LoginViewModel login)
         {
             // username = anet  
             //     var user = new Users().GetUsers().Where(u => u.UserName == userModel.UserName).SingleOrDefault();
-            Admin admin = _userService.getOneAdmin(username, password);
-            Buyer buyer = _buyerService.getOneBuyer(username, password);
+            if (!ModelState.IsValid)
+                return RedirectToAction(nameof(UserLogin));
+            Admin admin = _userService.getOneAdmin(login.UserName, login.Password);
+            Buyer buyer = _buyerService.getOneBuyer(login.UserName, login.Password);
             if (admin != null)
             {
                 var userClaims = new List<Claim>()
@@ -69,9 +72,9 @@ namespace Courses_Center.Controllers
                 };
                 //var userPrincipal = new ClaimsPrincipal(new[] { userIdentity });
                 //HttpContext.SignInAsync(userPrincipal);
-                 HttpContext.SignInAsync(
+                HttpContext.SignInAsync(
 
-            new ClaimsPrincipal(userIdentity));
+           new ClaimsPrincipal(userIdentity));
 
                 return RedirectToAction("Index", "University");
 
@@ -117,14 +120,14 @@ namespace Courses_Center.Controllers
                 };
                 //var userPrincipal = new ClaimsPrincipal(new[] { userIdentity });
                 //HttpContext.SignInAsync(userPrincipal);
-                 HttpContext.SignInAsync(
-            CookieAuthenticationDefaults.AuthenticationScheme,
-            new ClaimsPrincipal(userIdentity),
-            new AuthenticationProperties
-            {
-                IsPersistent = true,
-                ExpiresUtc = DateTime.UtcNow.AddMinutes(20)
-            });
+                HttpContext.SignInAsync(
+           CookieAuthenticationDefaults.AuthenticationScheme,
+           new ClaimsPrincipal(userIdentity),
+           new AuthenticationProperties
+           {
+               IsPersistent = true,
+               ExpiresUtc = DateTime.UtcNow.AddMinutes(20)
+           });
 
                 return RedirectToAction("Index", "University");
 
@@ -132,6 +135,7 @@ namespace Courses_Center.Controllers
 
 
             }
+            //ViewData["NotFound"] = new ErrorViewModel() { IsError = true, ErrorList= new List<string>() { "اسم المستخدم خطا او هناك خطا فى الرقم السري"} };
 
             return View();
         }

@@ -25,9 +25,11 @@ namespace Courses_Center.Controllers
         public ActionResult NewUser(Buyer B)
         {
 
+            if (!ModelState.IsValid)
+                return RedirectToAction(nameof(NewUser));
             Buyer buyer = _buyerService.AddBuyer(B);
-         
-             if (buyer != null)
+
+            if (buyer != null)
             {
                 var userClaims = new List<Claim>()
                 {
@@ -40,7 +42,7 @@ namespace Courses_Center.Controllers
                  };
 
                 HttpContext.Session.SetString("username", buyer.UserName);
-                HttpContext.Session.SetString("ProCount","0");
+                HttpContext.Session.SetString("ProCount", "0");
 
                 var userIdentity = new ClaimsIdentity(userClaims, CookieAuthenticationDefaults.AuthenticationScheme);
                 var authProperties = new AuthenticationProperties
@@ -87,5 +89,12 @@ namespace Courses_Center.Controllers
             return View();
         }
 
+        [HttpGet]
+        public IActionResult checkUsername(string username)
+        {
+            bool res = _buyerService.CheckUserName(username);
+            return Json(!res);
+
+        }
     }
 }

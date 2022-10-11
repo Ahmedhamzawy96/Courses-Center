@@ -19,6 +19,12 @@
           "lib/net6.0/Aspose.PDF.dll": {}
         }
       },
+      "Aspose.Pdf.dll.1/1.0.2": {
+        "type": "package",
+        "dependencies": {
+          "SampleDependency": "1.0.0"
+        }
+      },
       "Aspose.Words/22.10.0": {
         "type": "package",
         "dependencies": {
@@ -66,6 +72,30 @@
           }
         }
       },
+      "ceTe.DynamicPDF.Rasterizer.NET.x86/3.2.0.38353": {
+        "type": "package",
+        "build": {
+          "build/netcoreapp2.0/ceTe.DynamicPDF.Rasterizer.NET.x86.targets": {}
+        },
+        "runtimeTargets": {
+          "runtimes/win10-x64/native/DPDFRenderNative_x64.dll": {
+            "assetType": "native",
+            "rid": "win10-x64"
+          },
+          "runtimes/win10-x64/native/DPDFRenderNative_x86.dll": {
+            "assetType": "native",
+            "rid": "win10-x64"
+          },
+          "runtimes/win10-x86/native/DPDFRenderNative_x64.dll": {
+            "assetType": "native",
+            "rid": "win10-x86"
+          },
+          "runtimes/win10-x86/native/DPDFRenderNative_x86.dll": {
+            "assetType": "native",
+            "rid": "win10-x86"
+          }
+        }
+      },
       "Humanizer.Core/2.8.26": {
         "type": "package",
         "compile": {
@@ -78,6 +108,9 @@
             "related": ".xml"
           }
         }
+      },
+      "jQuery/2.1.1": {
+        "type": "package"
       },
       "MessagePack/2.1.152": {
         "type": "package",
@@ -1014,7 +1047,7 @@
           }
         }
       },
-      "Microsoft.DotNet.Scaffolding.Shared/6.0.10": {
+      "Microsoft.DotNet.Scaffolding.Shared/6.0.9": {
         "type": "package",
         "dependencies": {
           "Microsoft.CodeAnalysis.CSharp.Features": "4.0.0",
@@ -1501,11 +1534,11 @@
           }
         }
       },
-      "Microsoft.VisualStudio.Web.CodeGeneration/6.0.10": {
+      "Microsoft.VisualStudio.Web.CodeGeneration/6.0.9": {
         "type": "package",
         "dependencies": {
           "Microsoft.Extensions.DependencyInjection": "6.0.0",
-          "Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore": "6.0.10",
+          "Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore": "6.0.9",
           "NuGet.Packaging": "6.2.1",
           "System.Collections.Immutable": "6.0.0",
           "System.Configuration.ConfigurationManager": "6.0.0",
@@ -1523,11 +1556,11 @@
           }
         }
       },
-      "Microsoft.VisualStudio.Web.CodeGeneration.Core/6.0.10": {
+      "Microsoft.VisualStudio.Web.CodeGeneration.Core/6.0.9": {
         "type": "package",
         "dependencies": {
           "Microsoft.Extensions.DependencyInjection": "6.0.0",
-          "Microsoft.VisualStudio.Web.CodeGeneration.Templating": "6.0.10",
+          "Microsoft.VisualStudio.Web.CodeGeneration.Templating": "6.0.9",
           "Newtonsoft.Json": "13.0.1",
           "NuGet.Packaging": "6.2.1",
           "System.Configuration.ConfigurationManager": "6.0.0",
@@ -1545,11 +1578,11 @@
           }
         }
       },
-      "Microsoft.VisualStudio.Web.CodeGeneration.Design/6.0.10": {
+      "Microsoft.VisualStudio.Web.CodeGeneration.Design/6.0.9": {
         "type": "package",
         "dependencies": {
-          "Microsoft.DotNet.Scaffolding.Shared": "6.0.10",
-          "Microsoft.VisualStudio.Web.CodeGenerators.Mvc": "6.0.10",
+          "Microsoft.DotNet.Scaffolding.Shared": "6.0.9",
+          "Microsoft.VisualStudio.Web.CodeGenerators.Mvc": "6.0.9",
           "NuGet.Packaging": "6.2.1",
           "System.Configuration.ConfigurationManager": "6.0.0",
           "System.Private.Uri": "4.3.2",
@@ -1566,11 +1599,11 @@
           }
         }
       },
-      "Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore/6.0.10": {
+      "Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore/6.0.9": {
         "type": "package",
         "dependencies": {
-          "Microsoft.DotNet.Scaffolding.Shared": "6.0.10",
-          "Microsoft.VisualStudio.Web.CodeGeneration.Core": "6.0.10",
+          "Microsoft.DotNet.Scaffolding.Shared": "6.0.9",
+          "Microsoft.VisualStudio.Web.CodeGeneration.Core": "6.0.9",
           "NuGet.Packaging": "6.2.1",
           "System.Configuration.ConfigurationManager": "6.0.0",
           "System.Private.Uri": "4.3.2",
@@ -1587,13 +1620,13 @@
           }
         }
       },
-      "Microsoft.VisualStudio.Web.CodeGeneration.Templating/6.0.10": {
+      "Microsoft.VisualStudio.Web.CodeGeneration.Templating/6.0.9": {
         "type": "package",
         "dependencies": {
           "Microsoft.AspNetCore.Razor.Language": "6.0.0",
           "Microsoft.CodeAnalysis.CSharp": "4.0.0",
           "Microsoft.CodeAnalysis.Razor": "6.0.0",
-          "Microsoft.VisualStudio.Web.CodeGeneration.Utils": "6.0.10",
+          "Microsoft.VisualStudio.Web.CodeGeneration.Utils": "6.0.9",
           "NuGet.Packaging": "6.2.1",
           "System.Configuration.ConfigurationManager": "6.0.0",
           "System.Private.Uri": "4.3.2",
@@ -1610,12 +1643,12 @@
           }
         }
       },
-      "Microsoft.VisualStudio.Web.CodeGeneration.Utils/6.0.10": {
+      "Microsoft.VisualStudio.Web.CodeGeneration.Utils/6.0.9": {
         "type": "package",
         "dependencies": {
           "Microsoft.Build": "17.0.0",
           "Microsoft.CodeAnalysis.CSharp.Workspaces": "4.0.0",
-          "Microsoft.DotNet.Scaffolding.Shared": "6.0.10",
+          "Microsoft.DotNet.Scaffolding.Shared": "6.0.9",
           "Newtonsoft.Json": "13.0.1",
           "NuGet.Packaging": "6.2.1",
           "System.Configuration.ConfigurationManager": "6.0.0",
@@ -1633,11 +1666,11 @@
           }
         }
       },
-      "Microsoft.VisualStudio.Web.CodeGenerators.Mvc/6.0.10": {
+      "Microsoft.VisualStudio.Web.CodeGenerators.Mvc/6.0.9": {
         "type": "package",
         "dependencies": {
-          "Microsoft.DotNet.Scaffolding.Shared": "6.0.10",
-          "Microsoft.VisualStudio.Web.CodeGeneration": "6.0.10",
+          "Microsoft.DotNet.Scaffolding.Shared": "6.0.9",
+          "Microsoft.VisualStudio.Web.CodeGeneration": "6.0.9",
           "NuGet.Packaging": "6.2.1",
           "System.Configuration.ConfigurationManager": "6.0.0",
           "System.Private.Uri": "4.3.2",
@@ -1923,6 +1956,9 @@
           }
         }
       },
+      "PDF.js/1.3.91": {
+        "type": "package"
+      },
       "runtime.debian.8-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
         "type": "package",
         "runtimeTargets": {
@@ -2092,6 +2128,12 @@
             "assetType": "native",
             "rid": "ubuntu.16.10-x64"
           }
+        }
+      },
+      "SampleDependency/1.0.0": {
+        "type": "package",
+        "dependencies": {
+          "jQuery": "2.1.1"
         }
       },
       "sautinsoft.document/5.6.8.16": {
@@ -3939,6 +3981,40 @@
         "license/thirdpartylicenses-Aspose.PDF for .NET.txt"
       ]
     },
+    "Aspose.Pdf.dll.1/1.0.2": {
+      "sha512": "RPP/Z60z2wg6lcZVxRAyZgO445ig6rHEbKdhYxtmO3tqa2wjwIAf2Gi+17YdAWLcW1K0kplWVnxtRDvDgSL0jw==",
+      "type": "package",
+      "path": "aspose.pdf.dll.1/1.0.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        ".vs/Aspose.lk/DesignTimeBuild/.dtbcache.v2",
+        ".vs/Aspose.lk/FileContentIndex/84d60bc7-3166-4ebd-ad1d-2460824ecddd.vsidx",
+        ".vs/Aspose.lk/FileContentIndex/read.lock",
+        ".vs/ProjectEvaluation/aspose.lk.metadata.v2",
+        ".vs/ProjectEvaluation/aspose.lk.projects.v2",
+        "Aspose.lk.csproj",
+        "Aspose.lk.sln",
+        "Class1.cs",
+        "Properties/AssemblyInfo.cs",
+        "aspose.pdf.dll.1.1.0.2.nupkg.sha512",
+        "aspose.pdf.dll.1.nuspec",
+        "bin/Debug/Aspose.Cells.dll",
+        "bin/Debug/Aspose.Pdf.dll",
+        "bin/Debug/Aspose.Words.dll",
+        "bin/Debug/Aspose.lk.dll",
+        "bin/Debug/Aspose.lk.pdb",
+        "obj/Debug/.NETFramework,Version=v4.7.2.AssemblyAttributes.cs",
+        "obj/Debug/Aspose.lk.csproj.AssemblyReference.cache",
+        "obj/Debug/Aspose.lk.csproj.CopyComplete",
+        "obj/Debug/Aspose.lk.csproj.CoreCompileInputs.cache",
+        "obj/Debug/Aspose.lk.csproj.FileListAbsolute.txt",
+        "obj/Debug/Aspose.lk.dll",
+        "obj/Debug/Aspose.lk.pdb",
+        "obj/Debug/DesignTimeResolveAssemblyReferences.cache",
+        "obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache"
+      ]
+    },
     "Aspose.Words/22.10.0": {
       "sha512": "ekwFejkVek2Ov5/lLB/+5DUCmggY+vmoa+eIDhMvu7Pnh5uE/SlGFTvZZz5TpdJSXzkQOE6rTEYjFO3iNEx9og==",
       "type": "package",
@@ -3994,6 +4070,43 @@
         "readme.txt"
       ]
     },
+    "ceTe.DynamicPDF.Rasterizer.NET.x86/3.2.0.38353": {
+      "sha512": "7mqReoKYfpFNfEKE5hJ/B7Fez+qYDEJjwxYK2I6xrPcOI7Gf1H3vhfaF1PyQ4fOa7ny9F7dcI2G0CdNk8IwOJg==",
+      "type": "package",
+      "path": "cete.dynamicpdf.rasterizer.net.x86/3.2.0.38353",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "DynamicPDF/Native/DPDFRenderNative_x64.dll",
+        "DynamicPDF/Native/DPDFRenderNative_x86.dll",
+        "DynamicPDF/Standard/DynamicPDF.Rasterizer.NETStandard20.dll",
+        "DynamicPDF/Standard/DynamicPDF.Rasterizer.NETStandard20.xml",
+        "DynamicPDF/x64/DynamicPDF.Rasterizer.NETFramework40.x64.dll",
+        "DynamicPDF/x64/DynamicPDF.Rasterizer.NETFramework40.x64.xml",
+        "DynamicPDF/x86/DynamicPDF.Rasterizer.NETFramework40.x86.dll",
+        "DynamicPDF/x86/DynamicPDF.Rasterizer.NETFramework40.x86.xml",
+        "build/net40/ceTe.DynamicPDF.Rasterizer.NET.x86.targets",
+        "build/net403/ceTe.DynamicPDF.Rasterizer.NET.x86.targets",
+        "build/net45/ceTe.DynamicPDF.Rasterizer.NET.x86.targets",
+        "build/net451/ceTe.DynamicPDF.Rasterizer.NET.x86.targets",
+        "build/net452/ceTe.DynamicPDF.Rasterizer.NET.x86.targets",
+        "build/net46/ceTe.DynamicPDF.Rasterizer.NET.x86.targets",
+        "build/net461/ceTe.DynamicPDF.Rasterizer.NET.x86.targets",
+        "build/net462/ceTe.DynamicPDF.Rasterizer.NET.x86.targets",
+        "build/net47/ceTe.DynamicPDF.Rasterizer.NET.x86.targets",
+        "build/net471/ceTe.DynamicPDF.Rasterizer.NET.x86.targets",
+        "build/net472/ceTe.DynamicPDF.Rasterizer.NET.x86.targets",
+        "build/netcoreapp2.0/ceTe.DynamicPDF.Rasterizer.NET.x86.targets",
+        "build/netstandard2.0/ceTe.DynamicPDF.Rasterizer.NET.x86.targets",
+        "build/uap10.0/ceTe.DynamicPDF.Rasterizer.NET.x86.targets",
+        "cete.dynamicpdf.rasterizer.net.x86.3.2.0.38353.nupkg.sha512",
+        "cete.dynamicpdf.rasterizer.net.x86.nuspec",
+        "runtimes/win10-x64/native/DPDFRenderNative_x64.dll",
+        "runtimes/win10-x64/native/DPDFRenderNative_x86.dll",
+        "runtimes/win10-x86/native/DPDFRenderNative_x64.dll",
+        "runtimes/win10-x86/native/DPDFRenderNative_x86.dll"
+      ]
+    },
     "Humanizer.Core/2.8.26": {
       "sha512": "OiKusGL20vby4uDEswj2IgkdchC1yQ6rwbIkZDVBPIR6al2b7n3pC91elBul9q33KaBgRKhbZH3+2Ur4fnWx2A==",
       "type": "package",
@@ -4008,6 +4121,26 @@
         "lib/netstandard2.0/Humanizer.dll",
         "lib/netstandard2.0/Humanizer.xml",
         "logo.png"
+      ]
+    },
+    "jQuery/2.1.1": {
+      "sha512": "/cy0NGAGBx0W6XLqrnehQAKeJhfnZLDdPnBvlNLq/k4mraD1a7rbHBYzV5PYBaz9t5wh+VrGhPUbPztvnFAOrQ==",
+      "type": "package",
+      "path": "jquery/2.1.1",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Content/Scripts/jquery-2.1.1-vsdoc.js",
+        "Content/Scripts/jquery-2.1.1.js",
+        "Content/Scripts/jquery-2.1.1.min.js",
+        "Content/Scripts/jquery-2.1.1.min.map",
+        "Tools/common.ps1",
+        "Tools/install.ps1",
+        "Tools/jquery-2.1.1.intellisense.js",
+        "Tools/uninstall.ps1",
+        "jquery.2.1.1.nupkg.sha512",
+        "jquery.nuspec"
       ]
     },
     "MessagePack/2.1.152": {
@@ -4984,17 +5117,17 @@
         "microsoft.diasymreader.nuspec"
       ]
     },
-    "Microsoft.DotNet.Scaffolding.Shared/6.0.10": {
-      "sha512": "PZm9NdakQy5rtkkEWK+tJNYDD9KODH726a5wbb5k6fpKEk6zd7vCsUo/OaBrTE+zagNGDTii9TeAz7GvDV0bUg==",
+    "Microsoft.DotNet.Scaffolding.Shared/6.0.9": {
+      "sha512": "ixfrXJUBn931Mx8tpD7iqw1Jbkb58ON+BeSyGKh1cEBPDVUuVYb8AQuyhnbfRhr2F08ND1mfnZy5cwX+hNThKQ==",
       "type": "package",
-      "path": "microsoft.dotnet.scaffolding.shared/6.0.10",
+      "path": "microsoft.dotnet.scaffolding.shared/6.0.9",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Icon.png",
         "lib/net6.0/Microsoft.DotNet.Scaffolding.Shared.dll",
         "lib/net6.0/Microsoft.DotNet.Scaffolding.Shared.xml",
-        "microsoft.dotnet.scaffolding.shared.6.0.10.nupkg.sha512",
+        "microsoft.dotnet.scaffolding.shared.6.0.9.nupkg.sha512",
         "microsoft.dotnet.scaffolding.shared.nuspec"
       ]
     },
@@ -5565,52 +5698,52 @@
         "microsoft.visualstudio.debugger.contracts.nuspec"
       ]
     },
-    "Microsoft.VisualStudio.Web.CodeGeneration/6.0.10": {
-      "sha512": "jcwfm5lcnE1gZdYK3ciu8bpMerIvc/xOz+swLJPXv3VR34vBm4V/OPhwqOFLV0Hxsdwja4DNZOVZdFGBw7sX8w==",
+    "Microsoft.VisualStudio.Web.CodeGeneration/6.0.9": {
+      "sha512": "/C2BziR+4vdXzeVnt/R+jL/Y1a9scbJuwGAMaHsVd7BgFlFb5C16PzuVHb/Qy8793bcOUCjWXXveTUqXUJnIpw==",
       "type": "package",
-      "path": "microsoft.visualstudio.web.codegeneration/6.0.10",
+      "path": "microsoft.visualstudio.web.codegeneration/6.0.9",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Icon.png",
         "lib/net6.0/Microsoft.VisualStudio.Web.CodeGeneration.dll",
         "lib/net6.0/Microsoft.VisualStudio.Web.CodeGeneration.xml",
-        "microsoft.visualstudio.web.codegeneration.6.0.10.nupkg.sha512",
+        "microsoft.visualstudio.web.codegeneration.6.0.9.nupkg.sha512",
         "microsoft.visualstudio.web.codegeneration.nuspec"
       ]
     },
-    "Microsoft.VisualStudio.Web.CodeGeneration.Core/6.0.10": {
-      "sha512": "0iYBGyUXe+4eH9rb2yvrhKH8VuLz5otW8cpEZ4OZR+/TdlPxQ+3Ndb/Qg2MvI5WZmcmTnEoJzXd5tfpi+g8AMQ==",
+    "Microsoft.VisualStudio.Web.CodeGeneration.Core/6.0.9": {
+      "sha512": "D2ArSuP0bbTDQiX1LndKA4GLkGcPM/K+V5VX6T7A9Ef8mwjHzeg+rpdunepdm9KkdR4yhgCAyS6vtHB6DXLSIA==",
       "type": "package",
-      "path": "microsoft.visualstudio.web.codegeneration.core/6.0.10",
+      "path": "microsoft.visualstudio.web.codegeneration.core/6.0.9",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Icon.png",
         "lib/net6.0/Microsoft.VisualStudio.Web.CodeGeneration.Core.dll",
         "lib/net6.0/Microsoft.VisualStudio.Web.CodeGeneration.Core.xml",
-        "microsoft.visualstudio.web.codegeneration.core.6.0.10.nupkg.sha512",
+        "microsoft.visualstudio.web.codegeneration.core.6.0.9.nupkg.sha512",
         "microsoft.visualstudio.web.codegeneration.core.nuspec"
       ]
     },
-    "Microsoft.VisualStudio.Web.CodeGeneration.Design/6.0.10": {
-      "sha512": "4X4woAKNixsFWJH7tBWpj7gsM9QlvAIpOSwP5QEOOnjYDrNphNkqk8NnEkMhPIAVLpv+S7j5ZkTSYUvB92FC6A==",
+    "Microsoft.VisualStudio.Web.CodeGeneration.Design/6.0.9": {
+      "sha512": "LFE71Yquas2T73LKFhWvtrZM8yJuhO8ptyCotPw1hvdOfdOYt9Ww1NmIFS76V+cM/9a2k8jzvDZq+YdiPyWYhg==",
       "type": "package",
-      "path": "microsoft.visualstudio.web.codegeneration.design/6.0.10",
+      "path": "microsoft.visualstudio.web.codegeneration.design/6.0.9",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Icon.png",
         "lib/net6.0/dotnet-aspnet-codegenerator-design.dll",
         "lib/net6.0/dotnet-aspnet-codegenerator-design.xml",
-        "microsoft.visualstudio.web.codegeneration.design.6.0.10.nupkg.sha512",
+        "microsoft.visualstudio.web.codegeneration.design.6.0.9.nupkg.sha512",
         "microsoft.visualstudio.web.codegeneration.design.nuspec"
       ]
     },
-    "Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore/6.0.10": {
-      "sha512": "tHwtinZ+Zgbk8V7DopG/eerNm9WYrjuPBg7QnwDERbWcU5NSbvbQb6BIxwdPRlQZwSKRpWHBMMDh4fs8I72vbA==",
+    "Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore/6.0.9": {
+      "sha512": "3As+XUp1HvWl29w/JiFIYvih7NiotMw6v1zEks2rv8TF4D65LsMBGjID7P4nI3UqLgblu85ZYnxBHLw6mlrISQ==",
       "type": "package",
-      "path": "microsoft.visualstudio.web.codegeneration.entityframeworkcore/6.0.10",
+      "path": "microsoft.visualstudio.web.codegeneration.entityframeworkcore/6.0.9",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -5619,42 +5752,42 @@
         "lib/net6.0/Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore.dll",
         "lib/net6.0/Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore.runtimeconfig.json",
         "lib/net6.0/Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore.xml",
-        "microsoft.visualstudio.web.codegeneration.entityframeworkcore.6.0.10.nupkg.sha512",
+        "microsoft.visualstudio.web.codegeneration.entityframeworkcore.6.0.9.nupkg.sha512",
         "microsoft.visualstudio.web.codegeneration.entityframeworkcore.nuspec"
       ]
     },
-    "Microsoft.VisualStudio.Web.CodeGeneration.Templating/6.0.10": {
-      "sha512": "lvqognkL8eolgfTCNYFmUKYbPT/WhY9GaTz3m0MzX4cOd1qgQqPuUsIp6YdjI11eWgb9AaCJcGEI6YweRIRK9g==",
+    "Microsoft.VisualStudio.Web.CodeGeneration.Templating/6.0.9": {
+      "sha512": "nDLs2PavCzVkCwf4AcITUZvwnvhN+ah1j8178jG2NwvejusCpnV4b/XsPfQ27OG/CWlXOY4A+GQOk0SoHx3TXw==",
       "type": "package",
-      "path": "microsoft.visualstudio.web.codegeneration.templating/6.0.10",
+      "path": "microsoft.visualstudio.web.codegeneration.templating/6.0.9",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Icon.png",
         "lib/net6.0/Microsoft.VisualStudio.Web.CodeGeneration.Templating.dll",
         "lib/net6.0/Microsoft.VisualStudio.Web.CodeGeneration.Templating.xml",
-        "microsoft.visualstudio.web.codegeneration.templating.6.0.10.nupkg.sha512",
+        "microsoft.visualstudio.web.codegeneration.templating.6.0.9.nupkg.sha512",
         "microsoft.visualstudio.web.codegeneration.templating.nuspec"
       ]
     },
-    "Microsoft.VisualStudio.Web.CodeGeneration.Utils/6.0.10": {
-      "sha512": "DHxXuZOhUg2TDWZQeC/JYqPsgpLdjgpQF+VEaFPIzFNBwv8y2/DWIakPitfjMtmRH4M0n4tfVidxjbzSmb7vbg==",
+    "Microsoft.VisualStudio.Web.CodeGeneration.Utils/6.0.9": {
+      "sha512": "3tSUCUZj7GCzS1mNGiz2iwTnGA9sf2yEcSwrKga1yImxmOqqrYZDgtIvXUyzecRYp/kzcyoHM3/RrX5TAoFtRw==",
       "type": "package",
-      "path": "microsoft.visualstudio.web.codegeneration.utils/6.0.10",
+      "path": "microsoft.visualstudio.web.codegeneration.utils/6.0.9",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Icon.png",
         "lib/net6.0/Microsoft.VisualStudio.Web.CodeGeneration.Utils.dll",
         "lib/net6.0/Microsoft.VisualStudio.Web.CodeGeneration.Utils.xml",
-        "microsoft.visualstudio.web.codegeneration.utils.6.0.10.nupkg.sha512",
+        "microsoft.visualstudio.web.codegeneration.utils.6.0.9.nupkg.sha512",
         "microsoft.visualstudio.web.codegeneration.utils.nuspec"
       ]
     },
-    "Microsoft.VisualStudio.Web.CodeGenerators.Mvc/6.0.10": {
-      "sha512": "7QdD1LXFftoQPuk77Isp/8BQR4PYebPaRle38NbUYjJlK9sHPoORiOID2WOPeqLC8EP5SabwN2XS468GuOPG7w==",
+    "Microsoft.VisualStudio.Web.CodeGenerators.Mvc/6.0.9": {
+      "sha512": "gzMBpEjbjHkq/pfKFve3BSK7UcNKzHBTeRuCyz0LxFpUZXophl8pPXsa0rZUt/uDA/DqeCCgHt6nHxnTFQ1QOw==",
       "type": "package",
-      "path": "microsoft.visualstudio.web.codegenerators.mvc/6.0.10",
+      "path": "microsoft.visualstudio.web.codegenerators.mvc/6.0.9",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -6121,7 +6254,7 @@
         "lib/net6.0/bootstrap5_identitygeneratorfilesconfig.json",
         "lib/net6.0/identityMinimalHostingChanges.json",
         "lib/net6.0/minimalApiChanges.json",
-        "microsoft.visualstudio.web.codegenerators.mvc.6.0.10.nupkg.sha512",
+        "microsoft.visualstudio.web.codegenerators.mvc.6.0.9.nupkg.sha512",
         "microsoft.visualstudio.web.codegenerators.mvc.nuspec"
       ]
     },
@@ -6444,6 +6577,385 @@
         "nuget.versioning.nuspec"
       ]
     },
+    "PDF.js/1.3.91": {
+      "sha512": "DNDkm5EfyxGWOx46Y9eaGoahjmDRCKoyLxdX0eJWQOETrCaJV2UZT5A4UOvFErG3xJ4g5RWPIheLUlBW7HbSDw==",
+      "type": "package",
+      "path": "pdf.js/1.3.91",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "pdf.js.1.3.91.nupkg.sha512",
+        "pdf.js.nuspec",
+        "pdfjs-1.3.91-dist/LICENSE",
+        "pdfjs-1.3.91-dist/build/pdf.js",
+        "pdfjs-1.3.91-dist/build/pdf.worker.js",
+        "pdfjs-1.3.91-dist/web/cmaps/78-EUC-H.bcmap",
+        "pdfjs-1.3.91-dist/web/cmaps/78-EUC-V.bcmap",
+        "pdfjs-1.3.91-dist/web/cmaps/78-H.bcmap",
+        "pdfjs-1.3.91-dist/web/cmaps/78-RKSJ-H.bcmap",
+        "pdfjs-1.3.91-dist/web/cmaps/78-RKSJ-V.bcmap",
+        "pdfjs-1.3.91-dist/web/cmaps/78-V.bcmap",
+        "pdfjs-1.3.91-dist/web/cmaps/78ms-RKSJ-H.bcmap",
+        "pdfjs-1.3.91-dist/web/cmaps/78ms-RKSJ-V.bcmap",
+        "pdfjs-1.3.91-dist/web/cmaps/83pv-RKSJ-H.bcmap",
+        "pdfjs-1.3.91-dist/web/cmaps/90ms-RKSJ-H.bcmap",
+        "pdfjs-1.3.91-dist/web/cmaps/90ms-RKSJ-V.bcmap",
+        "pdfjs-1.3.91-dist/web/cmaps/90msp-RKSJ-H.bcmap",
+        "pdfjs-1.3.91-dist/web/cmaps/90msp-RKSJ-V.bcmap",
+        "pdfjs-1.3.91-dist/web/cmaps/90pv-RKSJ-H.bcmap",
+        "pdfjs-1.3.91-dist/web/cmaps/90pv-RKSJ-V.bcmap",
+        "pdfjs-1.3.91-dist/web/cmaps/Add-H.bcmap",
+        "pdfjs-1.3.91-dist/web/cmaps/Add-RKSJ-H.bcmap",
+        "pdfjs-1.3.91-dist/web/cmaps/Add-RKSJ-V.bcmap",
+        "pdfjs-1.3.91-dist/web/cmaps/Add-V.bcmap",
+        "pdfjs-1.3.91-dist/web/cmaps/Adobe-CNS1-0.bcmap",
+        "pdfjs-1.3.91-dist/web/cmaps/Adobe-CNS1-1.bcmap",
+        "pdfjs-1.3.91-dist/web/cmaps/Adobe-CNS1-2.bcmap",
+        "pdfjs-1.3.91-dist/web/cmaps/Adobe-CNS1-3.bcmap",
+        "pdfjs-1.3.91-dist/web/cmaps/Adobe-CNS1-4.bcmap",
+        "pdfjs-1.3.91-dist/web/cmaps/Adobe-CNS1-5.bcmap",
+        "pdfjs-1.3.91-dist/web/cmaps/Adobe-CNS1-6.bcmap",
+        "pdfjs-1.3.91-dist/web/cmaps/Adobe-CNS1-UCS2.bcmap",
+        "pdfjs-1.3.91-dist/web/cmaps/Adobe-GB1-0.bcmap",
+        "pdfjs-1.3.91-dist/web/cmaps/Adobe-GB1-1.bcmap",
+        "pdfjs-1.3.91-dist/web/cmaps/Adobe-GB1-2.bcmap",
+        "pdfjs-1.3.91-dist/web/cmaps/Adobe-GB1-3.bcmap",
+        "pdfjs-1.3.91-dist/web/cmaps/Adobe-GB1-4.bcmap",
+        "pdfjs-1.3.91-dist/web/cmaps/Adobe-GB1-5.bcmap",
+        "pdfjs-1.3.91-dist/web/cmaps/Adobe-GB1-UCS2.bcmap",
+        "pdfjs-1.3.91-dist/web/cmaps/Adobe-Japan1-0.bcmap",
+        "pdfjs-1.3.91-dist/web/cmaps/Adobe-Japan1-1.bcmap",
+        "pdfjs-1.3.91-dist/web/cmaps/Adobe-Japan1-2.bcmap",
+        "pdfjs-1.3.91-dist/web/cmaps/Adobe-Japan1-3.bcmap",
+        "pdfjs-1.3.91-dist/web/cmaps/Adobe-Japan1-4.bcmap",
+        "pdfjs-1.3.91-dist/web/cmaps/Adobe-Japan1-5.bcmap",
+        "pdfjs-1.3.91-dist/web/cmaps/Adobe-Japan1-6.bcmap",
+        "pdfjs-1.3.91-dist/web/cmaps/Adobe-Japan1-UCS2.bcmap",
+        "pdfjs-1.3.91-dist/web/cmaps/Adobe-Korea1-0.bcmap",
+        "pdfjs-1.3.91-dist/web/cmaps/Adobe-Korea1-1.bcmap",
+        "pdfjs-1.3.91-dist/web/cmaps/Adobe-Korea1-2.bcmap",
+        "pdfjs-1.3.91-dist/web/cmaps/Adobe-Korea1-UCS2.bcmap",
+        "pdfjs-1.3.91-dist/web/cmaps/B5-H.bcmap",
+        "pdfjs-1.3.91-dist/web/cmaps/B5-V.bcmap",
+        "pdfjs-1.3.91-dist/web/cmaps/B5pc-H.bcmap",
+        "pdfjs-1.3.91-dist/web/cmaps/B5pc-V.bcmap",
+        "pdfjs-1.3.91-dist/web/cmaps/CNS-EUC-H.bcmap",
+        "pdfjs-1.3.91-dist/web/cmaps/CNS-EUC-V.bcmap",
+        "pdfjs-1.3.91-dist/web/cmaps/CNS1-H.bcmap",
+        "pdfjs-1.3.91-dist/web/cmaps/CNS1-V.bcmap",
+        "pdfjs-1.3.91-dist/web/cmaps/CNS2-H.bcmap",
+        "pdfjs-1.3.91-dist/web/cmaps/CNS2-V.bcmap",
+        "pdfjs-1.3.91-dist/web/cmaps/ETHK-B5-H.bcmap",
+        "pdfjs-1.3.91-dist/web/cmaps/ETHK-B5-V.bcmap",
+        "pdfjs-1.3.91-dist/web/cmaps/ETen-B5-H.bcmap",
+        "pdfjs-1.3.91-dist/web/cmaps/ETen-B5-V.bcmap",
+        "pdfjs-1.3.91-dist/web/cmaps/ETenms-B5-H.bcmap",
+        "pdfjs-1.3.91-dist/web/cmaps/ETenms-B5-V.bcmap",
+        "pdfjs-1.3.91-dist/web/cmaps/EUC-H.bcmap",
+        "pdfjs-1.3.91-dist/web/cmaps/EUC-V.bcmap",
+        "pdfjs-1.3.91-dist/web/cmaps/Ext-H.bcmap",
+        "pdfjs-1.3.91-dist/web/cmaps/Ext-RKSJ-H.bcmap",
+        "pdfjs-1.3.91-dist/web/cmaps/Ext-RKSJ-V.bcmap",
+        "pdfjs-1.3.91-dist/web/cmaps/Ext-V.bcmap",
+        "pdfjs-1.3.91-dist/web/cmaps/GB-EUC-H.bcmap",
+        "pdfjs-1.3.91-dist/web/cmaps/GB-EUC-V.bcmap",
+        "pdfjs-1.3.91-dist/web/cmaps/GB-H.bcmap",
+        "pdfjs-1.3.91-dist/web/cmaps/GB-V.bcmap",
+        "pdfjs-1.3.91-dist/web/cmaps/GBK-EUC-H.bcmap",
+        "pdfjs-1.3.91-dist/web/cmaps/GBK-EUC-V.bcmap",
+        "pdfjs-1.3.91-dist/web/cmaps/GBK2K-H.bcmap",
+        "pdfjs-1.3.91-dist/web/cmaps/GBK2K-V.bcmap",
+        "pdfjs-1.3.91-dist/web/cmaps/GBKp-EUC-H.bcmap",
+        "pdfjs-1.3.91-dist/web/cmaps/GBKp-EUC-V.bcmap",
+        "pdfjs-1.3.91-dist/web/cmaps/GBT-EUC-H.bcmap",
+        "pdfjs-1.3.91-dist/web/cmaps/GBT-EUC-V.bcmap",
+        "pdfjs-1.3.91-dist/web/cmaps/GBT-H.bcmap",
+        "pdfjs-1.3.91-dist/web/cmaps/GBT-V.bcmap",
+        "pdfjs-1.3.91-dist/web/cmaps/GBTpc-EUC-H.bcmap",
+        "pdfjs-1.3.91-dist/web/cmaps/GBTpc-EUC-V.bcmap",
+        "pdfjs-1.3.91-dist/web/cmaps/GBpc-EUC-H.bcmap",
+        "pdfjs-1.3.91-dist/web/cmaps/GBpc-EUC-V.bcmap",
+        "pdfjs-1.3.91-dist/web/cmaps/H.bcmap",
+        "pdfjs-1.3.91-dist/web/cmaps/HKdla-B5-H.bcmap",
+        "pdfjs-1.3.91-dist/web/cmaps/HKdla-B5-V.bcmap",
+        "pdfjs-1.3.91-dist/web/cmaps/HKdlb-B5-H.bcmap",
+        "pdfjs-1.3.91-dist/web/cmaps/HKdlb-B5-V.bcmap",
+        "pdfjs-1.3.91-dist/web/cmaps/HKgccs-B5-H.bcmap",
+        "pdfjs-1.3.91-dist/web/cmaps/HKgccs-B5-V.bcmap",
+        "pdfjs-1.3.91-dist/web/cmaps/HKm314-B5-H.bcmap",
+        "pdfjs-1.3.91-dist/web/cmaps/HKm314-B5-V.bcmap",
+        "pdfjs-1.3.91-dist/web/cmaps/HKm471-B5-H.bcmap",
+        "pdfjs-1.3.91-dist/web/cmaps/HKm471-B5-V.bcmap",
+        "pdfjs-1.3.91-dist/web/cmaps/HKscs-B5-H.bcmap",
+        "pdfjs-1.3.91-dist/web/cmaps/HKscs-B5-V.bcmap",
+        "pdfjs-1.3.91-dist/web/cmaps/Hankaku.bcmap",
+        "pdfjs-1.3.91-dist/web/cmaps/Hiragana.bcmap",
+        "pdfjs-1.3.91-dist/web/cmaps/KSC-EUC-H.bcmap",
+        "pdfjs-1.3.91-dist/web/cmaps/KSC-EUC-V.bcmap",
+        "pdfjs-1.3.91-dist/web/cmaps/KSC-H.bcmap",
+        "pdfjs-1.3.91-dist/web/cmaps/KSC-Johab-H.bcmap",
+        "pdfjs-1.3.91-dist/web/cmaps/KSC-Johab-V.bcmap",
+        "pdfjs-1.3.91-dist/web/cmaps/KSC-V.bcmap",
+        "pdfjs-1.3.91-dist/web/cmaps/KSCms-UHC-H.bcmap",
+        "pdfjs-1.3.91-dist/web/cmaps/KSCms-UHC-HW-H.bcmap",
+        "pdfjs-1.3.91-dist/web/cmaps/KSCms-UHC-HW-V.bcmap",
+        "pdfjs-1.3.91-dist/web/cmaps/KSCms-UHC-V.bcmap",
+        "pdfjs-1.3.91-dist/web/cmaps/KSCpc-EUC-H.bcmap",
+        "pdfjs-1.3.91-dist/web/cmaps/KSCpc-EUC-V.bcmap",
+        "pdfjs-1.3.91-dist/web/cmaps/Katakana.bcmap",
+        "pdfjs-1.3.91-dist/web/cmaps/LICENSE",
+        "pdfjs-1.3.91-dist/web/cmaps/NWP-H.bcmap",
+        "pdfjs-1.3.91-dist/web/cmaps/NWP-V.bcmap",
+        "pdfjs-1.3.91-dist/web/cmaps/RKSJ-H.bcmap",
+        "pdfjs-1.3.91-dist/web/cmaps/RKSJ-V.bcmap",
+        "pdfjs-1.3.91-dist/web/cmaps/Roman.bcmap",
+        "pdfjs-1.3.91-dist/web/cmaps/UniCNS-UCS2-H.bcmap",
+        "pdfjs-1.3.91-dist/web/cmaps/UniCNS-UCS2-V.bcmap",
+        "pdfjs-1.3.91-dist/web/cmaps/UniCNS-UTF16-H.bcmap",
+        "pdfjs-1.3.91-dist/web/cmaps/UniCNS-UTF16-V.bcmap",
+        "pdfjs-1.3.91-dist/web/cmaps/UniCNS-UTF32-H.bcmap",
+        "pdfjs-1.3.91-dist/web/cmaps/UniCNS-UTF32-V.bcmap",
+        "pdfjs-1.3.91-dist/web/cmaps/UniCNS-UTF8-H.bcmap",
+        "pdfjs-1.3.91-dist/web/cmaps/UniCNS-UTF8-V.bcmap",
+        "pdfjs-1.3.91-dist/web/cmaps/UniGB-UCS2-H.bcmap",
+        "pdfjs-1.3.91-dist/web/cmaps/UniGB-UCS2-V.bcmap",
+        "pdfjs-1.3.91-dist/web/cmaps/UniGB-UTF16-H.bcmap",
+        "pdfjs-1.3.91-dist/web/cmaps/UniGB-UTF16-V.bcmap",
+        "pdfjs-1.3.91-dist/web/cmaps/UniGB-UTF32-H.bcmap",
+        "pdfjs-1.3.91-dist/web/cmaps/UniGB-UTF32-V.bcmap",
+        "pdfjs-1.3.91-dist/web/cmaps/UniGB-UTF8-H.bcmap",
+        "pdfjs-1.3.91-dist/web/cmaps/UniGB-UTF8-V.bcmap",
+        "pdfjs-1.3.91-dist/web/cmaps/UniJIS-UCS2-H.bcmap",
+        "pdfjs-1.3.91-dist/web/cmaps/UniJIS-UCS2-HW-H.bcmap",
+        "pdfjs-1.3.91-dist/web/cmaps/UniJIS-UCS2-HW-V.bcmap",
+        "pdfjs-1.3.91-dist/web/cmaps/UniJIS-UCS2-V.bcmap",
+        "pdfjs-1.3.91-dist/web/cmaps/UniJIS-UTF16-H.bcmap",
+        "pdfjs-1.3.91-dist/web/cmaps/UniJIS-UTF16-V.bcmap",
+        "pdfjs-1.3.91-dist/web/cmaps/UniJIS-UTF32-H.bcmap",
+        "pdfjs-1.3.91-dist/web/cmaps/UniJIS-UTF32-V.bcmap",
+        "pdfjs-1.3.91-dist/web/cmaps/UniJIS-UTF8-H.bcmap",
+        "pdfjs-1.3.91-dist/web/cmaps/UniJIS-UTF8-V.bcmap",
+        "pdfjs-1.3.91-dist/web/cmaps/UniJIS2004-UTF16-H.bcmap",
+        "pdfjs-1.3.91-dist/web/cmaps/UniJIS2004-UTF16-V.bcmap",
+        "pdfjs-1.3.91-dist/web/cmaps/UniJIS2004-UTF32-H.bcmap",
+        "pdfjs-1.3.91-dist/web/cmaps/UniJIS2004-UTF32-V.bcmap",
+        "pdfjs-1.3.91-dist/web/cmaps/UniJIS2004-UTF8-H.bcmap",
+        "pdfjs-1.3.91-dist/web/cmaps/UniJIS2004-UTF8-V.bcmap",
+        "pdfjs-1.3.91-dist/web/cmaps/UniJISPro-UCS2-HW-V.bcmap",
+        "pdfjs-1.3.91-dist/web/cmaps/UniJISPro-UCS2-V.bcmap",
+        "pdfjs-1.3.91-dist/web/cmaps/UniJISPro-UTF8-V.bcmap",
+        "pdfjs-1.3.91-dist/web/cmaps/UniJISX0213-UTF32-H.bcmap",
+        "pdfjs-1.3.91-dist/web/cmaps/UniJISX0213-UTF32-V.bcmap",
+        "pdfjs-1.3.91-dist/web/cmaps/UniJISX02132004-UTF32-H.bcmap",
+        "pdfjs-1.3.91-dist/web/cmaps/UniJISX02132004-UTF32-V.bcmap",
+        "pdfjs-1.3.91-dist/web/cmaps/UniKS-UCS2-H.bcmap",
+        "pdfjs-1.3.91-dist/web/cmaps/UniKS-UCS2-V.bcmap",
+        "pdfjs-1.3.91-dist/web/cmaps/UniKS-UTF16-H.bcmap",
+        "pdfjs-1.3.91-dist/web/cmaps/UniKS-UTF16-V.bcmap",
+        "pdfjs-1.3.91-dist/web/cmaps/UniKS-UTF32-H.bcmap",
+        "pdfjs-1.3.91-dist/web/cmaps/UniKS-UTF32-V.bcmap",
+        "pdfjs-1.3.91-dist/web/cmaps/UniKS-UTF8-H.bcmap",
+        "pdfjs-1.3.91-dist/web/cmaps/UniKS-UTF8-V.bcmap",
+        "pdfjs-1.3.91-dist/web/cmaps/V.bcmap",
+        "pdfjs-1.3.91-dist/web/cmaps/WP-Symbol.bcmap",
+        "pdfjs-1.3.91-dist/web/compatibility.js",
+        "pdfjs-1.3.91-dist/web/compressed.tracemonkey-pldi-09.pdf",
+        "pdfjs-1.3.91-dist/web/debugger.js",
+        "pdfjs-1.3.91-dist/web/images/annotation-check.svg",
+        "pdfjs-1.3.91-dist/web/images/annotation-comment.svg",
+        "pdfjs-1.3.91-dist/web/images/annotation-help.svg",
+        "pdfjs-1.3.91-dist/web/images/annotation-insert.svg",
+        "pdfjs-1.3.91-dist/web/images/annotation-key.svg",
+        "pdfjs-1.3.91-dist/web/images/annotation-newparagraph.svg",
+        "pdfjs-1.3.91-dist/web/images/annotation-noicon.svg",
+        "pdfjs-1.3.91-dist/web/images/annotation-note.svg",
+        "pdfjs-1.3.91-dist/web/images/annotation-paragraph.svg",
+        "pdfjs-1.3.91-dist/web/images/findbarButton-next-rtl.png",
+        "pdfjs-1.3.91-dist/web/images/findbarButton-next-rtl@2x.png",
+        "pdfjs-1.3.91-dist/web/images/findbarButton-next.png",
+        "pdfjs-1.3.91-dist/web/images/findbarButton-next@2x.png",
+        "pdfjs-1.3.91-dist/web/images/findbarButton-previous-rtl.png",
+        "pdfjs-1.3.91-dist/web/images/findbarButton-previous-rtl@2x.png",
+        "pdfjs-1.3.91-dist/web/images/findbarButton-previous.png",
+        "pdfjs-1.3.91-dist/web/images/findbarButton-previous@2x.png",
+        "pdfjs-1.3.91-dist/web/images/grab.cur",
+        "pdfjs-1.3.91-dist/web/images/grabbing.cur",
+        "pdfjs-1.3.91-dist/web/images/loading-icon.gif",
+        "pdfjs-1.3.91-dist/web/images/loading-small.png",
+        "pdfjs-1.3.91-dist/web/images/loading-small@2x.png",
+        "pdfjs-1.3.91-dist/web/images/secondaryToolbarButton-documentProperties.png",
+        "pdfjs-1.3.91-dist/web/images/secondaryToolbarButton-documentProperties@2x.png",
+        "pdfjs-1.3.91-dist/web/images/secondaryToolbarButton-firstPage.png",
+        "pdfjs-1.3.91-dist/web/images/secondaryToolbarButton-firstPage@2x.png",
+        "pdfjs-1.3.91-dist/web/images/secondaryToolbarButton-handTool.png",
+        "pdfjs-1.3.91-dist/web/images/secondaryToolbarButton-handTool@2x.png",
+        "pdfjs-1.3.91-dist/web/images/secondaryToolbarButton-lastPage.png",
+        "pdfjs-1.3.91-dist/web/images/secondaryToolbarButton-lastPage@2x.png",
+        "pdfjs-1.3.91-dist/web/images/secondaryToolbarButton-rotateCcw.png",
+        "pdfjs-1.3.91-dist/web/images/secondaryToolbarButton-rotateCcw@2x.png",
+        "pdfjs-1.3.91-dist/web/images/secondaryToolbarButton-rotateCw.png",
+        "pdfjs-1.3.91-dist/web/images/secondaryToolbarButton-rotateCw@2x.png",
+        "pdfjs-1.3.91-dist/web/images/shadow.png",
+        "pdfjs-1.3.91-dist/web/images/texture.png",
+        "pdfjs-1.3.91-dist/web/images/toolbarButton-bookmark.png",
+        "pdfjs-1.3.91-dist/web/images/toolbarButton-bookmark@2x.png",
+        "pdfjs-1.3.91-dist/web/images/toolbarButton-download.png",
+        "pdfjs-1.3.91-dist/web/images/toolbarButton-download@2x.png",
+        "pdfjs-1.3.91-dist/web/images/toolbarButton-menuArrows.png",
+        "pdfjs-1.3.91-dist/web/images/toolbarButton-menuArrows@2x.png",
+        "pdfjs-1.3.91-dist/web/images/toolbarButton-openFile.png",
+        "pdfjs-1.3.91-dist/web/images/toolbarButton-openFile@2x.png",
+        "pdfjs-1.3.91-dist/web/images/toolbarButton-pageDown-rtl.png",
+        "pdfjs-1.3.91-dist/web/images/toolbarButton-pageDown-rtl@2x.png",
+        "pdfjs-1.3.91-dist/web/images/toolbarButton-pageDown.png",
+        "pdfjs-1.3.91-dist/web/images/toolbarButton-pageDown@2x.png",
+        "pdfjs-1.3.91-dist/web/images/toolbarButton-pageUp-rtl.png",
+        "pdfjs-1.3.91-dist/web/images/toolbarButton-pageUp-rtl@2x.png",
+        "pdfjs-1.3.91-dist/web/images/toolbarButton-pageUp.png",
+        "pdfjs-1.3.91-dist/web/images/toolbarButton-pageUp@2x.png",
+        "pdfjs-1.3.91-dist/web/images/toolbarButton-presentationMode.png",
+        "pdfjs-1.3.91-dist/web/images/toolbarButton-presentationMode@2x.png",
+        "pdfjs-1.3.91-dist/web/images/toolbarButton-print.png",
+        "pdfjs-1.3.91-dist/web/images/toolbarButton-print@2x.png",
+        "pdfjs-1.3.91-dist/web/images/toolbarButton-search.png",
+        "pdfjs-1.3.91-dist/web/images/toolbarButton-search@2x.png",
+        "pdfjs-1.3.91-dist/web/images/toolbarButton-secondaryToolbarToggle-rtl.png",
+        "pdfjs-1.3.91-dist/web/images/toolbarButton-secondaryToolbarToggle-rtl@2x.png",
+        "pdfjs-1.3.91-dist/web/images/toolbarButton-secondaryToolbarToggle.png",
+        "pdfjs-1.3.91-dist/web/images/toolbarButton-secondaryToolbarToggle@2x.png",
+        "pdfjs-1.3.91-dist/web/images/toolbarButton-sidebarToggle-rtl.png",
+        "pdfjs-1.3.91-dist/web/images/toolbarButton-sidebarToggle-rtl@2x.png",
+        "pdfjs-1.3.91-dist/web/images/toolbarButton-sidebarToggle.png",
+        "pdfjs-1.3.91-dist/web/images/toolbarButton-sidebarToggle@2x.png",
+        "pdfjs-1.3.91-dist/web/images/toolbarButton-viewAttachments.png",
+        "pdfjs-1.3.91-dist/web/images/toolbarButton-viewAttachments@2x.png",
+        "pdfjs-1.3.91-dist/web/images/toolbarButton-viewOutline-rtl.png",
+        "pdfjs-1.3.91-dist/web/images/toolbarButton-viewOutline-rtl@2x.png",
+        "pdfjs-1.3.91-dist/web/images/toolbarButton-viewOutline.png",
+        "pdfjs-1.3.91-dist/web/images/toolbarButton-viewOutline@2x.png",
+        "pdfjs-1.3.91-dist/web/images/toolbarButton-viewThumbnail.png",
+        "pdfjs-1.3.91-dist/web/images/toolbarButton-viewThumbnail@2x.png",
+        "pdfjs-1.3.91-dist/web/images/toolbarButton-zoomIn.png",
+        "pdfjs-1.3.91-dist/web/images/toolbarButton-zoomIn@2x.png",
+        "pdfjs-1.3.91-dist/web/images/toolbarButton-zoomOut.png",
+        "pdfjs-1.3.91-dist/web/images/toolbarButton-zoomOut@2x.png",
+        "pdfjs-1.3.91-dist/web/images/treeitem-collapsed-rtl.png",
+        "pdfjs-1.3.91-dist/web/images/treeitem-collapsed-rtl@2x.png",
+        "pdfjs-1.3.91-dist/web/images/treeitem-collapsed.png",
+        "pdfjs-1.3.91-dist/web/images/treeitem-collapsed@2x.png",
+        "pdfjs-1.3.91-dist/web/images/treeitem-expanded.png",
+        "pdfjs-1.3.91-dist/web/images/treeitem-expanded@2x.png",
+        "pdfjs-1.3.91-dist/web/l10n.js",
+        "pdfjs-1.3.91-dist/web/locale/ach/viewer.properties",
+        "pdfjs-1.3.91-dist/web/locale/af/viewer.properties",
+        "pdfjs-1.3.91-dist/web/locale/ak/viewer.properties",
+        "pdfjs-1.3.91-dist/web/locale/an/viewer.properties",
+        "pdfjs-1.3.91-dist/web/locale/ar/viewer.properties",
+        "pdfjs-1.3.91-dist/web/locale/as/viewer.properties",
+        "pdfjs-1.3.91-dist/web/locale/ast/viewer.properties",
+        "pdfjs-1.3.91-dist/web/locale/az/viewer.properties",
+        "pdfjs-1.3.91-dist/web/locale/be/viewer.properties",
+        "pdfjs-1.3.91-dist/web/locale/bg/viewer.properties",
+        "pdfjs-1.3.91-dist/web/locale/bn-BD/viewer.properties",
+        "pdfjs-1.3.91-dist/web/locale/bn-IN/viewer.properties",
+        "pdfjs-1.3.91-dist/web/locale/br/viewer.properties",
+        "pdfjs-1.3.91-dist/web/locale/bs/viewer.properties",
+        "pdfjs-1.3.91-dist/web/locale/ca/viewer.properties",
+        "pdfjs-1.3.91-dist/web/locale/cs/viewer.properties",
+        "pdfjs-1.3.91-dist/web/locale/csb/viewer.properties",
+        "pdfjs-1.3.91-dist/web/locale/cy/viewer.properties",
+        "pdfjs-1.3.91-dist/web/locale/da/viewer.properties",
+        "pdfjs-1.3.91-dist/web/locale/de/viewer.properties",
+        "pdfjs-1.3.91-dist/web/locale/el/viewer.properties",
+        "pdfjs-1.3.91-dist/web/locale/en-GB/viewer.properties",
+        "pdfjs-1.3.91-dist/web/locale/en-US/viewer.properties",
+        "pdfjs-1.3.91-dist/web/locale/en-ZA/viewer.properties",
+        "pdfjs-1.3.91-dist/web/locale/eo/viewer.properties",
+        "pdfjs-1.3.91-dist/web/locale/es-AR/viewer.properties",
+        "pdfjs-1.3.91-dist/web/locale/es-CL/viewer.properties",
+        "pdfjs-1.3.91-dist/web/locale/es-ES/viewer.properties",
+        "pdfjs-1.3.91-dist/web/locale/es-MX/viewer.properties",
+        "pdfjs-1.3.91-dist/web/locale/et/viewer.properties",
+        "pdfjs-1.3.91-dist/web/locale/eu/viewer.properties",
+        "pdfjs-1.3.91-dist/web/locale/fa/viewer.properties",
+        "pdfjs-1.3.91-dist/web/locale/ff/viewer.properties",
+        "pdfjs-1.3.91-dist/web/locale/fi/viewer.properties",
+        "pdfjs-1.3.91-dist/web/locale/fr/viewer.properties",
+        "pdfjs-1.3.91-dist/web/locale/fy-NL/viewer.properties",
+        "pdfjs-1.3.91-dist/web/locale/ga-IE/viewer.properties",
+        "pdfjs-1.3.91-dist/web/locale/gd/viewer.properties",
+        "pdfjs-1.3.91-dist/web/locale/gl/viewer.properties",
+        "pdfjs-1.3.91-dist/web/locale/gu-IN/viewer.properties",
+        "pdfjs-1.3.91-dist/web/locale/he/viewer.properties",
+        "pdfjs-1.3.91-dist/web/locale/hi-IN/viewer.properties",
+        "pdfjs-1.3.91-dist/web/locale/hr/viewer.properties",
+        "pdfjs-1.3.91-dist/web/locale/hu/viewer.properties",
+        "pdfjs-1.3.91-dist/web/locale/hy-AM/viewer.properties",
+        "pdfjs-1.3.91-dist/web/locale/id/viewer.properties",
+        "pdfjs-1.3.91-dist/web/locale/is/viewer.properties",
+        "pdfjs-1.3.91-dist/web/locale/it/viewer.properties",
+        "pdfjs-1.3.91-dist/web/locale/ja/viewer.properties",
+        "pdfjs-1.3.91-dist/web/locale/ka/viewer.properties",
+        "pdfjs-1.3.91-dist/web/locale/kk/viewer.properties",
+        "pdfjs-1.3.91-dist/web/locale/km/viewer.properties",
+        "pdfjs-1.3.91-dist/web/locale/kn/viewer.properties",
+        "pdfjs-1.3.91-dist/web/locale/ko/viewer.properties",
+        "pdfjs-1.3.91-dist/web/locale/ku/viewer.properties",
+        "pdfjs-1.3.91-dist/web/locale/lg/viewer.properties",
+        "pdfjs-1.3.91-dist/web/locale/lij/viewer.properties",
+        "pdfjs-1.3.91-dist/web/locale/locale.properties",
+        "pdfjs-1.3.91-dist/web/locale/lt/viewer.properties",
+        "pdfjs-1.3.91-dist/web/locale/lv/viewer.properties",
+        "pdfjs-1.3.91-dist/web/locale/mai/viewer.properties",
+        "pdfjs-1.3.91-dist/web/locale/mk/viewer.properties",
+        "pdfjs-1.3.91-dist/web/locale/ml/viewer.properties",
+        "pdfjs-1.3.91-dist/web/locale/mn/viewer.properties",
+        "pdfjs-1.3.91-dist/web/locale/mr/viewer.properties",
+        "pdfjs-1.3.91-dist/web/locale/ms/viewer.properties",
+        "pdfjs-1.3.91-dist/web/locale/my/viewer.properties",
+        "pdfjs-1.3.91-dist/web/locale/nb-NO/viewer.properties",
+        "pdfjs-1.3.91-dist/web/locale/nl/viewer.properties",
+        "pdfjs-1.3.91-dist/web/locale/nn-NO/viewer.properties",
+        "pdfjs-1.3.91-dist/web/locale/nso/viewer.properties",
+        "pdfjs-1.3.91-dist/web/locale/oc/viewer.properties",
+        "pdfjs-1.3.91-dist/web/locale/or/viewer.properties",
+        "pdfjs-1.3.91-dist/web/locale/pa-IN/viewer.properties",
+        "pdfjs-1.3.91-dist/web/locale/pl/viewer.properties",
+        "pdfjs-1.3.91-dist/web/locale/pt-BR/viewer.properties",
+        "pdfjs-1.3.91-dist/web/locale/pt-PT/viewer.properties",
+        "pdfjs-1.3.91-dist/web/locale/rm/viewer.properties",
+        "pdfjs-1.3.91-dist/web/locale/ro/viewer.properties",
+        "pdfjs-1.3.91-dist/web/locale/ru/viewer.properties",
+        "pdfjs-1.3.91-dist/web/locale/rw/viewer.properties",
+        "pdfjs-1.3.91-dist/web/locale/sah/viewer.properties",
+        "pdfjs-1.3.91-dist/web/locale/si/viewer.properties",
+        "pdfjs-1.3.91-dist/web/locale/sk/viewer.properties",
+        "pdfjs-1.3.91-dist/web/locale/sl/viewer.properties",
+        "pdfjs-1.3.91-dist/web/locale/son/viewer.properties",
+        "pdfjs-1.3.91-dist/web/locale/sq/viewer.properties",
+        "pdfjs-1.3.91-dist/web/locale/sr/viewer.properties",
+        "pdfjs-1.3.91-dist/web/locale/sv-SE/viewer.properties",
+        "pdfjs-1.3.91-dist/web/locale/sw/viewer.properties",
+        "pdfjs-1.3.91-dist/web/locale/ta-LK/viewer.properties",
+        "pdfjs-1.3.91-dist/web/locale/ta/viewer.properties",
+        "pdfjs-1.3.91-dist/web/locale/te/viewer.properties",
+        "pdfjs-1.3.91-dist/web/locale/th/viewer.properties",
+        "pdfjs-1.3.91-dist/web/locale/tl/viewer.properties",
+        "pdfjs-1.3.91-dist/web/locale/tn/viewer.properties",
+        "pdfjs-1.3.91-dist/web/locale/tr/viewer.properties",
+        "pdfjs-1.3.91-dist/web/locale/uk/viewer.properties",
+        "pdfjs-1.3.91-dist/web/locale/ur/viewer.properties",
+        "pdfjs-1.3.91-dist/web/locale/vi/viewer.properties",
+        "pdfjs-1.3.91-dist/web/locale/wo/viewer.properties",
+        "pdfjs-1.3.91-dist/web/locale/xh/viewer.properties",
+        "pdfjs-1.3.91-dist/web/locale/zh-CN/viewer.properties",
+        "pdfjs-1.3.91-dist/web/locale/zh-TW/viewer.properties",
+        "pdfjs-1.3.91-dist/web/locale/zu/viewer.properties",
+        "pdfjs-1.3.91-dist/web/viewer.css",
+        "pdfjs-1.3.91-dist/web/viewer.html",
+        "pdfjs-1.3.91-dist/web/viewer.js"
+      ]
+    },
     "runtime.debian.8-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
       "sha512": "HdSSp5MnJSsg08KMfZThpuLPJpPwE5hBXvHwoKWosyHHfe8Mh5WKT0ylEOf6yNzX6Ngjxe4Whkafh5q7Ymac4Q==",
       "type": "package",
@@ -6666,6 +7178,18 @@
         "runtime.ubuntu.16.10-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
         "runtime.ubuntu.16.10-x64.runtime.native.system.security.cryptography.openssl.nuspec",
         "runtimes/ubuntu.16.10-x64/native/System.Security.Cryptography.Native.OpenSsl.so"
+      ]
+    },
+    "SampleDependency/1.0.0": {
+      "sha512": "rkrKnTI2KT/L+BaaB6/xZbDiqyQ702TxYp5adqgC/GYU7KBufnNArz/5KNetThpOeXmVEMg0VlFU+9/cKz0L4w==",
+      "type": "package",
+      "path": "sampledependency/1.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "content/Scripts/nugetexample.js",
+        "sampledependency.1.0.0.nupkg.sha512",
+        "sampledependency.nuspec"
       ]
     },
     "sautinsoft.document/5.6.8.16": {
@@ -11085,14 +11609,17 @@
   },
   "projectFileDependencyGroups": {
     "net6.0": [
-      "Aspose.PDF >= 22.9.0",
+      "Aspose.Pdf >= 22.9.0",
+      "Aspose.Pdf.dll.1 >= 1.0.2",
       "Aspose.Words >= 22.10.0",
       "Microsoft.EntityFrameworkCore >= 6.0.9",
       "Microsoft.EntityFrameworkCore.Design >= 6.0.9",
       "Microsoft.EntityFrameworkCore.Proxies >= 6.0.9",
       "Microsoft.EntityFrameworkCore.SqlServer >= 6.0.9",
       "Microsoft.EntityFrameworkCore.Tools >= 6.0.9",
-      "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 6.0.10",
+      "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 6.0.9",
+      "PDF.js >= 1.3.91",
+      "ceTe.DynamicPDF.Rasterizer.NET.x86 >= 3.2.0.38353",
       "sautinsoft.document >= 5.6.8.16"
     ]
   },
@@ -11103,11 +11630,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\HAMZAWY\\Downloads\\New folder (3)\\project2\\Courses Center\\Courses Center\\Courses Center.csproj",
+      "projectUniqueName": "C:\\Users\\HAMZAWY\\Downloads\\project2\\Courses Center\\Courses Center\\Courses Center.csproj",
       "projectName": "Courses Center",
-      "projectPath": "C:\\Users\\HAMZAWY\\Downloads\\New folder (3)\\project2\\Courses Center\\Courses Center\\Courses Center.csproj",
+      "projectPath": "C:\\Users\\HAMZAWY\\Downloads\\project2\\Courses Center\\Courses Center\\Courses Center.csproj",
       "packagesPath": "C:\\Users\\HAMZAWY\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\HAMZAWY\\Downloads\\New folder (3)\\project2\\Courses Center\\Courses Center\\obj\\",
+      "outputPath": "C:\\Users\\HAMZAWY\\Downloads\\project2\\Courses Center\\Courses Center\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -11140,9 +11667,13 @@
       "net6.0": {
         "targetAlias": "net6.0",
         "dependencies": {
-          "Aspose.PDF": {
+          "Aspose.Pdf": {
             "target": "Package",
             "version": "[22.9.0, )"
+          },
+          "Aspose.Pdf.dll.1": {
+            "target": "Package",
+            "version": "[1.0.2, )"
           },
           "Aspose.Words": {
             "target": "Package",
@@ -11174,7 +11705,15 @@
           },
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
             "target": "Package",
-            "version": "[6.0.10, )"
+            "version": "[6.0.9, )"
+          },
+          "PDF.js": {
+            "target": "Package",
+            "version": "[1.3.91, )"
+          },
+          "ceTe.DynamicPDF.Rasterizer.NET.x86": {
+            "target": "Package",
+            "version": "[3.2.0.38353, )"
           },
           "sautinsoft.document": {
             "target": "Package",

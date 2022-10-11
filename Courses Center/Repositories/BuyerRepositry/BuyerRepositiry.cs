@@ -17,5 +17,10 @@ namespace Courses_Center.Repositories.BuyerRepositry
         {
             _unitOfWork.Commit();
         }
+        public bool CheckUserName(string username)
+        {
+            bool res = _entities.Buyers.Any(buy => buy.UserName == username);
+            return res;
+        }
     }
 }
