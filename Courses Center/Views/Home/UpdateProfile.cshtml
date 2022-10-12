@@ -1,4 +1,7 @@
-﻿@model UProfileViewModel
+﻿@{
+    Layout = "~/Views/Shared/_UserLayout.cshtml";
+}
+@model UProfileViewModel
 <div class="container " dir="rtl">
     <div class="row justify-content-center">
         <div class="col-12">
@@ -9,12 +12,15 @@
                   asp-controller="Home"
                   method="post"
                   novalidate="novalidate">
+                <input  type="text" id="UserName" name="UserName" value="@ViewBag?.username" />
+                <input type="password" id="Password" name="Password" value="@ViewBag?.password" />
                 <div class="form-group my-4">
                     <label asp-for="FnameProfile" class="my-2">الاسم الاول </label>
                     <input type="text" style="line-height:2"
                            class="form-control text-right w-100"
                            asp-for="FnameProfile"
-                           placeholder="الاسم الاول" />
+                           placeholder="الاسم الاول"
+                           value="@ViewBag?.BuyerOld?.Fname" />
                     <span asp-validation-for="FnameProfile" class="text-danger"></span>
                 </div>
                 <div class="form-group my-4">
@@ -22,7 +28,8 @@
                       <input type="text" style="line-height:2"
                                    class="form-control text-right w-100"
                                    asp-for="LnameProfile"
-                                   placeholder="الاسم الثانى" />
+                                   placeholder="الاسم الثانى"
+                           value="@ViewBag?.BuyerOld?.Lname" />
                             <span asp-validation-for="LnameProfile" class="text-danger"></span>
                 </div>
                 <div class="form-group my-4">
@@ -30,6 +37,7 @@
                     <input type="email"
                            class="form-control text-right"
                            asp-for="EmailProfile"
+                           value="@ViewBag?.BuyerOld?.Email"
                            placeholder="البريد الالكترونى" />
                     <span asp-validation-for="EmailProfile" class="text-danger"></span>
                 </div>

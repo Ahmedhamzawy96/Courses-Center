@@ -2182,3 +2182,27 @@ C:\Users\La Vie\Documents\Courses Center\obj\Debug\net6.0\scopedcss\bundle\Cours
 C:\Users\La Vie\Documents\Courses Center\obj\Debug\net6.0\Courses Center.csproj.CopyComplete
 C:\Users\La Vie\Documents\Courses Center\obj\Debug\net6.0\Courses Center.genruntimeconfig.cache
 C:\Users\La Vie\Documents\Courses Center\obj\Debug\net6.0\ref\Courses Center.dll
+G:\Freelancing\Courses-Center\Courses Center\bin\Debug\net6.0\DPDFRenderNative_x64.dll
+G:\Freelancing\Courses-Center\Courses Center\bin\Debug\net6.0\DPDFRenderNative_x86.dll
+G:\Freelancing\Courses-Center\Courses Center\bin\Debug\net6.0\Aspose.PDF.dll
+G:\Freelancing\Courses-Center\Courses Center\bin\Debug\net6.0\Aspose.Words.Pdf2Word.dll
+G:\Freelancing\Courses-Center\Courses Center\bin\Debug\net6.0\Aspose.Words.dll
+G:\Freelancing\Courses-Center\Courses Center\bin\Debug\net6.0\Microsoft.Extensions.DependencyModel.dll
+G:\Freelancing\Courses-Center\Courses Center\bin\Debug\net6.0\SautinSoft.Document.dll
+G:\Freelancing\Courses-Center\Courses Center\bin\Debug\net6.0\SkiaSharp.dll
+G:\Freelancing\Courses-Center\Courses Center\bin\Debug\net6.0\System.Diagnostics.PerformanceCounter.dll
+G:\Freelancing\Courses-Center\Courses Center\bin\Debug\net6.0\System.IO.Packaging.dll
+G:\Freelancing\Courses-Center\Courses Center\bin\Debug\net6.0\System.Security.Cryptography.Pkcs.dll
+G:\Freelancing\Courses-Center\Courses Center\bin\Debug\net6.0\System.Xml.XPath.XmlDocument.dll
+G:\Freelancing\Courses-Center\Courses Center\bin\Debug\net6.0\runtimes\win10-x64\native\DPDFRenderNative_x64.dll
+G:\Freelancing\Courses-Center\Courses Center\bin\Debug\net6.0\runtimes\win10-x64\native\DPDFRenderNative_x86.dll
+G:\Freelancing\Courses-Center\Courses Center\bin\Debug\net6.0\runtimes\win10-x86\native\DPDFRenderNative_x64.dll
+G:\Freelancing\Courses-Center\Courses Center\bin\Debug\net6.0\runtimes\win10-x86\native\DPDFRenderNative_x86.dll
+G:\Freelancing\Courses-Center\Courses Center\bin\Debug\net6.0\runtimes\osx\native\libSkiaSharp.dylib
+G:\Freelancing\Courses-Center\Courses Center\bin\Debug\net6.0\runtimes\win-arm64\native\libSkiaSharp.dll
+G:\Freelancing\Courses-Center\Courses Center\bin\Debug\net6.0\runtimes\win-x64\native\libSkiaSharp.dll
+G:\Freelancing\Courses-Center\Courses Center\bin\Debug\net6.0\runtimes\win-x86\native\libSkiaSharp.dll
+G:\Freelancing\Courses-Center\Courses Center\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Diagnostics.PerformanceCounter.dll
+G:\Freelancing\Courses-Center\Courses Center\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Security.Cryptography.Pkcs.dll
+G:\Freelancing\Courses-Center\Courses Center\bin\Debug\net6.0\DynamicPDF.Rasterizer.NETStandard20.dll
+G:\Freelancing\Courses-Center\Courses Center\bin\Debug\net6.0\DynamicPDF.Rasterizer.NETStandard20.xml

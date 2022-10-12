@@ -79,7 +79,8 @@ namespace Courses_Center.Controllers
             _professorService.Add(Prof);
             CourseProfessor coursProf = new CourseProfessor() { ProfId = Prof.Id, CrsId = (int)professorDTO.CrsId };
             _CourseProfessorService.Add(coursProf);
-            return PartialView("CourseDisplay", _professorService.GetAll());
+            return RedirectToAction(nameof(Add));
+            //return PartialView("CourseDisplay", _professorService.GetAll());
         }
 
         [HttpGet]

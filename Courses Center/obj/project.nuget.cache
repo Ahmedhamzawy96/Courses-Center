@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "+jiUZFyKK7P/vQvwv3nTy3hn0S4fq0nkErYoE3RGtSheFm/IKIkBw4ogYWCyX+uBIFN3qWY6pqF2nX+iMPqR6Q==",
+  "dgSpecHash": "pgCdxor5sJ/2TPMNkEkVVwC7k3rL8OTxddZwrIgjIMTSZqv3xnc8n3w/4fkl3YrSgzTIhkIhwdYDugtQ0wNn6A==",
   "success": true,
-  "projectFilePath": "C:\\Users\\La Vie\\Documents\\Courses Center\\Courses Center.csproj",
+  "projectFilePath": "G:\\Freelancing\\Courses-Center\\Courses Center\\Courses Center.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\La Vie\\.nuget\\packages\\aspose.pdf\\22.9.0\\aspose.pdf.22.9.0.nupkg.sha512",
     "C:\\Users\\La Vie\\.nuget\\packages\\aspose.pdf.dll.1\\1.0.2\\aspose.pdf.dll.1.1.0.2.nupkg.sha512",

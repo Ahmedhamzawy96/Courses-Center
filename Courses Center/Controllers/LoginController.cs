@@ -138,7 +138,7 @@ namespace Courses_Center.Controllers
                ExpiresUtc = DateTime.UtcNow.AddMinutes(20)
            });
 
-                return RedirectToAction("Index", "University");
+                return RedirectToAction("Index", "Home");
 
                 //HttpContext.SignInAsync(userPrincipal);
 
@@ -153,6 +153,14 @@ namespace Courses_Center.Controllers
         public ActionResult UserAccessDenied()
         {
             return View();
+        }
+        
+        public ActionResult Logout()
+        {
+            HttpContext.Session.Clear();
+            HttpContext.Response.Cookies.Delete(CookieAuthenticationDefaults.AuthenticationScheme);
+            HttpContext.SignOutAsync();
+            return Redirect("/Home/Index");
         }
     }
 }

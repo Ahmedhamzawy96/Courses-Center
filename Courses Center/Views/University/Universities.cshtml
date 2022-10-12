@@ -1,4 +1,7 @@
-﻿@model IEnumerable<Courses_Center.Models.University>
+﻿@{
+    Layout = "~/Views/Shared/_UserLayout.cshtml";
+}
+@model IEnumerable<Courses_Center.Models.University>
 
 @{
     <!-- Universitets-Section -->
@@ -59,30 +62,36 @@
                                                class="form-control rounded"
                                                placeholder="البحث"
                                                aria-label="Search"
-                                               aria-describedby="search-addon" />
+                                               id="wordsearch"
+                                               aria-describedby="search-addon"
+                                               required />
                                     </div>
                                     <div class=" col-12  col-lg-6 py-3">
-                                        <button href="#" class="genric-btn danger-border radius">
+                                        <button class="genric-btn danger-border radius" onclick="Display()">
                                             بحث
                                         </button>
+                                        <a class="genric-btn danger-border radius"
+                                            asp-action="Universities" asp-controller="University">
+                                            كل الجامعات
+                                        </a>
                                     </div>
                                 </div>
-                                <div class="row py-5">
+                                <div class="row py-5" id="catalogeUniveristy">
                                     @foreach (var item in Model)
                                     {
                                         <div class="col-md-4 mb-3">
                                             <div class="card text-center">
-                                                <img class="img-fluid"
-                                                 alt="100%x280"
-                                                 src="./assets/img/University.jpg" />
+                                                @*<img class="img-fluid"
+                                        alt="100%x280"
+                                        src="./assets/img/University.jpg" />*@
                                                 <div class="card-body">
                                                     <h4 class="card-title text-center">
                                                         @item.Name
                                                     </h4>
-                                                    <p class="card-text text-center">
-                                                        هي الجامعة الحكومية الأولى في مصر. يقع حرمها
-                                                        الرئيسي في الجيزة ، مباشرة عبر النيل من القاهرة.
-                                                    </p>
+                                                    @*<p class="card-text text-center">
+                                            هي الجامعة الحكومية الأولى في مصر. يقع حرمها
+                                            الرئيسي في الجيزة ، مباشرة عبر النيل من القاهرة.
+                                            </p>*@
                                                     <a asp-controller="University" asp-action="Details" asp-route-Id="@item.Id"
                                                class="genric-btn danger-border radius">عرض</a>
                                                 </div>
@@ -96,6 +105,7 @@
                                 </div>
                             </div>
                         </div>
+                    </div>
                 </section>
 
             </div>
@@ -104,4 +114,51 @@
     </div>
 
     <!-- Universitets-Section -->
+}
+@section Scripts
+    {
+    <script>
+
+        function Display() {
+
+            var value = $("#wordsearch").val();
+            $.ajax({
+                url: "/University/Search",
+                dataType: "json",
+                cache: false,
+                type: 'POST',
+                data: { wordSearch: value },
+                success: function (result) {
+
+                    console.log(result)
+                    console.log(value.length)
+                    if (value.length > 1) {
+                        $("#catalogeUniveristy").empty();
+                        $.each(result, function (i, state) {
+
+                            $("#catalogeUniveristy").append(`
+                                                                            <div class="col-md-4 mb-3">
+                                                                                <div class="card text-center">
+                                                                                    <div class="card-body">
+                                                                                        <h4 class="card-title text-center">
+                                                                                                   ${state.name}
+                                                                                        </h4>
+                                                                                        <a asp-controller="University" asp-action="Details" asp-route-Id="${state.id}"
+                                                                               class="genric-btn danger-border radius">عرض</a>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>`
+
+                            );
+                        });
+                    }
+                },
+                error: function (ex) {
+
+                }
+
+            });
+
+        }
+    </script>
 }

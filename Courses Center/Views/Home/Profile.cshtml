@@ -1,4 +1,7 @@
-﻿@model Buyer
+﻿@{
+    Layout = "~/Views/Shared/_UserLayout.cshtml";
+}
+@model Buyer
 <style>
 
     /**********************************/
@@ -72,8 +75,8 @@
                     <a class="nav-link h4 active" id="dashboard-nav" data-toggle="pill" href="#dashboard-tab" role="tab" aria-selected="true" onclick="ShowProfileInfo();"><i class="fa fa-tachometer-alt p-1 m-1 h4"></i>الرئيسية</a>
                     <a class="nav-link h4" asp-action="Sources" asp-controller="Home"><i class="fa fa-credit-card p-1 m-1 h4"></i>الكتب</a>
                     <a class="nav-link h4" asp-action="ChangePassword" asp-controller="Home"><i class="fa fa-credit-card p-1 m-1 h4"></i>تغيير الرقم السرى</a>
-                    <a class="nav-link h4"  aria-selected="false" asp-action="UpdateProfile" asp-controller="Home"><i class="fa fa-user p-1 m-1 h4"></i>تعديل الحساب</a>
-                    <a class="nav-link h4" href="index.html"><i class="fa fa-sign-out-alt p-1 m-1 h4"></i>تسجيل الخروج</a>
+                    <a class="nav-link h4" aria-selected="false" asp-action="UpdateProfile" asp-controller="Home"><i class="fa fa-user p-1 m-1 h4"></i>تعديل الحساب</a>
+                    <a class="nav-link h4" aria-selected="false" asp-action="Logout" asp-controller="Login"><i class="fa fa-sign-out-alt p-1 m-1 h4"></i>تسجيل الخروج</a>
                 </div>
             </div>
             <div class="card  col-md-8 m-1 text-right shadow-sm p-2 mb-5 bg-white rounded">

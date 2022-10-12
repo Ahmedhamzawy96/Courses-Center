@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\La Vie\\Documents\\Courses Center\\Courses Center.csproj": {}
+    "G:\\Freelancing\\Courses-Center\\Courses Center\\Courses Center.csproj": {}
   },
   "projects": {
-    "C:\\Users\\La Vie\\Documents\\Courses Center\\Courses Center.csproj": {
+    "G:\\Freelancing\\Courses-Center\\Courses Center\\Courses Center.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\La Vie\\Documents\\Courses Center\\Courses Center.csproj",
+        "projectUniqueName": "G:\\Freelancing\\Courses-Center\\Courses Center\\Courses Center.csproj",
         "projectName": "Courses Center",
-        "projectPath": "C:\\Users\\La Vie\\Documents\\Courses Center\\Courses Center.csproj",
+        "projectPath": "G:\\Freelancing\\Courses-Center\\Courses Center\\Courses Center.csproj",
         "packagesPath": "C:\\Users\\La Vie\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\La Vie\\Documents\\Courses Center\\obj\\",
+        "outputPath": "G:\\Freelancing\\Courses-Center\\Courses Center\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\La Vie\\AppData\\Roaming\\NuGet\\NuGet.Config",

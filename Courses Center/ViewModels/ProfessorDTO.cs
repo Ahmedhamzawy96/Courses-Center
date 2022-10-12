@@ -14,24 +14,24 @@ namespace Courses_Center.ViewModels
 
         [Display(Name = "المادة")]
         [Required]
-        [RegularExpression("[1-9]{1,}", ErrorMessage = "يجب اختيار المادة")]
+        [RegularExpression("^[1-9]+\\d*$", ErrorMessage = "يجب اختيار المادة")]
         public int? CrsId { get; set; }
 
 
 
         [Display(Name = "الجامعة")]
         [Required]
-        [RegularExpression("[1-9]{1,}", ErrorMessage = "يجب اختيار الجامعة")]
+        [RegularExpression("^[1-9]+\\d*$", ErrorMessage = "يجب اختيار الجامعة")]
         public int UniID { get; set; }
 
         [Display(Name = "الكلية")]
         [Required]
-        [RegularExpression("[1-9]{1,}", ErrorMessage = "يجب اختيار الكلية")]
+        [RegularExpression("^[1-9]+\\d*$", ErrorMessage = "يجب اختيار الكلية")]
         public int ColID { get; set; }
 
         [Display(Name = "القسم")]
         [Required]
-        [RegularExpression("[1-9]{1,}", ErrorMessage = "يجب اختيار القسم")]
+        [RegularExpression("^[1-9]+\\d*$", ErrorMessage = "يجب اختيار القسم")]
         public int DeptID { get; set; }
 
     }
