@@ -166,6 +166,7 @@ namespace Courses_Center.Controllers
         {
             HttpContext.Session.Clear();
             HttpContext.Response.Cookies.Delete(CookieAuthenticationDefaults.AuthenticationScheme);
+            HttpContext.Response.Cookies.Delete(".AspNetCore.Cookies");
             HttpContext.SignOutAsync();
             return Redirect("/Home/Index");
         }

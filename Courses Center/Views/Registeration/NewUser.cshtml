@@ -53,7 +53,7 @@
                                 <input type="text" 
                                        class="form-control text-right"
                                     asp-for="UserName"
-                                       placeholder="اسم المستخدم" />
+                                       placeholder="اسم المستخدم" autocomplete="false" />
                                 <span asp-validation-for="UserName" class="text-danger"></span>
 
                             </div>
@@ -62,7 +62,7 @@
                                        class="form-control text-right"
                                      asp-for="Password"
                                        value=""
-                                       placeholder="كلمية المرور" />
+                                       placeholder="كلمية المرور" autocomplete="false" />
                                 <span asp-validation-for="Password" class="text-danger"></span>
 
                             </div>

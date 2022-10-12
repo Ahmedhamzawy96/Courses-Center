@@ -52,9 +52,18 @@
                                     <nav>
                                         <ul id="navigation">
                                             <li>
-                                                <a asp-action="UserLogin" asp-controller="Login"
-                                                   class=""
-                                                   style="font-size: 20px; color: red">تسجيل الدخول</a>
+                                                @{
+                                                    var claims = User.Claims.ToList();
+                                                    if(claims.Count>0){
+                                                        <a asp-action="Logout" asp-controller="Login"
+                                                            class=""
+                                                            style="font-size: 20px; color: red">تسجيل الخروج</a>
+                                                    }else{
+                                                            <a asp-action="UserLogin" asp-controller="Login"
+                                                            class=""
+                                                            style="font-size: 20px; color: red">تسجيل الدخول</a>
+                                                    }
+                                                 }
                                             </li>
                                             <li><a asp-controller="University" asp-action="Universities">الجامعات</a></li>
                                             <li><a asp-action="Index" asp-controller="Home">الصفحة الرئيسية</a></li>

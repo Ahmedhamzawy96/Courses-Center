@@ -2,11 +2,7 @@
     Layout = "~/Views/Shared/_UserLayout.cshtml";
 }
 @model IEnumerable<Courses_Center.Models.University>
-@{
-    var listUniv = Model.ToList();
-    int row = 0, slide = 3;
-    int lenght = listUniv.Count % 3 == 0 ? listUniv.Count / 3 : (int)Math.Ceiling((decimal)(listUniv.Count / 3.0));
-}
+
 
 <!-- Universitets-Section -->
 <main>
@@ -77,36 +73,70 @@
                          class="carousel slide"
                          data-ride="carousel">
                         <div class="carousel-inner">
-                            @for (int i = 0; i < lenght; i++)
-                            {
+                            @if(ViewBag?.uni1 != null){
 
-                                <div class="carousel-item">
-                                    <div class="row">
-                                        @for (int y = row; y < slide; y++)
-                                        {
+                            <div class="carousel-item active">
+                                <div class="row">
+                                    @foreach (var item in ViewBag.uni1 as IEnumerable<University>)
+                                    {
+                                        <div class="col-md-4 mb-3">
+                                            <div class="card text-center">
+                                                <div class="card-body">
+                                                    <h4 class="card-title text-center">
+                                                        @item.Name
+                                                    </h4>
+                                                    <a asp-controller="University" asp-action="Details" asp-route-Id="@item.Id"
+                                                   class="genric-btn danger-border radius">عرض</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    }
+                                </div>
 
+                            </div>
+                            }
+                            @if(ViewBag?.uni2 != null){
+
+                            <div class="carousel-item">
+                                <div class="row">
+                                    @foreach (var item in ViewBag.Uni2 as IEnumerable<University>)
+                                    {
                                             <div class="col-md-4 mb-3">
                                                 <div class="card text-center">
                                                     <div class="card-body">
                                                         <h4 class="card-title text-center">
-                                                            @listUniv[y].Name
+                                                            @item.Name
                                                         </h4>
-                                                        <a asp-controller="University" asp-action="Details" asp-route-Id="@listUniv[y].Id"
+                                                        <a asp-controller="University" asp-action="Details" asp-route-Id="@item.Id"
                                                    class="genric-btn danger-border radius">عرض</a>
                                                     </div>
                                                 </div>
                                             </div>
-
-
-                                        }
-                                   
-                                    </div>
+                                    }
                                 </div>
-                                row+= 3;
-                                slide = (listUniv.Count - slide)+slide;
+                            </div>
                             }
+                            @if(ViewBag?.uni3 != null){
 
-
+                            <div class="carousel-item">
+                                <div class="row">
+                                    @foreach (var item in ViewBag.Uni3 as IEnumerable<University>)
+                                    {
+                                            <div class="col-md-4 mb-3">
+                                                <div class="card text-center">
+                                                    <div class="card-body">
+                                                        <h4 class="card-title text-center">
+                                                            @item.Name
+                                                        </h4>
+                                                        <a asp-controller="University" asp-action="Details" asp-route-Id="@item.Id"
+                                                   class="genric-btn danger-border radius">عرض</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                    }
+                                </div>
+                            </div>
+                            }
                         </div>
                     </div>
                 </div>
@@ -120,10 +150,3 @@
     </section>
 </main>
 
-
-
-@section Scripts{
-    <script>
-        document.getElementsByClassName("carousel-item")[0].classList.add("active");
-    </script>
-                                    }

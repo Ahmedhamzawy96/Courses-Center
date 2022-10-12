@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "kS8NaOTVEoXDFjB3HRYVD2epDVSgIqtQ5UmZk9gJros=",
+  "Hash": "TEG7icluf/oyM/TX9cmY/SJ+NrFpK1iajVAyUhyfXFY=",
   "Source": "Courses Center",
   "BasePath": "_content/Courses Center",
   "Mode": "Default",
@@ -10589,6 +10589,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\resources\\236e35de-dac4-41e7-9db5-298bc3945cdcبيان بالرغبات التي تم تسجيلها بقاعدة البيانات لتكليف الخريجين.pdf"
+    },
+    {
+      "Identity": "G:\\Freelancing\\Courses-Center\\Courses Center\\wwwroot\\resources\\2ec9df7e-7bee-4547-9b68-21f608d2fb2dرحلتى مع غاندى.pdf",
+      "SourceId": "Courses Center",
+      "SourceType": "Discovered",
+      "ContentRoot": "G:\\Freelancing\\Courses-Center\\Courses Center\\wwwroot\\",
+      "BasePath": "_content/Courses Center",
+      "RelativePath": "resources/2ec9df7e-7bee-4547-9b68-21f608d2fb2dرحلتى مع غاندى.pdf",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\resources\\2ec9df7e-7bee-4547-9b68-21f608d2fb2dرحلتى مع غاندى.pdf"
     },
     {
       "Identity": "G:\\Freelancing\\Courses-Center\\Courses Center\\wwwroot\\resources\\42490ca5-c973-4084-a5b3-cfe702b13126بيان بالرغبات التي تم تسجيلها بقاعدة البيانات لتكليف الخريجين.pdf",

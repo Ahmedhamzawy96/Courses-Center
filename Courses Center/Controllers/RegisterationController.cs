@@ -19,12 +19,20 @@ namespace Courses_Center.Controllers
         [HttpGet]
         public IActionResult NewUser()
         {
+            var claims = User.Claims.ToList();
+            if (claims.Count > 0)
+            {
+                HttpContext.Session.Clear();
+                HttpContext.Response.Cookies.Delete(CookieAuthenticationDefaults.AuthenticationScheme);
+                HttpContext.Response.Cookies.Delete(".AspNetCore.Cookies");
+                HttpContext.SignOutAsync();
+                return Redirect("/Login/UserLogin");
+            }
             return View();
         }
         [HttpPost]
         public ActionResult NewUser(Buyer B)
-        {
-
+        {  
             if (!ModelState.IsValid)
                 return RedirectToAction(nameof(NewUser));
             Buyer buyer = _buyerService.AddBuyer(B);

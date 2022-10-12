@@ -27,8 +27,11 @@ namespace Courses_Center.Controllers
         // GET: UniversitiesController
         public ActionResult Index()
         {
-            var listUni = _universityService.getallUniversies().Take(9).ToList();
-            return View(listUni);
+
+            ViewBag.uni1 = _universityService.getallUniversies().Take(3).ToList();
+            ViewBag.Uni2 = _universityService.getallUniversies().Skip(3).Take(3).ToList();
+            ViewBag.Uni3 = _universityService.getallUniversies().Skip(6).Take(3).ToList();
+            return View();
         }
 
         [Authorize]
