@@ -54,7 +54,9 @@ namespace Courses_Center.Services.Course_Service
             return _CourseRepositoryMain.Get(id);
         }
 
-      
-       
+        public bool CheckCrsName(string name)
+        {
+            return _unitOfWork.dbContext.Courses.Any(c => c.Name == name);
+        }
     }
 }

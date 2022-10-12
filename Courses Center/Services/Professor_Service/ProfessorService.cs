@@ -18,6 +18,12 @@ namespace Courses_Center.Services.Professor_Service
             _professorRepository = professorRepository;
 
         }
+
+        public bool checkProfName(string name)
+        {
+            return _unitOfWork.dbContext.Professors.Any(P => P.Name == name);
+        }
+
         public List<Professor> getallProfs(int courseId)
         {
             return _professorRepository.GetAllWithCondation(c => c.Courses.Select(cc => cc.Id).FirstOrDefault() == courseId);

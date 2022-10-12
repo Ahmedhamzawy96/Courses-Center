@@ -8,8 +8,8 @@
     <section class="section " style="margin:50px ;">
 
         <div class=" p-3 rounded-3" style="background: #fff; border: 1px solid transparent; box-shadow: 0 2px 5px 1px rgb(64 60 67 / 16%);">
-        <form data-ajax-url="/admin/Course/DisplayCourses" data-ajax="true" data-ajax-method="Post"
-              data-ajax-mode="replace" data-ajax-update="#CoursesData">
+        <form id="AddForm" data-ajax-url="/admin/Course/DisplayCourses" data-ajax="true" data-ajax-method="Post"
+              data-ajax-mode="replace"  data-ajax-update="#CoursesData">
                 <div class="row mb-3" bis_skin_checked="1">
                     <label class="col-sm-1 col-form-label" asp-for="UniID"></label>
                     <div class="col-3" bis_skin_checked="1">
@@ -131,4 +131,8 @@
         }
         
         </script>
+    @{
+        Html.RenderPartial("_ValidationScriptsPartial");
+    }
+
         }

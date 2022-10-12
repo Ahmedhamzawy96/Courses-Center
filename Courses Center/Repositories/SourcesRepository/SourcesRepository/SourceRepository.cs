@@ -18,19 +18,5 @@ namespace Courses_Center.Repositories.SourcesRepository.SourcesRepository
         {
             _unitOfWork.Commit();
         }
-
-        public IEnumerable<dynamic> getallSourceForBuyer(string username)
-        {
-            var Sources = _entities.BuyingCarts.GroupJoin(// outer sequence 
-                                  _entities.Sources,  // inner sequence 
-                                  buyer => buyer.SId,    // outerKeySelector
-                                  source => source.Id,  // innerKeySelector
-                                  (buyer, source) => new  // result selector
-                                  {
-                                      buyer = buyer.BuyUserName,
-                                      source = source
-                                  }).Where(buy => buy.buyer == username).ToList();
-            return Sources;
-        }
     }
 }

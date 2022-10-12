@@ -53,7 +53,6 @@ namespace Courses_Center.Controllers
         }
         [HttpGet]
         [Authorize(Roles = "Admin")]
-        
         public IActionResult update(int id)
         {
             try
@@ -72,7 +71,6 @@ namespace Courses_Center.Controllers
 
         [HttpPost]
         [Authorize(Roles = "Admin")]
-        
         public IActionResult updatePost(int universityID, University university)
         {
             if (ModelState.IsValid)
@@ -158,18 +156,11 @@ namespace Courses_Center.Controllers
 
 
             }
-            //University u = new University();
-            //u = _iUni.GetOneUniversity(Id);
-            //collageDepts.uniName = u.Name;
+            University u = new University();
+            u = _iUni.GetOneUniversity(Id);
+            collageDepts.uniName = u.Name;
             // ViewBag.Name = _universityService.GetOneUniversity(Id).Name.ToString();
             return View(collageDepts);
-        }
-        public IActionResult Search(string wordSearch)
-        {
-            var university = _iUni.SearchUniversites(wordSearch).ToList();
-            if(university.Count > 0)
-                return Ok(university);
-            return NoContent();
         }
     }
 }

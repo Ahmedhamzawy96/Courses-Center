@@ -16,7 +16,10 @@ namespace Courses_Center.Repositories.Department_Repositry
         }
        public IUnitOfWork UnitOfWork { get { return _unitOfWork; } }
 
-       
+        public bool CheckDeptName(string name)
+        {
+            return UnitOfWork.dbContext.Departments.Any(A => A.Name == name);
+        }
 
         public IEnumerable<Department> GetDepartByUniColl(FilterDepartViewModel filter)
         {

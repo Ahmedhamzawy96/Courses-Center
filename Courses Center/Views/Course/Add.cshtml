@@ -7,19 +7,20 @@
                     <div class=" p-3 rounded-3" style="background: #fff; border: 1px solid transparent; box-shadow: 0 2px 5px 1px rgb(64 60 67 / 16%);">
 
                         <h1 class="d-flex justify-content-center">اضافة مادة </h1>
-        <form data-ajax-url="/admin/Course/Add" data-ajax="true" data-ajax-method="post"
-              data-ajax-mode="replace" data-ajax-update="#CoursesData">
+        <form asp-action="Add" asp-controller="Course">
                             <div class="row mb-3" bis_skin_checked="1">
                                 <label class="col-sm-1 col-form-label" asp-for="UniID" ></label>
                                 <div class="col-3" bis_skin_checked="1">
-                    <select name="Univesity" class="form-select"
+                    <select class="form-select"
                             asp-items="@(new SelectList(ViewBag?.Universities,"Id","Name"))"
                             asp-for="UniID"
+                            aria-label="Default select example"
                             value="UniverstyName"
                             id="UniVer"
                             onchange="changeUniName(this.value)">
-                        <option value="0">اختر الجامعة</option></select>
-                    <span class="text-danger" asp-validation-for="UniID" ></span>
+                        <option value="0">اختر الجامعة</option>
+                    </select>
+                    <span class="text-danger" asp-validation-for="UniID"></span>
                                 </div>
 
                                 <label class="col-sm-1 col-form-label" asp-for="ColID" ></label>
@@ -71,12 +72,6 @@
                         </form>
                         </div>
                 </section>
-
-<div class="section " style="margin:50px ;" id="CoursesData">
-    @{
-        Html.RenderPartial("CourseDisplay");
-    }
-</div>
 
 @section Scripts{
     <script type="text/javascript">
@@ -139,4 +134,6 @@
             document.getElementById('sections').disabled = false;
         };
     </script>
+    <partial name="_ValidationScriptsPartial" />
+
         }

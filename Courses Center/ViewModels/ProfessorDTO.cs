@@ -1,21 +1,22 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using Microsoft.AspNetCore.Mvc;
+using System.ComponentModel.DataAnnotations;
 using System.Xml.Linq;
 
 namespace Courses_Center.ViewModels
 {
     public class ProfessorDTO
     {
-        public int? Id { get; set; }
+        public int Id { get; set; }
 
         [Display(Name = "المحاضر")]
         [Required(ErrorMessage = "يجب ادخال اسم المحاضر ")]
-        //[RegularExpression(, ErrorMessage = "يجب الا يقل اسم المادة عن اربع حروف")]
+        [Remote("CheckProfName", "Professor", ErrorMessage = "هناك محاضر بنفس الاسم")]
         public string Name { get; set; }
 
         [Display(Name = "المادة")]
         [Required]
         [RegularExpression("^[1-9]+\\d*$", ErrorMessage = "يجب اختيار المادة")]
-        public int? CrsId { get; set; }
+        public int CrsId { get; set; }
 
 
 

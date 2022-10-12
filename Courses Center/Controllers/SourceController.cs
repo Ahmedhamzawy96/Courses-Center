@@ -123,13 +123,12 @@ namespace Courses_Center.Controllers
         [HttpPost]
         public async Task<List<Tuple<int, string>>> Profs(int Id)
         {
-            //var crsProf = _courseProfessorService.GetAll().Where(A => A.CrsId == Id).ToList();
+            var crsProf = _courseProfessorService.GetAll().Where(A => A.CrsId == Id).ToList();
             var Profess = new List<Professor>();
-            //foreach (var item in crsProf)
-            //{
-            //    Profess.Add(_profService.Get(item.ProfId));
-            //}
-            Profess = _profService.getallProfs(Id);
+            foreach (var item in crsProf)
+            {
+                Profess.Add(_profService.Get(item.ProfId));
+            }
             List<string> names = Profess.Select(x => x.Name).ToList();
             List<int> Ids = Profess.Select(x => x.Id).ToList();
 
@@ -147,20 +146,15 @@ namespace Courses_Center.Controllers
         public IActionResult Add()
         {
             universities = _universityService.GetAll().ToList();
-
-
-
-
             ViewBag.universities = new SelectList(universities, "Id", "Name");
-
             return View();
         }
         [HttpPost]
         [Authorize(Roles = "Admin")]
         public IActionResult Add(SourceDto sourceDto, IFormFile sources)
         {
-            //if(!ModelState.IsValid)
-            //    return RedirectToAction("Index");
+            if (!ModelState.IsValid)
+                return RedirectToAction("Index");
             _source.AddSource(sourceDto, sources);
             return RedirectToAction("Index");
         }

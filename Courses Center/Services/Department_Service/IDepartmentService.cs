@@ -17,6 +17,7 @@ namespace Courses_Center.Services.Department_Service
         IEnumerable<Department> GetColDepts(int id);
         List<Department> getallDepartments(int ColID);
         Department GetOneDepart(int id);
+        bool checkDepart(string Name);
 
 
     }

@@ -124,9 +124,5 @@ namespace Courses_Center.Services.SourcesService
             return _sourceRepository.GetAllWithCondation(s => s.CrsID == CrsID);
 
         }
-        public IEnumerable<dynamic> getallSourceForBuyer(string username)
-        {
-            return _sourceRepository.getallSourceForBuyer(username);
-        }
     }
 }

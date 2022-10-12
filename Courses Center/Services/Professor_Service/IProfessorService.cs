@@ -13,6 +13,7 @@ namespace Courses_Center.Services.Professor_Service
 
          Professor GetOneProfessor(int id);
         bool Update(Professor @new, Professor old);
+        bool checkProfName(string name);
 
 
     }

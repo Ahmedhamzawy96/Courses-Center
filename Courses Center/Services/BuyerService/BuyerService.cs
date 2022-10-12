@@ -53,7 +53,6 @@ namespace Courses_Center.Services.BuyerService
                 _buyerRepositiry.Update(OldPass);
                 _buyerRepositiry.SaveChanges();
             }
-            
             catch { }
         }
     }

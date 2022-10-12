@@ -36,6 +36,10 @@ namespace Courses_Center.Controllers
         [HttpPost]
         public IActionResult Add(Admin A)
         {
+            if (!ModelState.IsValid)
+            {
+                return RedirectToAction("Add");
+            }
             _userService.AddAdmin(A);
             return RedirectToAction("Index");
         }

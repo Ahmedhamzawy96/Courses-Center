@@ -102,7 +102,10 @@ namespace Courses_Center.Services.Department_Service
         {
             return _departmentRepM.Get(id);
         }
-       
-       
+
+        public bool checkDepart(string Name)
+        {
+            return _departmentRepM.CheckDeptName(Name);
+        }
     }
 }

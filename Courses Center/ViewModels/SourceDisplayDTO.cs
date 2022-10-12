@@ -16,17 +16,17 @@ namespace Courses_Center.ViewModels
         public int ColID { get; set; }
 
         [Display(Name = "القسم")]
-        [Required(ErrorMessage = "يجب اختيار الكلية")]
+        [Required(ErrorMessage = "يجب اختيار القسم")]
         [RegularExpression("^[1-9]+\\d*$", ErrorMessage = "يجب اختيار القسم")]
         public int DeptID { get; set; }
 
         [Display(Name = "المادة")]
-        [Required(ErrorMessage = "يجب اختيار الكلية")]
+        [Required(ErrorMessage = "يجب اختيار المادة")]
         [RegularExpression("^[1-9]+\\d*$", ErrorMessage = "يجب اختيار المادة")]
         public int CrsID { get; set; }
 
         [Display(Name = "الماحضر")]
-        [Required(ErrorMessage = "يجب اختيار الكلية")]
+        [Required(ErrorMessage = "يجب اختيار المحاضر")]
         [RegularExpression("^[1-9]+\\d*$", ErrorMessage = "يجب اختيار المحاضر")]
         public int ProfID { get; set; }
 

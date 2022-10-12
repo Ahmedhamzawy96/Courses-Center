@@ -110,7 +110,7 @@ app.UseEndpoints(endpoints =>
 {
     endpoints.MapControllerRoute(
      name: "routeAdmin",
-     pattern: "{Admin}/{controller=University}/{action=Index}/{id?}");
+     pattern: "{Admin}/{controller=Home}/{action=Index}/{id?}");
     endpoints.MapDefaultControllerRoute();
 });
 

@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace Courses_Center.Migrations
 {
-    public partial class centercourse : Migration
+    public partial class UpdateSource : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -58,8 +58,8 @@ namespace Courses_Center.Migrations
                 columns: table => new
                 {
                     UserName = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    Email = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    Password = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Email = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Password = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     ISDeleted = table.Column<bool>(type: "bit", nullable: false)
                 },
                 constraints: table =>
