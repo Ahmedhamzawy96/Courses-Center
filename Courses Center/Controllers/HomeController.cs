@@ -37,6 +37,10 @@ namespace Courses_Center.Controllers
             var claims = User.Claims.ToList();
             var username = claims[0].Value;
             var password = claims[1].Value;
+            if (claims[3].Value == "Admin")
+            {
+                return NoContent();
+            }
             var user = _buyerServices.getOneBuyer(username, password);
             return View(user);
         }
@@ -46,6 +50,7 @@ namespace Courses_Center.Controllers
             var claims = User.Claims.ToList();
             var username = claims[0].Value;
             var password = claims[1].Value;
+
             var user = _buyerServices.getOneBuyer(username, password);
 
             return PartialView(user);
@@ -56,6 +61,10 @@ namespace Courses_Center.Controllers
             var claims = User.Claims.ToList();
             var username = claims[0].Value;
             var password = claims[1].Value;
+            if (claims[3].Value == "Admin")
+            {
+                return NoContent();
+            }
             ViewData["BuyerOld"] = _buyerServices.getOneBuyer(username, password);
             return View("UpdateProfile");
         }
@@ -65,6 +74,7 @@ namespace Courses_Center.Controllers
         {
             if (ModelState.IsValid)
             {
+
                 var user = _buyerServices.getOneBuyer(UserName, Password);
                 if (user == null)
                     return RedirectToAction(nameof(Profile));
@@ -76,6 +86,11 @@ namespace Courses_Center.Controllers
         [Authorize]
         public IActionResult ChangePassword()
         {
+            var claims = User.Claims.ToList();
+            if (claims[3].Value == "Admin")
+            {
+                return NoContent();
+            }
             return View("ChangePassword");
         }
 

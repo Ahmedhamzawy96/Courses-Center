@@ -31,9 +31,14 @@ namespace Courses_Center.Controllers
         [HttpPost]
         public ActionResult UserLogin(LoginViewModel login)
         {
-            //var claims = User.Claims.ToList();
-            //if (claims.Count > 0)
-            //{
+            var claims = User.Claims.ToList();
+            if (claims.Count > 0)
+            {
+                if(claims[3].Value == "Buyer")
+                    return RedirectToAction("Index", "Home");
+                else if (claims[3].Value == "Admin")
+                    return Redirect("/Admin/University/Index");
+            }
             //    if (claims.Select(rol => rol.Value == "Buyer").FirstOrDefault())
             //    {
             //        return RedirectToAction(nameof(UserAccessDenied));
@@ -50,7 +55,7 @@ namespace Courses_Center.Controllers
                 var userClaims = new List<Claim>()
                 {
                     new Claim("UserName", admin.UserName),
-                 //   new Claim("PassWord", admin.Password),
+                    new Claim("PassWord", admin.Password),
                     new Claim(ClaimTypes.Email, admin.Email),
                     new Claim(ClaimTypes.Role, "Admin")
                  };

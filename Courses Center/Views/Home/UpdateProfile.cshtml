@@ -12,8 +12,8 @@
                   asp-controller="Home"
                   method="post"
                   novalidate="novalidate">
-                <input  type="text" id="UserName" name="UserName" value="@ViewBag?.username" />
-                <input type="password" id="Password" name="Password" value="@ViewBag?.password" />
+                <input hidden  type="text" id="UserName" name="UserName" value="@ViewBag?.username" />
+                <input hidden  type="password" id="Password" name="Password" value="@ViewBag?.password" />
                 <div class="form-group my-4">
                     <label asp-for="FnameProfile" class="my-2">الاسم الاول </label>
                     <input type="text" style="line-height:2"
