@@ -6,6 +6,5 @@ namespace Courses_Center.Repositories.SourcesRepository.ISourcesRepository
     public interface ISourceRepository: IGenericRepositry<Source>
     {
         void SaveChanges();
-        public IEnumerable<dynamic> getallSourceForBuyer(string username);
     }
 }

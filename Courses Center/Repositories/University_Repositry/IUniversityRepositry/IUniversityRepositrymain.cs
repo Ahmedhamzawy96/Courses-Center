@@ -12,6 +12,5 @@ namespace Courses_Center.Repositories.University_Repositry.IUniversityRepositry
         int updateUniversity(University uni);
 
         bool CheckNameUniversity(string Name);
-
     }
 }

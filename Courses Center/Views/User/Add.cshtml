@@ -1,6 +1,4 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
+﻿@model Admin
 @{
     <section class="section register min-vh-100 d-flex flex-column align-items-center justify-content-center py-4">
         <div class="container">
@@ -14,29 +12,25 @@
                             </div>
                             <form class="row g-3 needs-validation" novalidate method="post" asp-controller="User" asp-action="Add">
                                 <div class="col-12">
-                                    <label class="form-label">اسم المستخدم</label>
-                                    <div class="input-group has-validation">
-                                        <input name="UserName" class="form-control" required>
-                                        <span class="text-danger"></span>
-                                    </div>
+                                    <label class="form-label" asp-for="UserName"> </label>
+                                        <input asp-for="UserName" class="form-control" >
+                                        <span class="text-danger" asp-validation-for="UserName"></span>
                                 </div>
                                 <div class="col-12">
-                                    <label class="form-label"> الايميل</label>
-                                    <div class="input-group has-validation">
-                                        <input name="Email" class="form-control" required>
-                                        <span class="text-danger"></span>
-                                    </div>
+                                    <label class="form-label" asp-for="Email"></label>
+                                        <input class="form-control" asp-for="Email" >
+                                        <span class="text-danger" asp-validation-for="Email"></span>
                                 </div>
                                 <div class="col-12">
-                                    <label class="form-label">الرقم السري</label>
-                                    <input name="Password" class="form-control" required type="password">
-                                    <span class="text-danger"></span>
+                                    <label class="form-label" asp-for="Password"> </label>
+                                    <input  asp-for="Password" class="form-control" type="password">
+                                    <span class="text-danger" asp-validation-for="Password"></span>
 
                                 </div>
                                 <div class="col-12">
-                                    <label class="form-label">تكرار الرقم السري </label>
-                                    <input name="RPassword" class="form-control">
-                                    <span class="text-danger"></span>
+                                    <label class="form-label" asp-for="ConfirPassword"></label>
+                                    <input asp-for="ConfirPassword"  class="form-control" type="password">
+                                    <span class="text-danger" asp-validation-for="ConfirPassword"></span>
 
                                 </div>
 

@@ -11,5 +11,6 @@ namespace Courses_Center.Services.Course_Service
         List<Course> getallCources(int DeptID);
        
         Course GetOneCourse(int id);
+        bool CheckCrsName(string name); 
     }
 }

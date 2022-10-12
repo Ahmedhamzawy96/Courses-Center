@@ -55,7 +55,5 @@ namespace Courses_Center.Repositories.University_Repositry.UniversityRepositry
             bool res = _unitOfWork.dbContext.Universities.Any(uni=>uni.Name == Name);
             return res;
         }
-
-
     }
 }

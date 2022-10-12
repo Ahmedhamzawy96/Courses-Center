@@ -33,7 +33,7 @@ namespace Courses_Center.Controllers
             _departmentService = departmentService;
         }
 
-        
+        [Authorize(Roles = "Admin")]
         public IActionResult Index()
         {
             var uni = _UniversityService.GetAll();
@@ -41,6 +41,7 @@ namespace Courses_Center.Controllers
             return View();
         }
         [HttpGet]
+        [Authorize(Roles = "Admin")]
         public IActionResult Add()
         {
             var uni = _UniversityService.GetAll();
@@ -49,16 +50,19 @@ namespace Courses_Center.Controllers
         }
 
         [HttpPost]
+        [Authorize(Roles = "Admin")]
         public IActionResult Add(CourseDTO courseDTO)
         {
             if (!ModelState.IsValid)
-                return RedirectToAction("Add");
+                return RedirectToAction(nameof(Add));
             _CourseService.Add(courseDTO.DTOToCourse());
-            return PartialView("CourseDisplay", _CourseService.GetDeptCourses(courseDTO.DeptID));
+            return RedirectToAction("Index");
+
 
         }
 
         [HttpGet]
+        [Authorize(Roles = "Admin")]
         public IActionResult ChangeUniversty(int UniID)
         {
             if (UniID == 0)
@@ -68,6 +72,7 @@ namespace Courses_Center.Controllers
         }
 
         [HttpGet]
+        [Authorize(Roles = "Admin")]
         public IActionResult ChangeCollage(int ColID)
         {
             if (ColID == 0)
@@ -76,6 +81,7 @@ namespace Courses_Center.Controllers
         }
 
         [HttpPost]
+        [Authorize(Roles = "Admin")]
         public IActionResult DisplayCourses(CourseDisplay Course)
         {
             if (!ModelState.IsValid)
@@ -84,6 +90,7 @@ namespace Courses_Center.Controllers
         }
 
         [HttpGet]
+        [Authorize(Roles = "Admin")]
         public IActionResult Edite(int id)
         {
             var uni = _UniversityService.GetAll();
@@ -107,6 +114,7 @@ namespace Courses_Center.Controllers
 
 
         [HttpPost]
+        [Authorize(Roles = "Admin")]
 
         public IActionResult Edite(int id,CourseDTO courseDTO)
         {
@@ -133,6 +141,7 @@ namespace Courses_Center.Controllers
         }
 
         [HttpGet]
+        [Authorize(Roles = "Admin")]
         public IActionResult Delete(int id)
         {
             var cors = _CourseService.Get(id);
@@ -146,6 +155,13 @@ namespace Courses_Center.Controllers
             }
 
             return   RedirectToAction("Index");
+        }
+
+        [HttpGet]
+        [Authorize(Roles = "Admin")]
+        public IActionResult CheckCrsName(string Name )
+        {
+            return Json(!_CourseService.CheckCrsName(Name));
         }
 
 

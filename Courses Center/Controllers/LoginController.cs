@@ -1,5 +1,4 @@
-﻿using Castle.Core.Internal;
-using Courses_Center.Models;
+﻿using Courses_Center.Models;
 using Courses_Center.Services.BuyerService;
 using Courses_Center.Services.BuyingCartServices;
 using Courses_Center.Services.UserService;
@@ -31,14 +30,6 @@ namespace Courses_Center.Controllers
         [HttpPost]
         public ActionResult UserLogin(LoginViewModel login)
         {
-            //var claims = User.Claims.ToList();
-            //if (claims.Count > 0)
-            //{
-            //    if (claims.Select(rol => rol.Value == "Buyer").FirstOrDefault())
-            //    {
-            //        return RedirectToAction(nameof(UserAccessDenied));
-            //    }
-            //}
             // username = anet  
             //     var user = new Users().GetUsers().Where(u => u.UserName == userModel.UserName).SingleOrDefault();
             if (!ModelState.IsValid)
@@ -84,8 +75,8 @@ namespace Courses_Center.Controllers
                 HttpContext.SignInAsync(
 
            new ClaimsPrincipal(userIdentity));
-                return Redirect("/Admin/University/Index");
-                //return RedirectToAction("Index", "University");
+
+                return RedirectToAction("Index", "University");
 
             }
             else if (buyer != null)
@@ -138,7 +129,7 @@ namespace Courses_Center.Controllers
                ExpiresUtc = DateTime.UtcNow.AddMinutes(20)
            });
 
-                return RedirectToAction("Index", "Home");
+                return RedirectToAction("Index", "University");
 
                 //HttpContext.SignInAsync(userPrincipal);
 
@@ -153,14 +144,6 @@ namespace Courses_Center.Controllers
         public ActionResult UserAccessDenied()
         {
             return View();
-        }
-        
-        public ActionResult Logout()
-        {
-            HttpContext.Session.Clear();
-            HttpContext.Response.Cookies.Delete(CookieAuthenticationDefaults.AuthenticationScheme);
-            HttpContext.SignOutAsync();
-            return Redirect("/Home/Index");
         }
     }
 }

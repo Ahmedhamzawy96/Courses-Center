@@ -37,7 +37,7 @@ namespace Courses_Center.ViewModels.Extentsion
         {
             Professor professor = new Professor();
             professor.Name = professorDTO.Name;
-            professor.Id = professorDTO?.Id==null?0: (int)professorDTO?.Id;
+            professor.Id = professorDTO.Id;
             return professor;
         }
 

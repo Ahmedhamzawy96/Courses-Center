@@ -1,4 +1,5 @@
-﻿using System.ComponentModel;
+﻿using Microsoft.AspNetCore.Mvc;
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
@@ -11,6 +12,7 @@ namespace Courses_Center.Models
         [Display(Name = "اسم القسم")]
         [Required(ErrorMessage ="يجب ادخال اسم القسم")]
         [RegularExpression("^[^0-9]+$", ErrorMessage = "لا يجب ان يحتوى الحقل على ارقام")]
+        [Remote("checkDeptname", "Department", ErrorMessage = "هناك قسم بنفس الاسم")]
         public string Name { get; set; }
         [DefaultValue(false)]
         public bool ISDeleted { get; set; }

@@ -77,10 +77,9 @@ namespace Courses_Center.Controllers
                 return RedirectToAction("Add");
             Professor Prof = professorDTO.DTOToProfessor();
             _professorService.Add(Prof);
-            CourseProfessor coursProf = new CourseProfessor() { ProfId = Prof.Id, CrsId = (int)professorDTO.CrsId };
+            CourseProfessor coursProf = new CourseProfessor() { ProfId = Prof.Id, CrsId = professorDTO.CrsId };
             _CourseProfessorService.Add(coursProf);
-            return RedirectToAction(nameof(Add));
-            //return PartialView("CourseDisplay", _professorService.GetAll());
+            return RedirectToAction("Index");
         }
 
         [HttpGet]
@@ -154,6 +153,11 @@ namespace Courses_Center.Controllers
                     return RedirectToAction("Index");
                 }
             }
+        }
+
+        public IActionResult CheckProfName(string Name)
+        {
+            return Json(!_professorService.checkProfName(Name));
         }
     }
 }

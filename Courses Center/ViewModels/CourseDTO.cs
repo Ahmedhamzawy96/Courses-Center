@@ -1,4 +1,5 @@
 ﻿using Courses_Center.Models;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.Build.Framework;
 using System.ComponentModel.DataAnnotations;
 using RequiredAttribute = System.ComponentModel.DataAnnotations.RequiredAttribute;
@@ -17,6 +18,7 @@ namespace Courses_Center.ViewModels
         [Display(Name = "الكلية")]
         [Required(ErrorMessage = "يجب اختيار الكلية")]
         [RegularExpression("^[1-9]+\\d*$", ErrorMessage = "يجب اختيار الكلية")]
+        [Remote("CheckCrsName","Course",ErrorMessage = "هناك مقرر بنفس الاسم بنفس الاسم")]
         public int ColID { get; set; }
 
         [Display(Name = "القسم")]
@@ -26,17 +28,16 @@ namespace Courses_Center.ViewModels
 
         [Display(Name = "اسم المادة")]
         [Required(ErrorMessage = "يجب ادخال اسم المادة ")]
-        //[RegularExpression(, ErrorMessage = "يجب الا يقل اسم المادة عن اربع حروف")]
+        [Remote("CheckCrsName", "Course", ErrorMessage = "هناك مقرر بنفس الاسم بنفس الاسم")]
         public string Name { get; set; }
 
         [Display(Name = "المستوي")]
         [Required(ErrorMessage ="يجب ادخال اسم المستوي ")]
-        //[RegularExpression(, ErrorMessage = "يجب الا يقل اسم المادة عن حرفين حروف")]
+
         public string Level { get;set; }
 
         [Display(Name ="الترم")]
         [Required(ErrorMessage ="يجب ادخال اسم الترم")]
-       // [RegularExpression(,ErrorMessage = "يجب الا يقل اسم المادة عن حرفين حروف")]
         public string Semester { get; set; }    
 
     }

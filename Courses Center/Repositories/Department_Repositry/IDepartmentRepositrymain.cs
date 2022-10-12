@@ -12,6 +12,7 @@ namespace Courses_Center.Repositories.Department_Repositry
         IEnumerable<Department> GetDepartByUniColl(FilterDepartViewModel filter);
         void UpdateDepartment(Department old ,Department updated);
         Department GetDeptWithColUni(int? id);
+        bool CheckDeptName(string name);
 
     }
 }

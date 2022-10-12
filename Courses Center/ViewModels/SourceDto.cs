@@ -9,28 +9,28 @@ namespace Courses_Center.ViewModels
         public int Id { get; set; }
 
         [Display(Name = "الجامعة")]
-        [Required(ErrorMessage = "يجب اختيار الجامعة")]
-        [RegularExpression("^[1-9]+\\d*$", ErrorMessage = "يجب اختيار الجامعة")]
+        [Required(ErrorMessage = "يجب اختيار الكلية")]
+        [RegularExpression("[1-9]{1,}", ErrorMessage = "يجب اختيار الجامعة")]
         public int uniId { get; set; }
 
         [Display(Name = "الكلية")]
         [Required(ErrorMessage = "يجب اختيار الكلية")]
-        [RegularExpression("^[1-9]+\\d*$", ErrorMessage = "يجب اختيار الكلية")]
+        [RegularExpression("[1-9]{1,}", ErrorMessage = "يجب اختيار الكلية")]
         public int colliId { get; set; }
 
         [Display(Name = "القسم")]
-        [Required(ErrorMessage = "يجب اختيار القسم")]
-        [RegularExpression("^[1-9]+\\d*$", ErrorMessage = "يجب اختيار القسم")]
+        [Required]
+        [RegularExpression("[1-9]{1,}", ErrorMessage = "يجب اختيار القسم")]
         public int deptId { get; set; }
 
         [Display(Name = "المادة")]
-        [Required(ErrorMessage = "يجب اختيار المادة")]
-        [RegularExpression("^[1-9]+\\d*$", ErrorMessage = "يجب اختيار المادة")]
+        [Required]
+        [RegularExpression("[1-9]{1,}", ErrorMessage = "يجب اختيار المادة")]
         public int CrsID { get; set; }
 
         [Display(Name = "المحاضر")]
-        [Required(ErrorMessage = "يجب اختيار المحاضر")]
-        [RegularExpression("^[1-9]+\\d*$", ErrorMessage = "يجب اختيار المحاضر")]
+        [Required]
+        [RegularExpression("[1-9]{1,}", ErrorMessage = "يجب اختيار المحاضر")]
         public int ProfID { get; set; }
 
         public string ImageName { get; set; }
@@ -54,7 +54,6 @@ namespace Courses_Center.ViewModels
         [Required(ErrorMessage ="يجب تحديد سعر الملخص")]
         public decimal Price { get; set; }
         
-        [Required(ErrorMessage ="يجب تحميل الملف")]
         public string Url { get; set; }
 
         [Display(Name ="الملاحظات")]
