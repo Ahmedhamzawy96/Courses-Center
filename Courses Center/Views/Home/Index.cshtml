@@ -1,36 +1,42 @@
-﻿@model IEnumerable<Courses_Center.Models.University>
+﻿@{
+    Layout = "~/Views/Shared/_UserLayout.cshtml";
+}
+@model IEnumerable<Courses_Center.Models.University>
 @{
-    <!-- Universitets-Section -->
-    <main>
-        <div class="slider-area">
-            <div class="slider-active">
-                <div class="single-slider slider-height"
-                     data-background="https://cdn.pixabay.com/photo/2017/12/22/08/01/book-3033196_960_720.jpg">
-                    <div class="container">
-                        <div class="row d-flex align-items-center justify-content-between">
-                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 d-none d-md-block"></div>
-                            <div class="col-xl-5 col-lg-5 col-md-5 col-sm-8">
-                                <div class="hero__caption">
-                                    <br />
-                                    <br />
-                                    <span data-animation="fadeInRight"
-                                          data-delay=".4s"
-                                          style="color: red">متعة التعلم</span>
-                                    <h1 data-animation="fadeInRight" data-delay=".6s">
-                                        مؤسسة <br />
-                                        المنهج
-                                    </h1>
-                                    <br />
-                                    <div class="hero__btn"
-                                         data-animation="fadeInRight"
-                                         data-delay="1s">
-                                        <a asp-action="NewUser"
-                        asp-controller="Registeration"
-                        class="genric-btn danger e-large"
-                      >
-                        انشاء حساب جديد
-                      </a>
-                                    </div>
+    var listUniv = Model.ToList();
+    int row = 0, slide = 3;
+    int lenght = listUniv.Count % 3 == 0 ? listUniv.Count / 3 : (int)Math.Ceiling((decimal)(listUniv.Count / 3.0));
+}
+
+<!-- Universitets-Section -->
+<main>
+    <div class="slider-area">
+        <div class="slider-active">
+            <div class="single-slider slider-height"
+                 data-background="https://cdn.pixabay.com/photo/2017/12/22/08/01/book-3033196_960_720.jpg">
+                <div class="container">
+                    <div class="row d-flex align-items-center justify-content-between">
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 d-none d-md-block"></div>
+                        <div class="col-xl-5 col-lg-5 col-md-5 col-sm-8">
+                            <div class="hero__caption">
+                                <br />
+                                <br />
+                                <span data-animation="fadeInRight"
+                                      data-delay=".4s"
+                                      style="color: red">متعة التعلم</span>
+                                <h1 data-animation="fadeInRight" data-delay=".6s">
+                                    مؤسسة <br />
+                                    المنهج
+                                </h1>
+                                <br />
+                                <div class="hero__btn"
+                                     data-animation="fadeInRight"
+                                     data-delay="1s">
+                                    <a asp-action="NewUser"
+                                       asp-controller="Registeration"
+                                       class="genric-btn danger e-large">
+                                        انشاء حساب جديد
+                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -38,127 +44,86 @@
                 </div>
             </div>
         </div>
-        <section class="pt-5 pb-5 my-4">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xl-12">
-                        <div class="hero-cap text-center">
-                            <h1>الجامعات</h1>
+    </div>
+    <section class="pt-5 pb-5 my-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12">
+                    <div class="hero-cap text-center">
+                        <h1>الجامعات</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-6"></div>
+                <div class="col-6 text-right py-3">
+                    <a class="genric-btn danger-border radius"
+                       href="#carouselExampleIndicators2"
+                       role="button"
+                       data-slide="prev">
+                        <i class="fa fa-arrow-left"></i>
+                    </a>
+                    <a class="genric-btn danger-border radius"
+                       href="#carouselExampleIndicators2"
+                       role="button"
+                       data-slide="next">
+                        <i class="fa fa-arrow-right"></i>
+                    </a>
+                </div>
+                <div class="col-12">
+                    <div id="carouselExampleIndicators2"
+                         class="carousel slide"
+                         data-ride="carousel">
+                        <div class="carousel-inner">
+                            @for (int i = 0; i < lenght; i++)
+                            {
+
+                                <div class="carousel-item">
+                                    <div class="row">
+                                        @for (int y = row; y < slide; y++)
+                                        {
+
+                                            <div class="col-md-4 mb-3">
+                                                <div class="card text-center">
+                                                    <div class="card-body">
+                                                        <h4 class="card-title text-center">
+                                                            @listUniv[y].Name
+                                                        </h4>
+                                                        <a asp-controller="University" asp-action="Details" asp-route-Id="@listUniv[y].Id"
+                                                   class="genric-btn danger-border radius">عرض</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+                                        }
+                                   
+                                    </div>
+                                </div>
+                                row+= 3;
+                                slide = (listUniv.Count - slide)+slide;
+                            }
+
+
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-6"></div>
-                    <div class="col-6 text-right py-3">
-                        <a class="genric-btn danger-border radius"
-                           href="#carouselExampleIndicators2"
-                           role="button"
-                           data-slide="prev">
-                            <i class="fa fa-arrow-left"></i>
-                        </a>
-                        <a class="genric-btn danger-border radius"
-                           href="#carouselExampleIndicators2"
-                           role="button"
-                           data-slide="next">
-                            <i class="fa fa-arrow-right"></i>
-                        </a>
-                    </div>
-                    <div class="col-12">
-                        <div id="carouselExampleIndicators2"
-                             class="carousel slide"
-                             data-ride="carousel">
-                            <div class="carousel-inner">
-                                <div class="carousel-item active">
-                                    <div class="row">
-                                        @foreach (var item in ViewBag.uni1 as IEnumerable<University>)
-                                        {
-                                            <div class="col-md-4 mb-3">
-                                                <div class="card text-center">
-                                                    <img class="img-fluid"
-                                                     alt="100%x280"
-                                                     src="./assets/img/University.jpg" />
-                                                    <div class="card-body">
-                                                        <h4 class="card-title text-center">
-                                                            @item.Name
-                                                        </h4>
-                                                        <p class="card-text text-center">
-                                                            هي الجامعة الحكومية الأولى في مصر. يقع حرمها
-                                                            الرئيسي في الجيزة ، مباشرة عبر النيل من القاهرة.
-                                                        </p>
-                                                        <a asp-controller="University" asp-action="Details" asp-route-Id="@item.Id"
-                                                   class="genric-btn danger-border radius">عرض</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        }
-                                    </div>
-                                </div>
-                                <div class="carousel-item">
-                                    <div class="row">
-                                        @foreach (var item in ViewBag.Uni2 as IEnumerable<University>)
-                                        {
-                                            <div class="col-md-4 mb-3">
-                                                <div class="card text-center">
-                                                    <img class="img-fluid"
-                                                     alt="100%x280"
-                                                     src="./assets/img/University.jpg" />
-                                                    <div class="card-body">
-                                                        <h4 class="card-title text-center">
-                                                            @item.Name
-                                                        </h4>
-                                                        <p class="card-text text-center">
-                                                            هي الجامعة الحكومية الأولى في مصر. يقع حرمها
-                                                            الرئيسي في الجيزة ، مباشرة عبر النيل من القاهرة.
-                                                        </p>
-                                                        <a asp-controller="University" asp-action="Details" asp-route-Id="@item.Id"
-                                                   class="genric-btn danger-border radius">عرض</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        }
-                                    </div>
-                                </div>
-                                <div class="carousel-item">
-                                    <div class="row">
-                                        @foreach (var item in ViewBag.Uni3 as IEnumerable<University>)
-                                        {
-                                            <div class="col-md-4 mb-3">
-                                                <div class="card text-center">
-                                                    <img class="img-fluid"
-                                                     alt="100%x280"
-                                                     src="./assets/img/University.jpg" />
-                                                    <div class="card-body">
-                                                        <h4 class="card-title text-center">
-                                                            @item.Name
-                                                        </h4>
-                                                        <p class="card-text text-center">
-                                                            هي الجامعة الحكومية الأولى في مصر. يقع حرمها
-                                                            الرئيسي في الجيزة ، مباشرة عبر النيل من القاهرة.
-                                                        </p>
-                                                        <a asp-controller="University" asp-action="Details" asp-route-Id="@item.Id"
-                                                   class="genric-btn danger-border radius">عرض</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        }
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+        </div>
+        <div class="container">
+            <div class="text-center py-3">
+                <a class="genric-btn danger e-large" asp-controller="University" asp-action="Universities">الجامعات</a>
             </div>
-            <div class="container">
-                <div class="text-center py-3">
-                    <a class="genric-btn danger e-large" asp-controller="University" asp-action="Universities">الجامعات</a>
-                </div>
-            </div>
-        </section>
-    </main>
+        </div>
+    </section>
+</main>
 
 
 
-}
+@section Scripts{
+    <script>
+        document.getElementsByClassName("carousel-item")[0].classList.add("active");
+    </script>
+                                    }

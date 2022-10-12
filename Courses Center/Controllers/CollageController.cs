@@ -161,6 +161,11 @@ namespace Courses_Center.Controllers
         
         public IActionResult CollegeDepts(int Id)
         {
+            try
+            {
+                ViewBag.NameCol = _UniversityService.Get(Id)?.Name;
+            }
+            catch { }
             departments = _departmentService.getallDepartments(Id);
             ViewBag.departments = new SelectList(departments, "Id", "Name"); ;
             return View();

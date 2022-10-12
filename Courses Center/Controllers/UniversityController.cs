@@ -145,7 +145,7 @@ namespace Courses_Center.Controllers
         List<Department> departments = new List<Department>();
         CollageDepts collageDepts = new CollageDepts();
         
-        public ActionResult Details(int Id)
+              public ActionResult Details(int Id)
         {
 
             List<College> colleges = _collegeServices.getallCollege(Id);
@@ -156,11 +156,18 @@ namespace Courses_Center.Controllers
 
 
             }
-            University u = new University();
-            u = _iUni.GetOneUniversity(Id);
-            collageDepts.uniName = u.Name;
+            //University u = new University();
+            //u = _iUni.GetOneUniversity(Id);
+            //collageDepts.uniName = u.Name;
             // ViewBag.Name = _universityService.GetOneUniversity(Id).Name.ToString();
             return View(collageDepts);
+        }
+        public IActionResult Search(string wordSearch)
+        {
+            var university = _iUni.SearchUniversites(wordSearch).ToList();
+            if(university.Count > 0)
+                return Ok(university);
+            return NoContent();
         }
     }
 }

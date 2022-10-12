@@ -12,6 +12,7 @@ namespace Courses_Center.Services.SourcesService
         void removeSource(int id);
         Source Update(SourceDto s, IFormFile sources);
         List<Source> getallSource(int CrsID);
+        IEnumerable<dynamic> getallSourceForBuyer(string username);
     }
 
 }

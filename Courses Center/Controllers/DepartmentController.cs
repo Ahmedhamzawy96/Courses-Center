@@ -149,6 +149,7 @@ namespace Courses_Center.Controllers
             }
         }
 
+
         [HttpGet]
         [Authorize(Roles = "Admin")]
         public IActionResult Delete(int? id)

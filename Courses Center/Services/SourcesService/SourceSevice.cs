@@ -95,7 +95,7 @@ namespace Courses_Center.Services.SourcesService
                 filePath = Path.Combine(path, name);
                 filePath2 = Path.Combine(path2, obj2.ToString() +sources.Name+".png");
 
-                //  await studentDto.Certification_Photo.CopyToAsync(filePath);
+                //await studentDto.Certification_Photo.CopyToAsync(filePath);
                  using (Stream fileStream = new FileStream(filePath, FileMode.Create))
                 {
                     sources.CopyToAsync(fileStream);
@@ -123,6 +123,11 @@ namespace Courses_Center.Services.SourcesService
         {
             return _sourceRepository.GetAllWithCondation(s => s.CrsID == CrsID);
 
+        }
+
+        public IEnumerable<dynamic> getallSourceForBuyer(string username)
+        {
+            return _sourceRepository.getallSourceForBuyer(username);
         }
     }
 }

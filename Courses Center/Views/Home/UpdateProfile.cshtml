@@ -1,4 +1,7 @@
-﻿@model UProfileViewModel
+﻿@{
+    Layout = "~/Views/Shared/_UserLayout.cshtml";
+}
+@model UProfileViewModel
 <div class="container " dir="rtl">
     <div class="row justify-content-center">
         <div class="col-12">
@@ -9,11 +12,8 @@
                   asp-controller="Home"
                   method="post"
                   novalidate="novalidate">
-<<<<<<< HEAD
                 <input hidden  type="text" id="UserName" name="UserName" value="@ViewBag?.username" />
                 <input hidden  type="password" id="Password" name="Password" value="@ViewBag?.password" />
-=======
->>>>>>> 495bc33aea378e6d93a79f60e8d8be815fa50f96
                 <div class="form-group my-4">
                     <label asp-for="FnameProfile" class="my-2">الاسم الاول </label>
                     <input type="text" style="line-height:2"

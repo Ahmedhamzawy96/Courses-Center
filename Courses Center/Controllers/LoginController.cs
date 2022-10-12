@@ -30,7 +30,7 @@ namespace Courses_Center.Controllers
         [HttpPost]
         public ActionResult UserLogin(LoginViewModel login)
         {
-<<<<<<< HEAD
+//<<<<<<< HEAD
             var claims = User.Claims.ToList();
             if (claims.Count > 0)
             {
@@ -44,8 +44,8 @@ namespace Courses_Center.Controllers
             //        return RedirectToAction(nameof(UserAccessDenied));
             //    }
             //}
-=======
->>>>>>> 495bc33aea378e6d93a79f60e8d8be815fa50f96
+//=======
+//>>>>>>> 495bc33aea378e6d93a79f60e8d8be815fa50f96
             // username = anet  
             //     var user = new Users().GetUsers().Where(u => u.UserName == userModel.UserName).SingleOrDefault();
             if (!ModelState.IsValid)
@@ -91,8 +91,9 @@ namespace Courses_Center.Controllers
                 HttpContext.SignInAsync(
 
            new ClaimsPrincipal(userIdentity));
+                return Redirect("/Admin/University/Index");
 
-                return RedirectToAction("Index", "University");
+                //return RedirectToAction("Index", "University");
 
             }
             else if (buyer != null)
@@ -160,6 +161,13 @@ namespace Courses_Center.Controllers
         public ActionResult UserAccessDenied()
         {
             return View();
+        }
+         public ActionResult Logout()
+        {
+            HttpContext.Session.Clear();
+            HttpContext.Response.Cookies.Delete(CookieAuthenticationDefaults.AuthenticationScheme);
+            HttpContext.SignOutAsync();
+            return Redirect("/Home/Index");
         }
     }
 }
