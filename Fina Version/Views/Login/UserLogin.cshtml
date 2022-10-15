@@ -1,0 +1,66 @@
+﻿@{
+                Layout = "~/Views/Shared/_UserLayout.cshtml";
+}
+    <!--================login_part Area =================-->
+@model LoginViewModel
+<section class="login_part  p-5 ">
+    <div class="container-fluid p-0 shadow p-3 mb-5 bg-white rounded">
+        <div class="row  align-items-center">
+            <div class="col-lg-6 col-md-6 text-center">
+                <div class="login_part_form">
+                    <div class="login_part_form_iner">
+                        <h3>يرجي تسجيل الدخول</h3>
+    @*                    <div>
+                            @if (ViewBag.NotFound.IsError == true){
+                                <span class="text-danger">@ViewBag.NotFound.ErrorList[0]</span>
+                            }
+                        </div>*@
+                        <form class="row contact_form"
+                              method="post"
+                              novalidate="novalidate">
+                            <div class="col-md-12 form-group p_star">
+                                <input type="text"
+                                       class="form-control text-right"
+                                        asp-for="UserName"                  
+                                       placeholder="اسم المستخدم" />
+                                <span asp-validation-for="UserName" class="text-danger"></span>
+                            </div>
+                            <div class="col-md-12 form-group p_star">
+                                <input type="password"
+                                       class="form-control text-right"
+                                       asp-for="Password"
+                                       placeholder="كلمة المرور" />
+                                <span asp-validation-for="Password" class="text-danger"></span>
+
+                            </div>
+                            <div class="col-md-12 form-group">
+                                <button type="submit" value="submit" class="btn_3">
+                                    تسجيل الدخول
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6">
+                <div class="login_part_text text-center">
+                    <div class="login_part_text_iner">
+                        <h2>انشاء حساب جديد</h2>
+                        <p>
+                            نسعد بانضمامك لمنصة المنهج التعلمية حيث يمكن الحصول علي
+                            الملفات التعلمية من افضل المحاضربن بارقي الجامعات
+                        </p>
+                        <a asp-action="NewUser" asp-controller="Registeration" class="btn_3">مستخدم جديد</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--================login_part end =================-->
+@section Scripts
+    {
+    @{
+        Html.RenderPartial("_ValidationScriptsPartial");
+    }
+    }

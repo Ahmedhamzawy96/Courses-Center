@@ -1,0 +1,218 @@
+﻿@using Microsoft.AspNetCore.Http
+@inject IHttpContextAccessor HttpContextAccessor
+<!DOCTYPE html>
+<html class="no-js" lang="ar">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>eCommerce HTML-5 Template</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="manifest" href="site.webmanifest" />
+    <link rel="shortcut icon"
+          type="image/x-icon"
+          href="assets/img/favicon.ico" />
+
+    <link rel="stylesheet"
+          type="text/css"
+          href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+    <!-- CSS here -->
+    <link rel="stylesheet" href="~/assets2/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/assets2/css/owl.carousel.min.css" />
+    <link rel="stylesheet" href="~/assets2/css/flaticon.css" />
+    <link rel="stylesheet" href="~/assets2/css/slicknav.css" />
+    <link rel="stylesheet" href="~/assets2/css/animate.min.css" />
+    <link rel="stylesheet" href="~/assets2/css/magnific-popup.css" />
+    <link rel="stylesheet" href="~/assets2/css/fontawesome-all.min.css" />
+    <link rel="stylesheet" href="~/assets2/css/themify-icons.css" />
+    <link rel="stylesheet" href="~/assets2/css/slick.css" />
+    <link rel="stylesheet" href="~/assets2/css/nice-select.css" />
+    <link rel="stylesheet" href="~/assets2/css/style.css" />
+</head>
+<body>
+    <header>
+        <div class="header-area">
+            <div class="main-header">
+                <div class="header-bottom header-sticky"
+                     style="background-color: #f5f5f5">
+                    <div class="container-fluid">
+                        <div class="row align-items-center">
+                            <div class="col-xl-1 col-lg-1 col-md-1 col-sm-3">
+                                <div class="logo">
+                                    <a href="index.html">
+                                        <img src="~/assets/img/logo/logo.png" alt="" />
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="col-xl-6 col-lg-8 col-md-8 col-sm-6">
+                                <!-- Main-menu -->
+                                <div class="main-menu f-right d-none d-lg-block">
+                                    <nav>
+                                        <ul id="navigation">
+                                            <li>
+                                                @{
+                                                    string LoginOut = HttpContextAccessor.HttpContext.Session.GetString("username");
+                                                    var claims = User.Claims.ToList();
+                                                    @if(LoginOut != null||claims.Count>0){
+                                                        <a asp-action="Logout" asp-controller="Login"
+                                                            class=""
+                                                            style="font-size: 20px; color: red">تسجيل الخروج</a>
+                                                    }else{
+                                                            <a asp-action="UserLogin" asp-controller="Login"
+                                                            class=""
+                                                            style="font-size: 20px; color: red">تسجيل الدخول</a>
+                                                    }
+                                                 }
+                                            </li>
+                                            <li><a asp-controller="University" asp-action="Universities">الجامعات</a></li>
+                                            <li><a asp-action="Index" asp-controller="Home">الصفحة الرئيسية</a></li>
+
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </div>
+
+                            <div class="col-xl-5 col-lg-3 col-md-3 col-sm-3 fix-card">
+                                <ul class="header-right f-right d-none d-lg-block d-flex justify-content-between align-self-start">
+                                    <li>
+                                        @{
+                                            //var user = HttpContextAccessor?.HttpContext?.User?.Claims?.FirstOrDefault()?.Value;
+
+                                            var count = HttpContextAccessor.HttpContext.Session.GetString("ProCount");
+                                            var user = HttpContextAccessor.HttpContext.Session.GetString("username");
+                                        }
+                                        @if (user != null)
+                                        {
+                                            <div class="shopping-card">
+
+                                                <a href="/BuyingCart/Display">
+                                                    <i class="fas fa-shopping-cart"></i>
+                                                </a>
+
+
+                                                <span class="shoping-cart-span" id="shoping-cart-span">@count</span>
+
+                                            </div>
+                                        }
+
+                                       
+                                    </li>
+                                    <li>
+                                        <div class="shopping-card">
+
+                                            <a asp-action="Profile" asp-controller="Home">
+                                                <i class="fas fa-user"></i>
+                                            </a>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="col-12">
+                                <div class="mobile_menu d-block d-lg-none"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Header End -->
+    </header>
+    <main>
+        @RenderBody()
+    </main>
+    <footer dir="rtl">
+        <!-- Footer Start-->
+        <div class="footer-area footer-padding">
+            <div class="container">
+                <div class="row d-flex justify-content-between text-right">
+                    <div class="col-xl-2 col-lg-3 col-md-3 col-sm-5">
+                        <div class="single-footer-caption mb-50">
+                            <div class="footer-tittle">
+                                <h4>الاتصال بنا</h4>
+                                <ul>
+                                    <li><i class="fa-solid fa-phone"></i> 0096590058678</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-3 col-md-4 col-sm-7">
+                        <div class="single-footer-caption mb-50">
+                            <div class="footer-tittle">
+                                <h4>صفحات التواصل الاجتماعي</h4>
+                                <ul>
+                                    <li>
+                                        <a class="px-2"
+                                           href="https://www.instagram.com/engineer_2000_q8?r=nametag"
+                                           target="_blank">
+                                            <i class="fa-brands fa-instagram fa-2xl"></i>
+                                        </a>
+                                        <a class="px-2"
+                                           href="https://www.tiktok.com/@@www.almanhag.com?_t=8WTrjw3uQJJ&_r=1"
+                                           target="_blank">
+                                            <i class="fa-brands fa-tiktok fa-2xl"></i>
+                                        </a>
+                                        <a class="px-2"
+                                           href="https://www.snapchat.com/add/eng.kareem2022?share_id=inwY6uLGp1w&locale=ar-EG"
+                                           target="_blank">
+                                            <i class="fa-brands fa-snapchat fa-2xl"></i>
+                                        </a>
+                                        <a class="px-2"
+                                           href="https://wa.me/0096590058678"
+                                           target="_blank">
+                                            <i class="fa-brands fa-whatsapp fa-2xl"></i></i
+                                            >
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-3 col-md-5 col-sm-7"></div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer End-->
+    </footer>
+    <script src="~/assets2/js/vendor/modernizr-3.5.0.min.js"></script>
+    <!-- Jquery, Popper, Bootstrap -->
+    <script src="~/assets2/js/vendor/jquery-1.12.4.min.js"></script>
+    <script src="~/assets2/js/popper.min.js"></script>
+    <script src="~/assets2/js/bootstrap.min.js"></script>
+    <!-- Jquery Mobile Menu -->
+    <script src="~/assets2/js/jquery.slicknav.min.js"></script>
+
+    <!-- Jquery Slick , Owl-Carousel Plugins -->
+    <script src="~/assets2/js/owl.carousel.min.js"></script>
+    <script src="~/assets2/js/slick.min.js"></script>
+
+    <!-- One Page, Animated-HeadLin -->
+    <script src="~/assets2/js/wow.min.js"></script>
+    <script src="~/assets2/js/animated.headline.js"></script>
+    <script src="~/assets2/js/jquery.magnific-popup.js"></script>
+
+    <!-- Scrollup, nice-select, sticky -->
+    <script src="~/assets2/js/jquery.scrollUp.min.js"></script>
+    <script src="~/assets2/js/jquery.nice-select.min.js"></script>
+    <script src="~/assets2/js/jquery.sticky.js"></script>
+
+    <!-- contact js -->
+    <script src="~/assets2/js/contact.js"></script>
+    <script src="~/assets2/js/jquery.form.js"></script>
+    <script src="~/assets2/js/jquery.validate.min.js"></script>
+    <script src="~/assets2/js/jquery.validate.unobtrusive.min.js"></script>
+    <script src="~/assets2/js/mail-script.js"></script>
+    <script src="~/assets2/js/jquery.ajaxchimp.min.js"></script>
+
+    <!-- Jquery Plugins, main Jquery -->
+    <script src="~/assets2/js/plugins.js"></script>
+    <script src="~/assets2/js/main.js"></script>
+    <script src="https://mozilla.github.io/pdf.js/build/pdf.js"></script>
+    <script src="https://kit.fontawesome.com/9aa881c29c.js" crossorigin="anonymous"></script>
+        @RenderSection("Scripts",false);
+
+
+</body>
+</html>

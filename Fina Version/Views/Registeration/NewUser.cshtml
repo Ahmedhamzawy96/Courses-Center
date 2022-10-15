@@ -1,0 +1,94 @@
+﻿@{
+    Layout = "~/Views/Shared/_UserLayout.cshtml";
+}
+@model Courses_Center.Models.Buyer
+<section class="login_part  p-5 ">
+    <div class="container-fluid p-0 shadow p-3 mb-5 bg-white rounded">
+        <div class="row  align-items-center">
+            <div class="col-lg-6 col-md-6">
+                <div class="login_part_text text-center">
+                    <div class="login_part_text_iner">
+                        <h2>الدخول الى حسابى</h2>
+                        <p>
+                            نسعد بانضمامك لمنصة المنهج التعلمية حيث يمكن الحصول علي
+                            الملفات التعلمية من افضل المحاضربن بارقي الجامعات
+                        </p>
+                        <a asp-action="UserLogin" asp-controller="Login" class="btn_3">تسجيل الدخول</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-6 col-md-6 text-center">
+                <div class="login_part_form">
+                    <div class="login_part_form_iner">
+                        <h3>مستخدم جديد</h3>
+                        <form class="row  contact_form "  autocomplete="off"
+                              action="#"
+                              method="post"
+                              novalidate="novalidate">
+                            <div class="col-md-12 col-sm-12 row m-0 justify-content-between align-items-center">
+                                <div  class="col-md-6 col-sm-12 p-0  p_star order-1 order-sm-2">
+                                    <input type="text" style="line-height:2"
+                                           class="form-control text-right w-100"
+                                          asp-for="Lname"
+                                           placeholder="الاسم الثانى" />
+                                    <span asp-validation-for="Lname" class="text-danger"></span>
+                                    <br />
+                                </div>
+                                <div  class="col-md-6 col-sm-12 p-0 p_star order-2 order-sm-1">
+                                    <input type="text" style="line-height:2"
+                                           class="form-control text-right w-100"
+                                           asp-for="Fname"
+                                           placeholder="الاسم الاول" />
+                                    <span asp-validation-for="Fname" class="text-danger"></span>
+                                    <br />
+                                
+
+                                </div>
+                            </div>
+
+
+
+                            <div style="line-height:2" class="col-md-12   form-group p_star">
+                                <input type="text" 
+                                       class="form-control text-right"
+                                    asp-for="UserName"
+                                       placeholder="اسم المستخدم" autocomplete="off" />
+                                <span asp-validation-for="UserName" class="text-danger"></span>
+
+                            </div>
+                            <div style="line-height:2" class="col-md-12 form-group p_star">
+                                <input type="password"
+                                       class="form-control text-right"
+                                     asp-for="Password"
+                                       value=""
+                                       placeholder="كلمية المرور" autocomplete="off" />
+                                <span asp-validation-for="Password" class="text-danger"></span>
+
+                            </div>
+                            <div style="line-height:2" class="col-md-12 form-group p_star">
+                                <input type="email"
+                                       class="form-control text-right"
+                                      asp-for="Email"
+                                       placeholder="البريد الالكترونى" />
+                                <span asp-validation-for="Email" class="text-danger"></span>
+
+                            </div>
+                            <div style="line-height:2" class="col-md-12 form-group">
+                                <button type="submit" value="submit" class="btn_3">
+                                    انشاء حساب 
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+@section Scripts
+    {
+    @{
+        Html.RenderPartial("_ValidationScriptsPartial");
+    }
+    }

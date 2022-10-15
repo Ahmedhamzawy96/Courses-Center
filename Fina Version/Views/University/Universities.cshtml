@@ -1,0 +1,163 @@
+﻿@{
+    Layout = "~/Views/Shared/_UserLayout.cshtml";
+}
+@model IEnumerable<Courses_Center.Models.University>
+
+@{
+    <!-- Universitets-Section -->
+    <div class="slider-area">
+            <!-- Mobile Menu -->
+            <div class="single-slider slider-height2 d-flex align-items-center"
+                 data-background="https://images.unsplash.com/20/cambridge.JPG?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1447&q=80">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-12">
+                            <div class="hero-cap text-center">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+    <div class="container-fluid py-5" dir="rtl">
+            <div class="row">
+
+                <div class="col-12 ">
+                    <!-- <section class="UniPref" >
+                      <div class="card" style="background-color:#f5f5f5 ;">
+                        <div class="card-body">
+                          <div class="img-sec">
+                            <div class="col-12 py-2">
+                              <div class="card align-items-center py-3">
+                                <div class="card-body text-center py-4">
+                                  <img
+                                    class="w-75"
+                                    src="./assets/img/Cairo_University_Crest.png"
+                                    alt="University Logo"
+                                  />
+                                </div>
+                                <div class="info px-3">
+                                  <p>
+                                    جامعة القاهرة ، المعروفة أيضًا باسم الجامعة المصرية من
+                                    1908 إلى 1940 ، وجامعة الملك فؤاد الأول وجامعة فؤاد
+                                    الأول من 1940 إلى 1952 ، هي الجامعة الحكومية الأولى في
+                                    مصر. يقع حرمها الرئيسي في الجيزة ، مباشرة عبر النيل من
+                                    القاهرة.
+                                  </p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </section> -->
+                    <section class="py-3">
+                        <div class="card" style="background-color:#f5f5f5 ;">
+                            <div class="card-body">
+                                <h1 class="text-center">الجامعات</h1>
+                                <div class="container py-0 py-md-3">
+                                    <div class="row  ">
+                                        <div class="Search-Bar py-3 col-12  col-lg-6">
+                                            <input type="search"
+                                                   class="form-control rounded"
+                                                   placeholder="البحث"
+                                                   aria-label="Search"
+                                                   id="wordsearch"
+                                                   aria-describedby="search-addon"
+                                                   required />
+                                        </div>
+                                        <div class=" col-12  col-lg-6 py-3">
+                                            <button class="genric-btn danger-border radius" onclick="Display()">
+                                                بحث
+                                            </button>
+                                            <a class="genric-btn danger-border radius"
+                                            asp-action="Universities" asp-controller="University">
+                                                كل الجامعات
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="row py-5" id="catalogeUniveristy">
+                                        @foreach (var item in Model)
+                                    {
+                                            <div class="col-md-4 mb-3">
+                                                <div class="card text-center">
+                                                    @*<img class="img-fluid"
+                                        alt="100%x280"
+                                        src="./assets/img/University.jpg" />*@
+                                                    <div class="card-body">
+                                                        <h4 class="card-title text-center">
+                                                            @item.Name
+                                                        </h4>
+                                                        @*<p class="card-text text-center">
+                                            هي الجامعة الحكومية الأولى في مصر. يقع حرمها
+                                            الرئيسي في الجيزة ، مباشرة عبر النيل من القاهرة.
+                                            </p>*@
+                                                        <a asp-controller="University" asp-action="Details" asp-route-Id="@item.Id"
+                                               class="genric-btn danger-border radius">عرض</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                    }
+
+
+
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                </div>
+
+            </div>
+    </div>
+
+    <!-- Universitets-Section -->
+}
+@section Scripts
+    {
+    <script>
+
+        function Display() {
+
+            var value = $("#wordsearch").val();
+            $.ajax({
+                url: "/University/Search",
+                dataType: "json",
+                cache: false,
+                type: 'POST',
+                data: { wordSearch: value },
+                success: function (result) {
+
+                    console.log(result)
+                    console.log(value.length)
+                    if (value.length > 1) {
+                        $("#catalogeUniveristy").empty();
+                        $.each(result, function (i, state) {
+
+                            $("#catalogeUniveristy").append(`
+                                                                            <div class="col-md-4 mb-3">
+                                                                                <div class="card text-center">
+                                                                                    <div class="card-body">
+                                                                                        <h4 class="card-title text-center">
+                                                                                                   ${state.name}
+                                                                                        </h4>
+                                                                                       <a class="genric-btn danger-border radius" href="/University/Details/${state.id}">عرض</a>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>`
+
+                            );
+                        });
+                    }
+                },
+                error: function (ex) {
+
+                }
+
+            });
+
+        }
+    </script>
+}

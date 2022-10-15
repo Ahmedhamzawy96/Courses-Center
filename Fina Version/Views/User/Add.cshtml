@@ -1,0 +1,47 @@
+﻿@model Admin
+@{
+    <section class="section register min-vh-100 d-flex flex-column align-items-center justify-content-center py-4">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-7 col-md-7 d-flex flex-column align-items-center justify-content-center">
+
+                    <div class="card mb-3">
+                        <div class="card-body">
+                            <div class="pt-4 pb-2">
+                                <h5 class="card-title text-center pb-0 fs-4">اضافه ادمن </h5>
+                            </div>
+                            <form class="row g-3 needs-validation" novalidate method="post" asp-controller="User" asp-action="Add">
+                                <div class="col-12">
+                                    <label class="form-label" asp-for="UserName"> </label>
+                                        <input asp-for="UserName" class="form-control" >
+                                        <span class="text-danger" asp-validation-for="UserName"></span>
+                                </div>
+                                <div class="col-12">
+                                    <label class="form-label" asp-for="Email"></label>
+                                        <input class="form-control" asp-for="Email" >
+                                        <span class="text-danger" asp-validation-for="Email"></span>
+                                </div>
+                                <div class="col-12">
+                                    <label class="form-label" asp-for="Password"> </label>
+                                    <input  asp-for="Password" class="form-control" type="password">
+                                    <span class="text-danger" asp-validation-for="Password"></span>
+
+                                </div>
+                                <div class="col-12">
+                                    <label class="form-label" asp-for="ConfirPassword"></label>
+                                    <input asp-for="ConfirPassword"  class="form-control" type="password">
+                                    <span class="text-danger" asp-validation-for="ConfirPassword"></span>
+
+                                </div>
+
+
+                                <div class="col-12"> <button class="btn btn-primary w-100" type="submit">انشاء حساب</button></div>
+
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+}

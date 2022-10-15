@@ -1,0 +1,138 @@
+﻿
+@model CourseDisplay
+
+@{
+    ViewBag.Title = "المواد";
+
+}
+    <section class="section " style="margin:50px ;">
+
+        <div class=" p-3 rounded-3" style="background: #fff; border: 1px solid transparent; box-shadow: 0 2px 5px 1px rgb(64 60 67 / 16%);">
+        <form id="AddForm" data-ajax-url="/admin/Course/DisplayCourses" data-ajax="true" data-ajax-method="Post"
+              data-ajax-mode="replace"  data-ajax-update="#CoursesData">
+                <div class="row mb-3" bis_skin_checked="1">
+                    <label class="col-sm-1 col-form-label" asp-for="UniID"></label>
+                    <div class="col-3" bis_skin_checked="1">
+                    <select  class="form-select"
+                            asp-items="@(new SelectList(ViewBag?.Universities,"Id","Name"))"
+                            asp-for="UniID"
+                            aria-label="Default select example"
+                            value="UniverstyName"
+                            id="UniVer"
+                            onchange="changeUniName(this.value)"
+                    >
+                        <option value="0">اختر الجامعة</option>
+                    </select>
+                    <span class="text-danger" asp-validation-for="UniID"></span>
+                    </div>
+                    <label class="col-sm-1 col-form-label" asp-for="ColID"></label>
+                    <div class="col-3" bis_skin_checked="1">
+
+                    <select  class="form-select" id="colleges" asp-for="ColID" onchange="changeColName(this.value)" disabled>
+                    </select>
+                    <span class="text-danger" asp-validation-for="ColID"></span>
+
+                    </div>
+                    <label class="col-sm-1 col-form-label" asp-for="DeptID"></label>
+                    <div class="col-3" bis_skin_checked="1">
+                    <select class="form-select" id="sections" disabled asp-for="DeptID">
+                    </select>
+                    <span class="text-danger" asp-validation-for="DeptID"></span>
+                    </div>
+                    <br>
+                    <br>
+
+                    <br>
+
+                    <div class="col-12 d-flex justify-content-center" bis_skin_checked="1">
+                        <button class="btn btn-primary" type="submit">عرض المواد </button>
+                    </div>
+
+            </form>
+        </div>
+    </section>
+
+<div class="section " style="margin:50px ;" id="CoursesData">
+    @{
+        Html.RenderPartial("CourseDisplay");
+    }
+</div>
+
+    @section Scripts{
+        <script type="text/javascript">
+            function changeUniName(value) {
+                console.log(value);
+                $.ajax({
+                    type: "Get",
+                    dataType: "json",
+                    Cache: false,
+                    url: "/admin/Course/ChangeUniversty",
+                    data: { "UniID": value },
+                    success: function (response) {
+                        $("#colleges").empty();
+                        console.log(response);
+                    $("#colleges").empty();
+                    $("#colleges").append('<option value="' + 0 + '">' + "اختر الكلية" + '</option>');
+
+                    $.each(response, function (i, state) {
+                        $("#colleges").append('<option value="' + state.id + '">' + state.name + '</option>');
+                    });
+
+                    },
+                    failure: function (response) {
+                        console.log(response.responseText);
+                    },
+                    error: function (response) {
+                        console.log(response.responseText);
+                    }
+                });
+            document.getElementById('colleges').disabled = false;
+            };
+
+        function changeColName(value) {
+         
+            console.log(value);
+            $.ajax({
+                type: "Get",
+                dataType: "json",
+                Cache: false,
+                url: "/admin/Course/ChangeCollage",
+                data: {"ColID":value },
+                success: function (response) {
+                    $("#sections").empty();
+                    console.log(response);
+                    $("#sections").empty();
+                    $("#sections").append('<option value="' + 0 + '">' + "اخترالقسم" + '</option>');
+
+                    $.each(response, function (i, state) {
+                        $("#sections").append('<option value="' + state.id + '">' + state.name + '</option>');
+                    });
+
+                },
+                failure: function (response) {
+                    console.log(response.responseText);
+                },
+                error: function (response) {
+                    console.log(response.responseText);
+                }
+            });
+            document.getElementById('sections').disabled = false;
+        };
+
+        showInPopup = (url) => {
+            $.ajax({
+                type: 'GET',
+                url: url,
+                success: function (res) {
+                    $('#CourseModal .modalbody').html(res);
+                    $('#CourseModal').modal('show');
+                }
+            })
+        }
+        
+        </script>
+    @{
+        Html.RenderPartial("_ValidationScriptsPartial");
+    }
+
+        }
