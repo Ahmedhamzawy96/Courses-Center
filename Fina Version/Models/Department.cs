@@ -12,7 +12,10 @@ namespace Courses_Center.Models
         [Display(Name = "اسم القسم")]
         [Required(ErrorMessage ="يجب ادخال اسم القسم")]
         //[RegularExpression("^[^0-9]+$", ErrorMessage = "لا يجب ان يحتوى الحقل على ارقام")]
+<<<<<<< HEAD
         [Remote("checkDeptname", "Department", ErrorMessage = "هناك قسم بنفس الاسم")]
+=======
+>>>>>>> c76c8111419d8fa4538e6953a76412ac224b8fc7
         public string Name { get; set; }
         [DefaultValue(false)]
         public bool ISDeleted { get; set; }

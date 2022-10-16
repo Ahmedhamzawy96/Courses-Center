@@ -1,6 +1,7 @@
 {
   "format": 1,
   "restore": {
+<<<<<<< HEAD
     "G:\\Freelancing\\Courses-Center\\Fina Version\\Courses Center.csproj": {}
   },
   "projects": {
@@ -12,6 +13,19 @@
         "projectPath": "G:\\Freelancing\\Courses-Center\\Fina Version\\Courses Center.csproj",
         "packagesPath": "C:\\Users\\La Vie\\.nuget\\packages\\",
         "outputPath": "G:\\Freelancing\\Courses-Center\\Fina Version\\obj\\",
+=======
+    "C:\\Users\\HAMZAWY\\Desktop\\Freelance Project 2\\Repo\\Courses-Center\\Fina Version\\Courses Center.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\HAMZAWY\\Desktop\\Freelance Project 2\\Repo\\Courses-Center\\Fina Version\\Courses Center.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\HAMZAWY\\Desktop\\Freelance Project 2\\Repo\\Courses-Center\\Fina Version\\Courses Center.csproj",
+        "projectName": "Courses Center",
+        "projectPath": "C:\\Users\\HAMZAWY\\Desktop\\Freelance Project 2\\Repo\\Courses-Center\\Fina Version\\Courses Center.csproj",
+        "packagesPath": "C:\\Users\\HAMZAWY\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\HAMZAWY\\Desktop\\Freelance Project 2\\Repo\\Courses-Center\\Fina Version\\obj\\",
+>>>>>>> c76c8111419d8fa4538e6953a76412ac224b8fc7
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\La Vie\\AppData\\Roaming\\NuGet\\NuGet.Config",

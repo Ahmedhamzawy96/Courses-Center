@@ -10,7 +10,6 @@ namespace Courses_Center.ViewModels
 
         [Display(Name = "المحاضر")]
         [Required(ErrorMessage = "يجب ادخال اسم المحاضر ")]
-        [Remote("CheckProfName", "Professor", ErrorMessage = "هناك محاضر بنفس الاسم")]
         public string Name { get; set; }
 
         [Display(Name = "المادة")]
