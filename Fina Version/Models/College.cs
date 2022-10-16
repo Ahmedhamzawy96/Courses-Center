@@ -12,8 +12,7 @@ namespace Courses_Center.Models
 
         [Display(Name ="اسم الكلية")]
         [Required(ErrorMessage = "يجب ادخال اسم الكلية")]
-        [RegularExpression("^[^0-9]+$", ErrorMessage = "لا يجب ان يحتوى الحقل على ارقام")]
-        [Remote("CheckNameColl", "Collage", AdditionalFields = "UniID", ErrorMessage = "هناك كلية بنفس الاسم فى هذة الجامعة")]
+        //[RegularExpression("^[^0-9]+$", ErrorMessage = "لا يجب ان يحتوى الحقل على ارقام")]
         public string Name { get; set; }
 
         [DefaultValue(false)]

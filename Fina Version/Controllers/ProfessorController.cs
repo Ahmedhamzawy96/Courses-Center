@@ -88,9 +88,15 @@ namespace Courses_Center.Controllers
             if(id == 0 ) 
                 return RedirectToAction(nameof(Index));
             var prof = _professorService.Get(id);
-            var CrsProf = _CourseProfessorService.Get(id);
             _professorService.Remove(prof);
-            _CourseProfessorService.Remove(CrsProf);
+            var CrsProfList = _CourseProfessorService.GetAll();
+            foreach(var item in CrsProfList)
+            {
+                if(item.ProfId == id)
+                {
+                    _CourseProfessorService.Remove(item);
+                }
+            }
             return  RedirectToAction(nameof(Index));
         }
 

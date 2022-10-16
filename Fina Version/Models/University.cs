@@ -10,7 +10,7 @@ namespace Courses_Center.Models
         public int Id { get; set; }
         [Display(Name = "اسم الجامعة")]
         [Required(ErrorMessage = "يجب ان تدخل اسم الجامعة")]
-        [RegularExpression("^[^0-9]+$", ErrorMessage = "لا يجب ان يحتوى الحقل على ارقام")]
+        //[RegularExpression("^[^0-9]+$", ErrorMessage = "لا يجب ان يحتوى الحقل على ارقام")]
         [Remote("CheckNameUni", "University", ErrorMessage = "هناك جامعة بنفس الاسم")]
         public string Name { get; set; }
         [DefaultValue(false)]

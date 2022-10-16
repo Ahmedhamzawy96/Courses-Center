@@ -5,6 +5,5 @@ namespace Courses_Center.Services.CourseProfessorService
 {
     public interface ICourseProfessorService:IEntityServices<CourseProfessor>
     {
-
     }
 }

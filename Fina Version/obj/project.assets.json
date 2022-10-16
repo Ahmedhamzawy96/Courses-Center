@@ -11630,11 +11630,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\HAMZAWY\\Desktop\\Freelance Project 2\\Fina Version\\Courses Center.csproj",
+      "projectUniqueName": "C:\\Users\\HAMZAWY\\Desktop\\Freelance Project 2\\Repo\\Courses-Center\\Fina Version\\Courses Center.csproj",
       "projectName": "Courses Center",
-      "projectPath": "C:\\Users\\HAMZAWY\\Desktop\\Freelance Project 2\\Fina Version\\Courses Center.csproj",
+      "projectPath": "C:\\Users\\HAMZAWY\\Desktop\\Freelance Project 2\\Repo\\Courses-Center\\Fina Version\\Courses Center.csproj",
       "packagesPath": "C:\\Users\\HAMZAWY\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\HAMZAWY\\Desktop\\Freelance Project 2\\Fina Version\\obj\\",
+      "outputPath": "C:\\Users\\HAMZAWY\\Desktop\\Freelance Project 2\\Repo\\Courses-Center\\Fina Version\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

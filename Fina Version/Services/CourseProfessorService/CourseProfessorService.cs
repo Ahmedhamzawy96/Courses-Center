@@ -14,6 +14,7 @@ namespace Courses_Center.Services.CourseProfessorService
         {
             _unitOfWork = unitOfWork;
             _courseProfessorRepo = courseProfessorRepo;
-        }   
+        }
+
     }
 }

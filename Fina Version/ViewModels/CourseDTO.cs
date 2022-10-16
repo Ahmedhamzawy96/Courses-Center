@@ -18,7 +18,6 @@ namespace Courses_Center.ViewModels
         [Display(Name = "الكلية")]
         [Required(ErrorMessage = "يجب اختيار الكلية")]
         [RegularExpression("^[1-9]+\\d*$", ErrorMessage = "يجب اختيار الكلية")]
-        [Remote("CheckCrsName","Course",ErrorMessage = "هناك مقرر بنفس الاسم بنفس الاسم")]
         public int ColID { get; set; }
 
         [Display(Name = "القسم")]
@@ -28,7 +27,6 @@ namespace Courses_Center.ViewModels
 
         [Display(Name = "اسم المادة")]
         [Required(ErrorMessage = "يجب ادخال اسم المادة ")]
-        [Remote("CheckCrsName", "Course", ErrorMessage = "هناك مقرر بنفس الاسم بنفس الاسم")]
         public string Name { get; set; }
 
         [Display(Name = "المستوي")]
