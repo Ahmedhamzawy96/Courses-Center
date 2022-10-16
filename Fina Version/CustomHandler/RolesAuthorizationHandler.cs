@@ -40,8 +40,10 @@ namespace Courses_Center.CustomHandler
                 var claims = context.User.Claims;
                 var userName = claims.FirstOrDefault(c => c.Type == "UserName").Value;
                 var roles = requirement.AllowedRoles;
-
-                validRole = _userService.getOneAdminRole(p => roles.Contains("Admin") && p.UserName == userName).Any();
+                if (claims.ToList()[3].Value == "Admin")
+                    validRole = _userService.getOneAdminRole(p => roles.Contains("Admin") && p.UserName == userName).Any();
+                else
+                    validRole = _userService.getOneAdminRole(p => roles.Contains("Owner") && p.UserName == userName).Any();
                  //   _centerContext.Users.Where(p => roles.Contains("Admin") && p.UserName == userName).Any();
                 validRole2 = _buyerService.getOneBuyerRole(p => roles.Contains("Buyer") && p.UserName == userName).Any();
                // _centerContext.Buyers.Where(p => roles.Contains("Buyer") && p.UserName == userName).Any();

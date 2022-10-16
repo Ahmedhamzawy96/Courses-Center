@@ -12,7 +12,7 @@ using Microsoft.CodeAnalysis.Differencing;
 
 namespace Courses_Center.Controllers
 {
-    [Authorize(Roles = "Admin")]
+    [Authorize(Roles = "Admin,Owner")]
     public class CourseController : Controller
     {
         ICourseService _CourseService;
@@ -33,7 +33,7 @@ namespace Courses_Center.Controllers
             _departmentService = departmentService;
         }
 
-        [Authorize(Roles = "Admin")]
+        [Authorize(Roles = "Admin,Owner")]
         public IActionResult Index()
         {
             var uni = _UniversityService.GetAll();
@@ -41,7 +41,7 @@ namespace Courses_Center.Controllers
             return View();
         }
         [HttpGet]
-        [Authorize(Roles = "Admin")]
+        [Authorize(Roles = "Admin,Owner")]
         public IActionResult Add()
         {
             var uni = _UniversityService.GetAll();
@@ -50,7 +50,7 @@ namespace Courses_Center.Controllers
         }
 
         [HttpPost]
-        [Authorize(Roles = "Admin")]
+        [Authorize(Roles = "Admin,Owner")]
         public IActionResult Add(CourseDTO courseDTO)
         {
             if (!ModelState.IsValid)
@@ -62,7 +62,7 @@ namespace Courses_Center.Controllers
         }
 
         [HttpGet]
-        [Authorize(Roles = "Admin")]
+        [Authorize(Roles = "Admin,Owner")]
         public IActionResult ChangeUniversty(int UniID)
         {
             if (UniID == 0)
@@ -72,7 +72,7 @@ namespace Courses_Center.Controllers
         }
 
         [HttpGet]
-        [Authorize(Roles = "Admin")]
+        [Authorize(Roles = "Admin,Owner")]
         public IActionResult ChangeCollage(int ColID)
         {
             if (ColID == 0)
@@ -81,7 +81,7 @@ namespace Courses_Center.Controllers
         }
 
         [HttpPost]
-        [Authorize(Roles = "Admin")]
+        [Authorize(Roles = "Admin,Owner")]
         public IActionResult DisplayCourses(CourseDisplay Course)
         {
             if (!ModelState.IsValid)
@@ -90,7 +90,7 @@ namespace Courses_Center.Controllers
         }
 
         [HttpGet]
-        [Authorize(Roles = "Admin")]
+        [Authorize(Roles = "Admin,Owner")]
         public IActionResult Edite(int id)
         {
             var uni = _UniversityService.GetAll();
@@ -114,7 +114,7 @@ namespace Courses_Center.Controllers
 
 
         [HttpPost]
-        [Authorize(Roles = "Admin")]
+        [Authorize(Roles = "Admin,Owner")]
 
         public IActionResult Edite(int id,CourseDTO courseDTO)
         {
@@ -141,7 +141,7 @@ namespace Courses_Center.Controllers
         }
 
         [HttpGet]
-        [Authorize(Roles = "Admin")]
+        [Authorize(Roles = "Admin,Owner")]
         public IActionResult Delete(int id)
         {
             var cors = _CourseService.Get(id);
@@ -158,7 +158,7 @@ namespace Courses_Center.Controllers
         }
 
         [HttpGet]
-        [Authorize(Roles = "Admin")]
+        [Authorize(Roles = "Admin,Owner")]
         public IActionResult CheckCrsName(string Name )
         {
             return Json(!_CourseService.CheckCrsName(Name));

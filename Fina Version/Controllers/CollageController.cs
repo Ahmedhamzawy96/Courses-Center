@@ -53,7 +53,7 @@ namespace Courses_Center.Controllers
 
         }
         [HttpGet]
-        [Authorize(Roles = "Admin")]
+        [Authorize(Roles = "Admin,Owner")]
         public IActionResult Index()
         {
             var universtyItems = _UniversityService.GetUniverstyNotDelete().ToList();
@@ -62,7 +62,7 @@ namespace Courses_Center.Controllers
         }
 
         [HttpPost]
-        [Authorize(Roles = "Admin")]
+        [Authorize(Roles = "Admin,Owner")]
         public IActionResult DisplayCollage(int? UniverstyID)
         {
             //Modelfilter.CollageID = null;
@@ -72,7 +72,7 @@ namespace Courses_Center.Controllers
         }
 
         [HttpGet]
-        [Authorize(Roles = "Admin")]
+        [Authorize(Roles = "Admin,Owner")]
         public IActionResult Add()
         {
             var universtyItems = _UniversityService.GetUniverstyNotDelete().ToList();
@@ -95,7 +95,7 @@ namespace Courses_Center.Controllers
             }
         }
         [HttpGet]
-        [Authorize(Roles = "Admin")]
+        [Authorize(Roles = "Admin,Owner")]
         public IActionResult Edit(int? id)
         {
             if (id <= 0 || id == null)
@@ -109,7 +109,7 @@ namespace Courses_Center.Controllers
             return View(res);
         }
         [HttpPost]
-        [Authorize(Roles = "Admin")]
+        [Authorize(Roles = "Admin,Owner")]
         public IActionResult EditCollage(int? id, College updateCollage)
         {
             if (!ModelState.IsValid || id <= 0 || id == null)
@@ -138,7 +138,7 @@ namespace Courses_Center.Controllers
             }
         }
         [HttpGet]
-        [Authorize(Roles = "Admin")]
+        [Authorize(Roles = "Admin,Owner")]
         public IActionResult Delete(int? id)
         {
             var depart = _CollegeService.Get((int)id);
@@ -149,7 +149,7 @@ namespace Courses_Center.Controllers
         }
 
         [HttpGet]
-        [Authorize(Roles = "Admin")]
+        [Authorize(Roles = "Admin,Owner")]
         public IActionResult CheckNameColl(string Name,int UniID)
        {
             bool res = _CollegeService.CheckNameColl(Name,UniID);

@@ -49,6 +49,9 @@ namespace Courses_Center.Migrations
                     b.Property<bool>("ISDeleted")
                         .HasColumnType("bit");
 
+                    b.Property<bool>("IsOwner")
+                        .HasColumnType("bit");
+
                     b.Property<string>("Password")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");

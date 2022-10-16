@@ -4,6 +4,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Courses_Center.Models
 {
+
     public class Admin
     {
         [Key]
@@ -24,6 +25,7 @@ namespace Courses_Center.Models
         public string ConfirPassword { get; set; }
         [DefaultValue(false)]
         public bool ISDeleted { get; set; }
-
+        [DefaultValue(false)]
+        public bool IsOwner { get; set; }
     }
 }

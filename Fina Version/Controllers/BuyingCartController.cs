@@ -2,10 +2,12 @@
 using Courses_Center.Services.BuyingCartServices;
 using Courses_Center.Services.SourcesService;
 using Courses_Center.ViewModels;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Courses_Center.Controllers
 {
+    [Authorize("Buyer")]
     public class BuyingCartController : Controller
     {
         IBuyingCartService _buyingCartService;

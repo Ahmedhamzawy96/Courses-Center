@@ -53,7 +53,7 @@ namespace Courses_Center.Controllers
         List<Department> departmentsList;
         List<Course> CoursesList;
         List<Professor> prodList;
-        [Authorize(Roles = "Admin")]
+        [Authorize(Roles = "Admin,Owner")]
         public IActionResult Index()
         {
 
@@ -142,7 +142,7 @@ namespace Courses_Center.Controllers
             return mylist;
         }
         [HttpGet]
-        [Authorize(Roles = "Admin")]
+        [Authorize(Roles = "Admin,Owner")]
         public IActionResult Add()
         {
             universities = _universityService.GetAll().ToList();
@@ -150,7 +150,7 @@ namespace Courses_Center.Controllers
             return View();
         }
         [HttpPost]
-        [Authorize(Roles = "Admin")]
+        [Authorize(Roles = "Admin,Owner")]
         public IActionResult Add(SourceDto sourceDto, IFormFile sources)
         {
             if (!ModelState.IsValid)
@@ -160,7 +160,7 @@ namespace Courses_Center.Controllers
         }
 
         [HttpPost]
-        [Authorize(Roles = "Admin")]
+        [Authorize(Roles = "Admin,Owner")]
         public IActionResult Details(SourceDisplayDTO sourceDisplayDTO)
         {
             if(!ModelState.IsValid)
@@ -178,7 +178,7 @@ namespace Courses_Center.Controllers
 
         }
         [HttpGet]
-        [Authorize(Roles = "Admin")]
+        [Authorize(Roles = "Admin,Owner")]
         public IActionResult Delete(int Id)
         {
             if(Id == 0)
@@ -189,7 +189,7 @@ namespace Courses_Center.Controllers
 
         }
         [HttpGet]
-        [Authorize(Roles = "Admin")]
+        [Authorize(Roles = "Admin,Owner")]
         public IActionResult Update(int Id, int department, int colleges, int unversity)
         {
             
@@ -226,7 +226,7 @@ namespace Courses_Center.Controllers
             return View(sourceDto);
         }
         [HttpPost]
-        [Authorize(Roles = "Admin")]
+        [Authorize(Roles = "Admin,Owner")]
         public IActionResult Update(SourceDto sourceDto, IFormFile sources)
         {
 

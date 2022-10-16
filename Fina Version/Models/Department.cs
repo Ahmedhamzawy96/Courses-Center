@@ -11,7 +11,7 @@ namespace Courses_Center.Models
         public int Id { get; set; }
         [Display(Name = "اسم القسم")]
         [Required(ErrorMessage ="يجب ادخال اسم القسم")]
-        [RegularExpression("^[^0-9]+$", ErrorMessage = "لا يجب ان يحتوى الحقل على ارقام")]
+        //[RegularExpression("^[^0-9]+$", ErrorMessage = "لا يجب ان يحتوى الحقل على ارقام")]
         [Remote("checkDeptname", "Department", ErrorMessage = "هناك قسم بنفس الاسم")]
         public string Name { get; set; }
         [DefaultValue(false)]

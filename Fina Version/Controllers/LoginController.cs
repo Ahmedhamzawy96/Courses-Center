@@ -39,6 +39,8 @@ namespace Courses_Center.Controllers
                     return RedirectToAction("Index", "Home");
                 else if (claims[3].Value == "Admin")
                     return Redirect("/Admin/University/Index");
+                else if (claims[3].Value == "Owner")
+                    return Redirect("/Admin/University/Index");
             }
             //var claims = User.Claims.ToList();
             //if (claims.Count > 0)
@@ -63,13 +65,24 @@ namespace Courses_Center.Controllers
             Buyer buyer = _buyerService.getOneBuyer(login.UserName, login.Password);
             if (admin != null)
             {
-                var userClaims = new List<Claim>()
+                List<Claim> userClaims=null;
+                   
+                if (admin.IsOwner)
                 {
-                    new Claim("UserName", admin.UserName),
-                    new Claim("PassWord", admin.Password),
-                    new Claim(ClaimTypes.Email, admin.Email),
-                    new Claim(ClaimTypes.Role, "Admin")
-                 };
+                    userClaims = new List<Claim>() {
+                        new Claim("UserName", admin.UserName),
+                        new Claim("PassWord", admin.Password),
+                        new Claim(ClaimTypes.Email, admin.Email),
+                        new Claim(ClaimTypes.Role, "Owner") };
+                }
+                else
+                {
+                    userClaims = new List<Claim>() {
+                        new Claim("UserName", admin.UserName),
+                        new Claim("PassWord", admin.Password),
+                        new Claim(ClaimTypes.Email, admin.Email),
+                        new Claim(ClaimTypes.Role, "Admin") };
+                }
 
                 var userIdentity = new ClaimsIdentity(userClaims, CookieAuthenticationDefaults.AuthenticationScheme);
                 var authProperties = new AuthenticationProperties

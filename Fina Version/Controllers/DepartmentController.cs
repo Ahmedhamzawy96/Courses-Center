@@ -10,7 +10,7 @@ using Microsoft.AspNetCore.Mvc.Routing;
 
 namespace Courses_Center.Controllers
 {
-    [Authorize(Roles = "Admin")]
+    [Authorize(Roles = "Admin,Owner")]
     public class DepartmentController : Controller
     {
         IDepartmentService _departmentService;
@@ -26,7 +26,7 @@ namespace Courses_Center.Controllers
         }
 
         [HttpGet]
-        [Authorize(Roles = "Admin")]
+                [Authorize(Roles = "Admin,Owner")]
         public IActionResult Index()
         {
             var universtyItems = _UniversityService.GetUniverstyNotDelete().ToList();
@@ -44,7 +44,7 @@ namespace Courses_Center.Controllers
         }
 
         [HttpGet]
-        [Authorize(Roles = "Admin")]
+                [Authorize(Roles = "Admin,Owner")]
         public IActionResult ChangeUniversty(int? UniverstyID)
         {
             if (UniverstyID is null || UniverstyID <= 0)
@@ -54,7 +54,7 @@ namespace Courses_Center.Controllers
         }
 
         [HttpPost]
-        [Authorize(Roles = "Admin")]
+                [Authorize(Roles = "Admin,Owner")]
         public IActionResult DisplayDepartment( FilterDepartViewModel Modelfilter)
         {
             //Modelfilter.CollageID = null;
@@ -66,7 +66,7 @@ namespace Courses_Center.Controllers
             return PartialView("DisplayDepartment",_departmentService.FilterDepart(Modelfilter).ToList());
         }
         [HttpGet]
-        [Authorize(Roles = "Admin")]
+                [Authorize(Roles = "Admin,Owner")]
         public IActionResult Add()
         {
 
@@ -84,7 +84,7 @@ namespace Courses_Center.Controllers
             return View();
         }
         [HttpPost]
-        [Authorize(Roles = "Admin")]
+                [Authorize(Roles = "Admin,Owner")]
         public IActionResult AddDepartment(Department newDepartment)
         {
             try
@@ -103,7 +103,7 @@ namespace Courses_Center.Controllers
         }
 
         [HttpGet]
-        [Authorize(Roles = "Admin")]
+                [Authorize(Roles = "Admin,Owner")]
         public IActionResult Edit(int id)
         {
             if (id <= 0)
@@ -119,7 +119,7 @@ namespace Courses_Center.Controllers
             return View(res);
         }
         [HttpPost]
-        [Authorize(Roles = "Admin")]
+                [Authorize(Roles = "Admin,Owner")]
         public IActionResult EditDepartment(int id, Department updateDepartment)
         {
             if (!ModelState.IsValid || id <= 0)
@@ -151,7 +151,7 @@ namespace Courses_Center.Controllers
 
 
         [HttpGet]
-        [Authorize(Roles = "Admin")]
+                [Authorize(Roles = "Admin,Owner")]
         public IActionResult Delete(int? id)
         {
             var depart = _departmentService.Get(id);
@@ -161,7 +161,7 @@ namespace Courses_Center.Controllers
             return RedirectToAction("Index");
         }
         [HttpGet]
-        [Authorize(Roles = "Admin")]
+                [Authorize(Roles = "Admin,Owner")]
         public IActionResult checkDeptname(string Name)
         {
             return Json(!_departmentService.checkDepart(Name));

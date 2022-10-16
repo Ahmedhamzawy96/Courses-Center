@@ -12,7 +12,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Courses_Center.Controllers
 {
-    [Authorize(Roles = "Admin")]
+    [Authorize(Roles = "Admin,Owner")]
     public class ProfessorController : Controller
     {
         IUniversityService _universityService;

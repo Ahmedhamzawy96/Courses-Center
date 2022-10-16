@@ -39,7 +39,7 @@ namespace Courses_Center.Services.SourcesService
 
             List<string> urls = new List<string>();
             urls = FileSave(file);
-             source.Url = urls[0];
+            source.Url = urls[0];
             source.image = urls[1];
             source.CountOfBuy = 0;
             _sourceRepository.Add(source);

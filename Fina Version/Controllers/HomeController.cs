@@ -40,7 +40,7 @@ namespace Courses_Center.Controllers
             var claims = User.Claims.ToList();
             var username = claims[0].Value;
             var password = claims[1].Value;
-            if (claims[3].Value == "Admin")
+            if (claims[3].Value == "Admin"|| claims[3].Value == "Owner")
             {
                 return NoContent();
             }
@@ -64,7 +64,7 @@ namespace Courses_Center.Controllers
             var claims = User.Claims.ToList();
             var username = claims[0].Value;
             var password = claims[1].Value;
-            if (claims[3].Value == "Admin")
+            if (claims[3].Value == "Admin" || claims[3].Value == "Owner")
             {
                 return NoContent();
             }
@@ -90,7 +90,7 @@ namespace Courses_Center.Controllers
         public IActionResult ChangePassword()
         {
             var claims = User.Claims.ToList();
-            if (claims[3].Value == "Admin")
+            if (claims[3].Value == "Admin" || claims[3].Value == "Owner")
             {
                 return NoContent();
             }

@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Courses_Center.Controllers
 {
-    [Authorize(Roles = "Admin")]
+    [Authorize(Roles = "Owner")]
     public class UserController : Controller
     {
         private readonly IUserService _userService;

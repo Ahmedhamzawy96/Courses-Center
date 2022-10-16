@@ -23,7 +23,7 @@ namespace Courses_Center.Controllers
             this._departmentService = departmentService;
         }
         [HttpGet]
-        [Authorize(Roles = "Admin")]
+        [Authorize(Roles = "Admin,Owner")]
         public IActionResult Index()
         {
             var univs = _iUni.GetAll().ToList();
@@ -31,7 +31,7 @@ namespace Courses_Center.Controllers
         }
 
         [HttpGet]
-        [Authorize(Roles = "Admin")]
+        [Authorize(Roles = "Admin,Owner")]
         public IActionResult Add()
         {
             ViewBag.name = "Add";
@@ -40,7 +40,7 @@ namespace Courses_Center.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        [Authorize(Roles = "Admin")]
+        [Authorize(Roles = "Admin,Owner")]
         public IActionResult Add(University university)
         {
             if (!ModelState.IsValid)
@@ -52,7 +52,7 @@ namespace Courses_Center.Controllers
             return RedirectToAction("Index");
         }
         [HttpGet]
-        [Authorize(Roles = "Admin")]
+        [Authorize(Roles = "Admin,Owner")]
         public IActionResult update(int id)
         {
             try
@@ -70,7 +70,7 @@ namespace Courses_Center.Controllers
         }
 
         [HttpPost]
-        [Authorize(Roles = "Admin")]
+        [Authorize(Roles = "Admin,Owner")]
         public IActionResult updatePost(int universityID, University university)
         {
             if (ModelState.IsValid)
@@ -101,7 +101,7 @@ namespace Courses_Center.Controllers
         }
 
         [HttpGet]
-        [Authorize(Roles = "Admin")]
+        [Authorize(Roles = "Admin,Owner")]
         public IActionResult Remove(int id)
         {
             try
@@ -120,7 +120,7 @@ namespace Courses_Center.Controllers
         }
 
         [HttpGet]
-        [Authorize(Roles = "Admin")]
+        [Authorize(Roles = "Admin,Owner")]
         public IActionResult CheckNameUni(string Name)
         {
             bool res = _iUni.CheckNameUni(Name);
