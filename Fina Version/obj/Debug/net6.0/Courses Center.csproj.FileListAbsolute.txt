@@ -3361,3 +3361,14 @@ C:\Users\HAMZAWY\Desktop\Freelance Project 2\Repo\Courses-Center\Fina Version\ob
 C:\Users\HAMZAWY\Desktop\Freelance Project 2\Repo\Courses-Center\Fina Version\obj\Debug\net6.0\Courses Center.genruntimeconfig.cache
 C:\Users\HAMZAWY\Desktop\Freelance Project 2\Repo\Courses-Center\Fina Version\obj\Debug\net6.0\ref\Courses Center.dll
 >>>>>>> c76c8111419d8fa4538e6953a76412ac224b8fc7
+G:\Freelancing\Courses-Center17-10--2022\Fina Version\obj\Debug\net6.0\Courses Center.csproj.AssemblyReference.cache
+G:\Freelancing\Courses-Center17-10--2022\Fina Version\obj\Debug\net6.0\Courses Center.GeneratedMSBuildEditorConfig.editorconfig
+G:\Freelancing\Courses-Center17-10--2022\Fina Version\obj\Debug\net6.0\Courses Center.AssemblyInfoInputs.cache
+G:\Freelancing\Courses-Center17-10--2022\Fina Version\obj\Debug\net6.0\Courses Center.AssemblyInfo.cs
+G:\Freelancing\Courses-Center17-10--2022\Fina Version\obj\Debug\net6.0\Courses Center.csproj.CoreCompileInputs.cache
+G:\Freelancing\Courses-Center17-10--2022\Fina Version\obj\Debug\net6.0\Courses Center.MvcApplicationPartsAssemblyInfo.cache
+G:\Freelancing\Courses-Center17-10--2022\Fina Version\obj\Debug\net6.0\Courses Center.RazorAssemblyInfo.cache
+G:\Freelancing\Courses-Center17-10--2022\Fina Version\obj\Debug\net6.0\Courses Center.RazorAssemblyInfo.cs
+G:\Freelancing\Courses-Center17-10--2022\Fina Version\obj\Debug\net6.0\Courses Center.dll
+G:\Freelancing\Courses-Center17-10--2022\Fina Version\obj\Debug\net6.0\refint\Courses Center.dll
+G:\Freelancing\Courses-Center17-10--2022\Fina Version\obj\Debug\net6.0\Courses Center.pdb

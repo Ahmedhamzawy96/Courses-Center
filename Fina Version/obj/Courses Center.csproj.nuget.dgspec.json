@@ -1,31 +1,17 @@
 {
   "format": 1,
   "restore": {
-<<<<<<< HEAD
-    "G:\\Freelancing\\Courses-Center\\Fina Version\\Courses Center.csproj": {}
+    "G:\\Freelancing\\Courses-Center17-10--2022\\Fina Version\\Courses Center.csproj": {}
   },
   "projects": {
-    "G:\\Freelancing\\Courses-Center\\Fina Version\\Courses Center.csproj": {
+    "G:\\Freelancing\\Courses-Center17-10--2022\\Fina Version\\Courses Center.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "G:\\Freelancing\\Courses-Center\\Fina Version\\Courses Center.csproj",
+        "projectUniqueName": "G:\\Freelancing\\Courses-Center17-10--2022\\Fina Version\\Courses Center.csproj",
         "projectName": "Courses Center",
-        "projectPath": "G:\\Freelancing\\Courses-Center\\Fina Version\\Courses Center.csproj",
+        "projectPath": "G:\\Freelancing\\Courses-Center17-10--2022\\Fina Version\\Courses Center.csproj",
         "packagesPath": "C:\\Users\\La Vie\\.nuget\\packages\\",
-        "outputPath": "G:\\Freelancing\\Courses-Center\\Fina Version\\obj\\",
-=======
-    "C:\\Users\\HAMZAWY\\Desktop\\Freelance Project 2\\Repo\\Courses-Center\\Fina Version\\Courses Center.csproj": {}
-  },
-  "projects": {
-    "C:\\Users\\HAMZAWY\\Desktop\\Freelance Project 2\\Repo\\Courses-Center\\Fina Version\\Courses Center.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "C:\\Users\\HAMZAWY\\Desktop\\Freelance Project 2\\Repo\\Courses-Center\\Fina Version\\Courses Center.csproj",
-        "projectName": "Courses Center",
-        "projectPath": "C:\\Users\\HAMZAWY\\Desktop\\Freelance Project 2\\Repo\\Courses-Center\\Fina Version\\Courses Center.csproj",
-        "packagesPath": "C:\\Users\\HAMZAWY\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\HAMZAWY\\Desktop\\Freelance Project 2\\Repo\\Courses-Center\\Fina Version\\obj\\",
->>>>>>> c76c8111419d8fa4538e6953a76412ac224b8fc7
+        "outputPath": "G:\\Freelancing\\Courses-Center17-10--2022\\Fina Version\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\La Vie\\AppData\\Roaming\\NuGet\\NuGet.Config",

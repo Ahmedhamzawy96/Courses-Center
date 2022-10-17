@@ -12,11 +12,11 @@ namespace Courses_Center.Models
 
         [Display(Name ="اسم الكلية")]
         [Required(ErrorMessage = "يجب ادخال اسم الكلية")]
-        //[RegularExpression("^[^0-9]+$", ErrorMessage = "لا يجب ان يحتوى الحقل على ارقام")]
-<<<<<<< HEAD
-        [Remote("CheckNameColl", "Collage", AdditionalFields = "UniID", ErrorMessage = "هناك كلية بنفس الاسم فى هذة الجامعة")]
-=======
->>>>>>> c76c8111419d8fa4538e6953a76412ac224b8fc7
+//        //[RegularExpression("^[^0-9]+$", ErrorMessage = "لا يجب ان يحتوى الحقل على ارقام")]
+//<<<<<<< HEAD
+//        [Remote("CheckNameColl", "Collage", AdditionalFields = "UniID", ErrorMessage = "هناك كلية بنفس الاسم فى هذة الجامعة")]
+//=======
+//>>>>>>> c76c8111419d8fa4538e6953a76412ac224b8fc7
         public string Name { get; set; }
 
         [DefaultValue(false)]
